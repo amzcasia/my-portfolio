@@ -1,0 +1,135 @@
+*{
+  font-family: 'Manrope', sans-serif;
+}
+
+#brand {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.bg-1 {
+    background-color: #FFF9ED;
+}
+
+.bg-2 {
+    background-color: #BBAC83;
+}
+
+.bg-3 {
+    background-color: #FFCF40;
+}
+
+.bg-4 {
+    background-color: #a67c00;
+}
+
+.bg-5{
+  background-color: #A96215;
+}
+
+
+
+.borders{
+    border: 1px dashed black;
+}
+
+
+#left_button{
+    background-image: url("../images/left.png");
+    height: 40px;
+    width: 40px;
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover;
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+#right_button{
+    background-image: url("../images/right.png");
+    height: 40px;
+    width: 40px;
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover;
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+.image_gallery{
+    transition: transform 500ms ease;
+}
+
+.image_gallery[data-status="ready_right"]{
+    /*transform: translateX(100%) scale(0);*/
+    transform: scale(0,0);
+    /*transition: none;*/
+    /*transition-delay: 300ms;*/
+}
+
+.image_gallery[data-status="ready_left"]{
+    /*transform: translateX(-100%) scale(0);*/
+    transform: scale(0,0);
+    /*transition: none;*/
+    /*transition-delay: 300ms;*/
+}
+
+.image_gallery[data-status="active"] {
+    /*transition-delay: 300ms;*/
+    transform: translateX(0);
+  }
+  
+  .image_gallery[data-status="after_left"] {
+    transform: translateX(-100%);
+  }
+
+  .image_gallery[data-status="after_right"] {
+    transform: translateX(100%);
+  }
+  
+  .image_gallery[data-status="before_left"] {
+    transform: translateX(100%);
+  }
+
+  .image_gallery[data-status="before_right"] {
+    transform: translateX(-100%);
+  }
+  
+  .image_gallery[data-status="becoming-active-from-after"] {
+    transform: translateX(-100%);
+    transition: none;
+  }
+  
+  .image_gallery[data-status="becoming-active-from-before"] {
+    transform: translateX(100%);
+    transition: none;
+  }
+
+.image_button{
+    transition: transform 100ms ease;
+    margin-right: 5px;
+}
+
+.image_button[data-status="button_active"]{
+  background-color: #FFCF40;
+  transform: scale(1.2);
+}
+
+
+
+.bg_image{
+  transition: opacity 500ms ease;
+}
+
+.bg_image[data-status="bg_inactive"]{
+  opacity: 0%;
+}
+
+.bg_image[data-status="bg_active"]{
+  opacity: 50%;
+}
+ 

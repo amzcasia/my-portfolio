@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Jejoju Cafe</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope&family=Open+Sans&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="output.css">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body class="relative bg-1">
+    
+    <header id="htmlHeader" class="grid grid-cols-2 gap-4 px-[10%] bg-3 h-[70px] w-full border-b-2 border-[#A37A00] z-[100] sticky top-[0px]  transition duration-100 drop-shadow-2xl">      <!-- top-0 relative sticky z-[50]  translate-y-[70px] hover:translate-y-0 -->
+      
+      <div class="flex items-center container_logo ">
+        <a href="index.html" class="flex items-center h-full">
+          <img src="..\images\logo.jpg" class="h-[50px] rounded-full" alt="Jejoju logo">
+          <h1 id="brand" class="ml-4 text-3xl font-bold">JeJoJu</h1>
+        </a> 
+      </div>
+      <nav id="large_navbar" class="grid ">        
+        <ul class="hidden h-full lg:flex">
+          <li class="flex items-center justify-center w-full hover:text-[#a96215] transition"> <!--#a96215-->
+            <a href="#" class="">
+              <span class="text-xl font-bold">Menu</span>
+            </a>
+          </li>
+          <li class="flex items-center justify-center w-full hover:text-[#a96215] transition">
+            <a href="#" class="">
+              <span class="text-xl font-bold">Partner</span>
+            </a>
+          </li>
+          <li class="flex items-center justify-center w-full hover:text-[#a96215] transition">
+            <a href="../../" class="">
+              <span class="text-xl font-bold">Contact Us</span>
+            </a>
+          </li>     
+        </ul>
+        <div class="relative flex items-center justify-end lg:hidden">
+          <button id="menuBtn" onclick=" /*<!-- eventListenerTest -->*/ " class="rounded-full bg-3 h-[45px] w-[45px] hover:bg-[#E6C359] transition-colors duration-300">
+            <img id="menuIcon" src="..\images\more.png" class="h-[25px] w-[25px] m-auto">
+          </button>
+          <!-- <div class="absolute w-[40px] h-[40px] left-0 top-0 rounded-full bg-slate-400 scale-0 hover:scale-150 transition ease-in-out"></div> -->
+        </div>
+      </nav>
+      <div id="smallNavbar" class="hidden lg:hidden absolute right-0  top-[70px] z-[100] w-[50%] h-screen">
+        
+        <ul id="navbarEntries" class="flex flex-col gap-4 pt-5 translate-x-full border-l-2 border-[#A37A00] w-full h-screen bg-3 transition ease-out duration-300 text-2xl">
+
+
+          <li class="hover:text-[#a96215] pl-7 transition">
+            <a href="#" class="">
+              <span class="text-xl font-bold text-right">Menu</span>
+            </a>
+          </li>
+          <li class="hover:text-[#a96215] pl-7 transition">
+            <a href="#" class="">
+              <span class="text-xl font-bold">Partner</span>
+            </a>
+          </li>
+          <li class="hover:text-[#a96215] pl-7 transition">
+            <a href="#" class="">
+              <span class="text-xl font-bold">Contact Us</span>
+            </a>
+          </li>
+        </ul>
+      </div>  <!-- End of Small Navbar-->  
+      
+       
+    </header>
+    
+    <div class="relative text-lg main_content">
+      <!--  -->
+      <section class="relative grid h-[calc(66vh)] overflow-hidden w-full lg:h-auto justify-items-center">
+        <!-- h-[calc(screen-100px)] -->
+        <div id="video_container" class="relative h-[calc(66vh)] w-auto lg:h-auto lg:w-full  overflow-hidden bg-white aspect-[1280/600]">
+          <video autoplay muted loop class="absolute left-0 right-0 opacity-50 bg-1 top-[-55px] h-[calc(66vh+95px)] lg:h-auto lg:w-full mx-auto blur-sm"> <!--  -->
+            <source src="../images/promotional_video.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+          </video>
+        </div> <!-- End of Video Container -->
+        <!-- aspect-[1280/600] -->
+        <div id="text_container" class="absolute top-0 left-0 right-0 grid content-center w-full h-full mx-auto">
+          <div class="relative grid gap-3 text-base justify-items-center">
+            <span class="text-2xl lg:text-6xl font-bold text-[#A96215] mx-auto block">
+              Cravings Sa-tea-sfied
+            </span>
+            <span class="mx-auto font-semibold text-center lg:text-3xl">
+              Here's to adding that sweet treat feeling <br class="lg:hidden"> to your day.
+            </span>
+            <a href="#" class="mt-3 transition bg-black rounded-full lg:mt-8 hover:bg-[#989898]">
+              <div class="flex justify-center p-2 px-6 lg:px-9 ">
+                <span class="text-white lg:text-3xl">Order Your Drink</span>  
+              </div>
+            </a>
+            <div class="absolute top-[-10px] lg:top-[-30px] left-[calc(50%+120px)] lg:left-[calc(50%+302px)]">
+              <img src="..\images\check-mark.png" class="w-[25px] h-[25px] lg:w-[52px] lg:h-[56px]">
+            </div>
+          </div>
+        </div> <!-- End of Text Container -->
+        
+      </section> <!-- End of video container -->
+
+      <!-- 
+
+        
+
+       -->
+
+      <section id="series" class="relative w-full text-lg specials snap-end">
+        <div class="bg-3 w-[70%] py-2 pl-[10%] flex items-center rounded-r-2xl my-5">
+          <span class="font-bold lg:text-3xl">
+            Enjoy Different Varieties.
+          </span>
+        </div>
+
+        <div class="font-bold text-white text-md lg:text-xl w-full px-[10%] grid grid-cols-1 lg:grid-cols-2 gap-10">
+
+          <a href="#" class="rounded-[20px]">
+          <div class="relative overflow-hidden card-holder rounded-[30px] border-[5px] border-primary ">
+            <img src="..\images\series_1.png" class="w-full aspect-[495/317] hover:scale-110 transition duration-300">
+            <div class="absolute bottom-0 left-0 flex justify-center w-full bg-primary py-2 rounded-b-[20px]">
+                <span class="text-black">J's Specials</span>
+            </div>
+          </div>  <!-- End of Card Holder-->
+          </a>
+
+          <a href="#" class="rounded-[20px]">
+            <div class="relative overflow-hidden card-holder rounded-[30px] border-[5px] border-primary ">
+              <img src="..\images\series_2.png" class="w-full aspect-[495/317] hover:scale-110 transition duration-300">
+              <div class="absolute bottom-0 left-0 flex justify-center w-full bg-primary py-2 rounded-b-[20px]">
+                  <span class="text-black">Original Series</span>
+              </div>
+            </div>  <!-- End of Card Holder-->
+            </a>
+
+            <a href="#" class="rounded-[20px]">
+              <div class="relative overflow-hidden card-holder rounded-[30px] border-[5px] border-primary ">
+                <img src="..\images\series_3.png" class="w-full aspect-[495/317] hover:scale-110 transition duration-300">
+                <div class="absolute bottom-0 left-0 flex justify-center w-full bg-primary py-2 rounded-b-[20px]">
+                    <span class="text-black">Coffee Collection</span>
+                </div>
+              </div>  <!-- End of Card Holder-->
+              </a>
+
+              <a href="#" class="rounded-[20px] ">
+                <div class="relative overflow-hidden card-holder rounded-[30px] border-[5px] border-primary ">
+                  <img src="..\images\series_4.png" class="w-full aspect-[495/317] hover:scale-110 transition duration-300">
+                  <div class="absolute bottom-0 left-0 flex justify-center w-full bg-primary py-2 rounded-b-[20px]">
+                      <span class="text-black">Fruitea Series</span>
+                  </div>
+                </div>  <!-- End of Card Holder-->
+                </a>
+
+          
+
+          <div class="flex justify-center lg:col-span-2">
+              <a href="#" class="transition rounded-full bg-primary hover:bg-[#FFE492]">
+              <div class="p-2 px-7 ">
+                <span class="text-black lg:text-xl">
+                  Show me more
+                </span>
+              </div>
+              </a>
+          </div>
+
+        </div> <!-- End of Card holder-holder-->
+
+
+      </section> <!-- End of Specials Section -->
+      <section id="promo" class="relative grid w-full mt-5 promo snap-end">
+        
+        <div id="promo_background" class="absolute flex w-full h-full overflow-hidden bg-[#D3CDC0]">
+          <!--<img src="..\images\promo_6.jpg" class="absolute top-0 left-0 w-full opacity-50 aspect-square blur-lg bg_image">-->
+          <img src="..\images\promo_6.jpg" class="absolute top-0 left-0 w-auto h-full opacity-50 lg:w-full lg:h-auto aspect-square blur-lg bg_image" data-index="bg0" data-status="bg_inactive">
+          <img src="..\images\promo_2.jpg" class="absolute top-0 left-0 w-auto h-full opacity-50 lg:h-auto lg:w-full aspect-square blur-lg bg_image" data-index="bg1" data-status="bg_inactive">
+          <img src="..\images\promo_5.jpg" class="absolute top-0 left-0 w-auto h-full opacity-50 lg:h-auto lg:w-full aspect-square blur-lg bg_image" data-index="bg2" data-status="bg_inactive">
+          <img src="..\images\promo_1.png" class="absolute top-0 left-0 self-center w-auto h-full opacity-50 lg:h-auto lg:w-full aspect-square blur-lg bg_image" data-index="bg3" data-status="bg_active">
+        </div>
+        <!--
+        <div class="bg-3 w-[70%] pl-[10%] flex items-center rounded-r-2xl my-5">
+          <span class="text-3xl font-bold">
+            Sweet Deals. Sweet Prices.
+          </span>
+        </div>
+        -->
+        <div class="bg-3 w-[70%] py-2 pl-[10%] flex items-center rounded-r-2xl my-5 z-50">
+          <span class="font-bold lg:text-3xl ">
+            Sweet Deals. Sweet Prices.
+          </span>
+        </div>
+
+        
+        <div class="w-full pb-12">        
+
+          <div class="relative flex items-center justify-center w-full mx-auto carousel_container">
+<!--
+             <div class="relative grid">
+              <div class="absolute top-0 left-0 w-[40px] h-[40px] rounded-full bg-2 opacity-0 hover:opacity-100 transition-opacity duration-300">
+ 
+              </div> -->
+              <div id="left_button" class="" onclick="swipeRight()">
+                <!---->
+                <!--
+                <div class="w-full h-full transition-opacity rounded-full opacity-0 hover:opacity-100 bg-2"></div> -->
+                </div>
+              
+            <!-- </div> -->
+
+            <ul class="w-[80%] lg:max-w-[550px] aspect-square relative overflow-hidden rounded-3xl mb-2">
+              <li data-index="0" data-status="inactive" class="image_gallery absolute translate-x-[100%] w-full h-full">
+                <img class="w-full lg:w-[550px] aspect-square" src="..\images\promo_6.jpg"  >
+              </li>
+              <li data-index="1" data-status="inactive" class="image_gallery absolute translate-x-[100%]" >
+                <img class="w-full lg:w-[550px] aspect-square"  src="..\images\promo_2.jpg" >
+              </li>
+              <li data-index="2" data-status="inactive" class="image_gallery absolute translate-x-[100%]">
+                <img class="w-full lg:w-[550px] aspect-square" src="..\images\promo_5.jpg">
+              </li>
+              <li data-index="3" data-status="active" class="image_gallery absolute translate-x-[100%]">
+                <img class="w-full lg:w-[550px] aspect-square" src="..\images\promo_1.png">
+              </li>
+            </ul>
+
+            <div id="right_button" onclick="swipeLeft()">
+            </div>
+
+            <div class="absolute bottom-[-35px] left-[calc(50%-50px)]">
+              <button class="w-5 h-5 text-center rounded-full bg-primary-light image_button" data-index="b0" data-status="button_inactive" onclick="updateSlides(0)"></button>
+              <button class="w-5 h-5 text-center rounded-full bg-primary-light image_button" data-index="b1" data-status="button_inactive" onclick="updateSlides(1)"></button>
+              <button class="w-5 h-5 text-center rounded-full bg-primary-light image_button" data-index="b2" data-status="button_inactive" onclick="updateSlides(2)"></button>
+              <button class="w-5 h-5 text-center rounded-full bg-primary-light image_button" data-index="b3" data-status="button_active" onclick="updateSlides(3)"></button>
+            </div>
+
+          </div> <!-- End of carousel container-->
+        </div> <!-- End of carousel container container-->
+
+        
+
+      </section> <!-- End of Promo Section -->
+       
+      <section class="grid mb-5 snap-end">
+        <div class="bg-3 w-[70%] py-2 pl-[10%] flex items-center rounded-r-2xl my-5">
+          <span class="font-bold lg:text-3xl">
+            You can find us here:
+          </span>
+        </div>
+
+        
+        <div class="grid w-full grid-cols-1 lg:grid-cols-2 lg:gap-5 px-[10%]">
+          <div class="col-span-1 mb-5">
+            <img src="..\images\facade.jpg" class="w-full aspect-[803/690] rounded-[20px] ">
+          </div>
+
+          <div class="relative grid w-full h-full col-span-2 lg:col-span-1 ">
+            <div class="overflow-hidden border-2 border-black rounded-[20px] h-[450px]">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3925.2027887061217!2d123.9392802749511!3d10.32564998979708!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33a999fe6ece2e0b%3A0x5ceed6163283d4b9!2sJeJoJu%20Cafe!5e0!3m2!1sen!2sph!4v1683883280013!5m2!1sen!2sph"  style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="w-full h-full"></iframe>
+              <!--  width="600" height="450" -->
+            </div>
+            <div class="">
+              <span class="text-lg text-center">S.B. Cabahug St., Centro, Mandaue City (Beside San Antonio Bakeshop)</span>
+            </div>
+          </div>
+        </div>
+
+      </section>  <!-- End of Location Section -->
+      <!-- h-[calc(100vh-230px)]  -->
+      <section class="relative grid">
+        
+          <!--
+            <div class="absolute z-0 w-full h-full overflow-hidden bg-1">
+          <img src="..\images\message.jpg" class="w-full aspect-[940/788] absolute top-[-200px] opacity-50  blur-md">
+        </div>   
+            -->
+            <div class="absolute top-0 left-0 z-0 grid w-full h-full overflow-hidden place-items-center">
+              <img src="..\images\message.jpg" class="absolute lg:top-[-175px] left-0 lg:w-full h-full w-auto lg:h-auto opacity-50 aspect-[940/788] scale-[175%] lg:scale-100 blur-sm">
+    
+            </div>
+
+       
+
+        <div class="bg-3 w-[70%] py-2 pl-[10%] flex items-center rounded-r-2xl my-5 z-50">
+            <span class="font-bold lg:text-3xl">
+              We would love to hear from you
+            </span>
+          </div>
+        
+        <!--
+        <div class="z-[50] bg-3 flex items-center pl-[10%]">
+          <span class="font-bold lg:text-3xl">We would love to hear from you</span>
+        </div>
+        -->
+        
+
+        <div id="form_div" class=" w-full px-[10%] z-50 ">
+          <!-- <form id ="form" class="text-base lg:text-lg p-4 w lg:w-[50%] mx-auto" action="https://www.freecodecamp.com/email-submit" method="post"> -->
+
+          <form id="form" class="text-base lg:text-lg p-4 w lg:w-[50%] mx-auto" action="https://formsubmit.co/strikefrdm23@gmail.com" method="POST">
+            <input type="hidden" name="_subject" value="Message from Jejoju">
+            <div>
+              <label class="mt-10">Name: * </label><br>
+              <input type="text" placeholder="" name="name" id="name" required class="w-full h-10 mt-1 border-2 border-black rounded-lg"><br>            
+            </div>
+            <div class="mt-4">
+              <label class="">Email: *</label><br> 
+              <input type="email" name="email" id="email" required class="w-full h-10 mt-1 border-2 border-black rounded-lg" ><br>
+            </div>
+            <div class="mt-4">
+              <label class="">Message: *</label><br>
+              <!--<input type="text" name="message" id="message" required class="mt-1 w-full h-[200px] border border-[#BBAC83] rounded-lg"><br> -->
+              <textarea name="message" cols="30" rows="10" class="w-full h-[100px] border-2 border-black rounded-lg resize-none"> </textarea>
+              
+            </div>
+            <div class="flex justify-center w-32 h-12 mx-auto mt-4 transition rounded-full bg-primary hover:bg-primary-light">
+              <input class="w-full text-xl font-bold text-center rounded-full hover:cursor-pointer" type="submit" id="submit" value="Submit">                
+            </div>
+            <input type="hidden" name="_next" value="https://amzcasia.github.io/amarkc/">
+          </form>
+        </div>
+
+        
+
+      </section> <!-- End of Message Section -->
+
+      <footer class="text-sm lg:text-lg grid grid-cols-2 gap-4 w-full px-[10%] bg-3 snap-end py-5">
+        <div class="flex flex-col justify-between ">
+          <p class="font-bold">
+            Operating Hours
+          </p>
+          <p class="">
+            Monday - Thursday<br>
+            12:00nn - 10:00pm<br>
+          </p>
+          <p class="mt-2">
+            Friday - Sunday<br>
+            12:00nn - 12:00am
+          </p>
+        </div>
+        <div class="flex flex-col justify-between w-full h-full lg:justify-center">
+            <div class="flex items-center w-full pb-2 ">
+              <div><img src="..\images\fb.png" class="h-[40px] aspect-square mr-10"></div>
+              <div><img src="..\images\email.png" class="h-[40px] aspect-square mr-10"></div>
+              <div><img src="..\images\phone.png" class="h-[40px] aspect-square mr-10"></div>
+            </div>
+            <div class="pt-2">
+              <p>S.B. Cabahug St., Centro, Mandaue City (Beside San Antonio Bakeshop)</p>
+            </div>
+        </div>
+        
+      </footer>
+
+      <div class="h-[200px] w-full bg-slate-800 text-white hidden">
+        Test Area
+        <br>
+        <button id="testBtn" class="w-20 h-10 border border-white rounded-full">
+          testBtn
+        </button>
+
+        <div id="testDiv" class="h-[100px] w-[150px] scale-x-0 hover:scale-x-100 scale-y-100 border border-white transition ease-linear bg-slate-400"></div>
+
+
+
+      </div>
+    </div> <!-- End of Main Content --> 
+    
+	  <script src="main.js"></script>
+    <script src="test.js"></script>
+
+    
+  </body>
+</html>
