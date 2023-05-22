@@ -2,9 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-
 @layer utilities {
-    .borders {
+
+    .borders{
         border: 1px dashed black;
     }
 }

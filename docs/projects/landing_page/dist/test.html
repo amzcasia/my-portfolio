@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="output.css">
+        <link rel="stylesheet" href="styles.css">
+
+        <title>Test</title>
+    </head>
+    <body>
+        <div>
+            <div class="w-[500px] h-[500px] borders overflow-visible mx-auto">
+                <div id="promo_background" class="h-full w-full absolute flex">
+                    <img src="promo_5.jpg" class="h-[500px] w-[500px]">
+                    <img src="promo_5.jpg" class="h-[500px] w-[500px]">
+                    <img src="promo_5.jpg" class="h-[500px] w-[500px]">
+                    <img src="promo_5.jpg" class="h-[500px] w-[500px]">
+                </div>
+            </div>
+            <div class="w-[500px] mx-auto flex justify-between">
+                <button id="prev_btn" class="border-[5px] border-black w-20" onclick="moveLeft">Prev</button>
+                <button class="rounded-full h-5 w-5 bg-2"></button>
+                <button class="rounded-full h-5 w-5 bg-2"></button>
+                <button class="rounded-full h-5 w-5 bg-2"></button>
+                <button class="rounded-full h-5 w-5 bg-2"></button>
+                <button id="next_btn" class="border-[5px] border-black w-20" onclick="moveRight()">Next</button>
+            </div>
+        </div>
+
+        <script src="main.js"></script>
+
+
+    </body>
+</html>
