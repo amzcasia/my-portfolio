@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href=".\dist\output.css">
+	<link rel="stylesheet" href=".\dist\styles.css">
+	<link rel="stylesheet" href="styles.css">
+	<title>Document</title>
+	<script src="https://kit.fontawesome.com/c322fa12db.js" crossorigin="anonymous"></script>
+	
+</head>
+<body class="bg-[#10182B] text-[#96A4B9] text-base scroll-smooth w-full relative">
+	<div class="fixed right-[7%] bottom-6 z-[100] md:hiddens"><a href="#navbar" class="p-1 px-3 border border-slate-300 text-lg text-slate-300 rounded-full bg-[#10182B] ">Back to top</a></div>
+	
+	<div class="container_container grid grid-cols-1 md:flex md:px-[7%] w-full relative">
+		<div id="nav_container" class="top-0 left-0 w-full col-span-1 pb-5 lg:text-lg md:w-[28.5%] md:sticky md:top-0 md:h-screen h-[40vh] pl-[7%] md:pl-0 border-y border-slate-500 md:border-0 relative">
+			<!-- w-full lg:w-1/4  h-screen -->
+		  <nav id="navbar" class="left-0 grid h-full">
+			<header class="sticky top-0 flex items-center justify-center pt-5 bg-[#10182B]">
+				<img class="w-10 h-10 -translate-x-4" src="https://raw.githubusercontent.com/amzcasia/amarkc/main/image_hosting/technical_documentation/images/logo.png">
+				<span class="pl-2 -translate-x-4">tailwind CSS</span>
+			</header>
+			<div id="contents" class="grid h-full overflow-y-auto">
+				<a class="nav-link" onclick="highlight(1)" href="#Get_started_with_Tailwind_CSS" class="nav_link"><p class="nav_item">Get started with Tailwind CSS</p></a>
+				<a class="border-l-2 border-gray-500 nav-link sub-menu" onclick="highlight(2)" href="#Installation" ><p>Installation</p></a>
+
+				<a class="nav-link" onclick="highlight(3)" href="#Utility-First_Fundamentals"><p class="nav_item">Utility-First Fundamentals</p></a>
+				<a class="nav-link" onclick="highlight(4)" href="#Responsive_Design"> <p class="nav_item">Responsive Design</p></a>
+				<!-- <div class="grid gap-3 border-l-2 border-gray-500"> -->
+				<a class="border-l-2 border-gray-500 nav-link sub-menu" onclick="highlight(5)" href="#Working_mobile-first" ><p>Working mobile-first</p></a>
+				<a class="border-l-2 border-gray-500 nav-link sub-menu" onclick="highlight(6)" href="#Targeting_a_breakpoint_range" ><p>Targeting a breakpoint range</p></a>
+				<a class="border-l-2 border-gray-500 nav-link sub-menu" onclick="highlight(7)" href="#Targeting_a_single_breakpoint" ><p>Targeting a single breakpoint</p></a>
+				<a class="border-l-2 border-gray-500 nav-link sub-menu" onclick="highlight(8)" href="#Customizing_your_theme" ><p>Customizing your theme</p></a>
+				<!-- </div> -->
+				<a class="nav-link" onclick="highlight(9)" href="#Dark_Mode"><p class="nav_item">Dark Mode</p></a>
+				<a class="border-l-2 border-gray-500 nav-link sub-menu" onclick="highlight(10)" href="#Toggling_dark_mode_manually"><p class="nav_item">Toggling dark mode manually</p></a>
+
+				<a class="nav-link" onclick="highlight(11)" href="#Functions_&_Directives" id=""><p>Functions & Directives</p></a>
+				<!-- <div class="grid gap-5 border-l-2 border-gray-500"> -->
+				<a class="border-l-2 border-gray-500 nav-link sub-menu" onclick="highlight(12)" href="#Directives"><p>Directives</p></a>
+				<a class="border-l-2 border-gray-500 nav-link sub-menu" onclick="highlight(13)" href="#@tailwind"><p>@tailwind</p></a>
+				<a class="border-l-2 border-gray-500 nav-link sub-menu" onclick="highlight(14)" href="#@layer"><p>@layer</p></a>
+				<a class="border-l-2 border-gray-500 nav-link sub-menu" onclick="highlight(15)" href="#@apply" class="pb-5"><p>@apply</p></a>
+			</div>
+			<!-- </div> -->
+		  </nav>
+		</div><!-- End of nav_container-->
+		<div id="main_container" class="col-span-3 md:pl-5 md:w-[71.5%] md:inline-block top-[40vh] px-[7%] md:pr-0">
+		  <main id="main-doc">
+			<section class="main-section" id="Get_started_with_Tailwind_CSS">
+				<header>Get started with Tailwind CSS</header>
+				<p>
+					Tailwind CSS works by scanning all of your HTML files, JavaScript components, and any other templates for class names, generating the corresponding styles and then writing them to a static CSS file. It's fast, flexible, and reliable — with zero-runtime.
+				</p>
+			</section>
+			<section class="main-section" id="Installation">
+				<header class="">Installation</header>
+				
+				<p class="">The simplest and fastest way to get up and running with Tailwind CSS from scratch is with the Tailwind CLI tool. The CLI is also available as a standalone executable if you want to use it without installing Node.js.</p>
+				<ol class="pt-5 pl-5 list-decimal">
+					<li class="list">
+						<h3>Install Tailwind CSS</h3>
+						<p>Install tailwindcss via npm, and create your tailwind.config.js file.</p>
+						<div class="code_box ">
+							<div class="flex items-center justify-between px-5 pt-1 bg-slate-900 rounded-t-xl">
+								<div class="tab">Terminal</div>
+								<div>
+									<span id="code1" class="hidden pl-1 mr-1 text-base transition duration-200 border rounded-md opacity-0 bg-slate-500 border-slate-500 text-slate-900" >
+										<i class="fa-solid fa-caret-down"></i>
+										Copied
+									</span>
+									<button onclick="copy('code_1','code1')" class="duration-200 hover:text-slate-700">
+										<i class="text-xl fa-solid fa-copy"></i>
+									</button>
+								</div>
+							</div>
+<pre id="code_1" class="p-2">
+npm install -D tailwindcss
+npx tailwindcss init
+</pre>
+						</div> <!-- End of Code Container-->
+					</li>
+					<li>
+						<h3>Configure your template paths</h3>
+						<p>Add the paths to all of your template files in your  <code>tailwind.config.js</code class=""> file.</p>
+						<div class="code_box">
+							<div class="flex items-center justify-between px-5 pt-1 bg-slate-900 rounded-t-xl">
+								<div class="tab">Tailwind.config.js</div>
+								<div>
+									<span id="code2" class="hidden pl-1 mr-1 text-base transition duration-200 border rounded-md opacity-0 bg-slate-500 border-slate-500 text-slate-900" >
+										<i class="fa-solid fa-caret-down"></i>
+										Copied
+									</span>
+									<button onclick="copy('code_2','code2')" class="duration-200 hover:text-slate-700">
+										<i class="text-xl fa-solid fa-copy"></i>
+									</button>
+								</div>
+							</div>
+<pre id="code_2" class="p-2">
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+	content: ["./src/**/*.{html,js}"],
+	theme: { 
+		extend: {},
+	},
+	plugins: [],
+}
+</pre>
+						</div> <!-- End of Code Container-->
+					</li>
+					<li>
+						<h3>Add the Tailwind directives to your CSS</h3>
+						<p>Add the @tailwind directives for each of Tailwind’s layers to your main CSS file.</p>
+						<div class="code_box">
+							<div class="flex items-center justify-between px-5 pt-1 bg-slate-900 rounded-t-xl">
+								<div class="tab">src/input.css</div>
+								<div>
+									<span id="code3" class="hidden pl-1 mr-1 text-base transition duration-200 border rounded-md opacity-0 bg-slate-500 border-slate-500 text-slate-900" >
+										<i class="fa-solid fa-caret-down"></i>
+										Copied
+									</span>
+									<button onclick="copy('code_3','code3')" class="duration-200 hover:text-slate-700">
+										<i class="text-xl fa-solid fa-copy"></i>
+									</button>
+								</div>
+							</div>
+<pre id="code_3" class="p-2">
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+</pre>
+						</div>
+					</li>
+					<li>
+						<h3>Start the Tailwind CLI build process</h3>
+						<p>Run the CLI tool to scan your template files for classes and build your CSS.</p>
+						<div class="code_box">
+							<div class="flex items-center justify-between px-5 pt-1 bg-slate-900 rounded-t-xl">
+								<div class="tab">Terminal</div> <!-- Tab Title Here -->
+								<div>
+									<span id="code4" class="hidden pl-1 mr-1 text-base transition duration-200 border rounded-md opacity-0 bg-slate-500 border-slate-500 text-slate-900" >
+										<i class="fa-solid fa-caret-down"></i>
+										Copied
+									</span>
+									<button onclick="copy('code_4','code4')" class="duration-200 hover:text-slate-700">
+										<i class="text-xl fa-solid fa-copy"></i>
+									</button>
+								</div>
+							</div>
+<pre id="code_4" class="p-2">
+npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch
+</pre>
+						</div>
+					</li>
+
+					<li>Start using Tailwind in your HTML
+						<p>Add your compiled CSS file to the <head> and start using Tailwind’s utility classes to style your content.</p>
+							<div class="code_box">
+								<div class="flex items-center justify-between px-5 pt-1 bg-slate-900 rounded-t-xl">
+									<div class="tab">src/index.html</div> <!-- Tab Title Here -->
+									<div>
+										<span id="code5" class="hidden pl-1 mr-1 text-base transition duration-200 border rounded-md opacity-0 bg-slate-500 border-slate-500 text-slate-900" >
+											<!-- Replace codex -->
+											<i class="fa-solid fa-caret-down"></i>
+											Copied
+										</span>
+										<button onclick="copy('code_5','code5')" class="duration-200 hover:text-slate-700">
+											<!-- Replace (code_x, codex) -->
+											<i class="text-xl fa-solid fa-copy"></i>
+										</button>
+									</div>
+								</div>
+							<!-- replace code_x -->
+<pre id="code_5" class="p-2">
+&lt;!doctype html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta charset="UTF-8"&gt;
+&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+&lt;link href="/dist/output.css" rel="stylesheet"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h1 class="text-3xl font-bold underline"&gt;
+	Hello world!
+&lt;/h1&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+							</div>
+						</code>
+					</li>
+				</ol>
+			</section>
+			<section class="main-section" id="Utility-First_Fundamentals">
+			<header class="sticky top-0">Utility-First Fundamentals</header>
+			<p>
+				Traditionally, whenever you need to style something on the web, you write CSS.
+				With Tailwind, you style elements by applying pre-existing classes directly in your HTML.
+				This approach allows us to implement a completely custom component design without writing a single line of custom CSS.
+				Now I know what you&apos;re thinking, “this is an atrocity, what a horrible mess!” and you’re right, it’s kind of ugly. In fact it’s just about impossible to think this is a good idea the first time you see it — you have to actually try it.		
+			</p>
+			<p>But once you’ve actually built something this way, you’ll quickly notice some really important benefits:</p>
+			<ul class="pl-5 list-disc">
+				<li>You aren’t wasting energy inventing class names. No more adding silly class names like sidebar-inner-wrapper just to be able to style something, and no more agonizing over the perfect abstract name for something that’s really just a flex container.</li>
+				<li>Your CSS stops growing. Using a traditional approach, your CSS files get bigger every time you add a new feature. With utilities, everything is reusable so you rarely need to write new CSS.</li>
+				<li>Making changes feels safer. CSS is global and you never know what you’re breaking when you make a change. Classes in your HTML are local, so you can change them without worrying about something else breaking.</li>
+			</ul>
+			<p>When you realize how productive you can be working exclusively in HTML with predefined utility classes, working any other way will feel like torture.</p>
+			  
+			</section>
+			<section class="main-section" id="Responsive_Design">
+			<header>Responsive Design</header>
+			<p>Using responsive utility variants to build adaptive user interfaces.
+				Every utility class in Tailwind can be applied conditionally at different breakpoints, which makes it a piece of cake to build complex responsive interfaces without ever leaving your HTML.
+				There are five breakpoints by default, inspired by common device resolutions:
+			</p>	
+			<img src=".\images\image_1.png">	
+			<p>To add a utility but only have it take effect at a certain breakpoint, all you need to do is prefix the utility with the breakpoint name, followed by the : character:
+				
+				</p>		
+			<code>
+				<div>
+				&lt;!-- Width of 16 by default, 32 on medium screens, and 48 on large screens --&gt;<br>
+				&lt;img class="w-16 md:w-32 lg:w-48" src="..."&gt;<br>
+				</div>
+			</code>
+			</section>
+			<section class="main-section" id="Working_mobile-first">
+				<header>Working mobile-first</header>
+				<p>By default, Tailwind uses a mobile-first breakpoint system, similar to what you might be used to in other frameworks like Bootstrap.
+					What this means is that unprefixed utilities (like uppercase) take effect on all screen sizes, while prefixed utilities (like md:uppercase) only take effect at the specified breakpoint and above.
+					</p>
+			</section>
+			<section class="main-section" id="Targeting_a_breakpoint_range">
+				<header>Targeting a breakpoint range</header>
+				<p>
+					By default, styles applied by rules like md:flex will apply at that breakpoint and stay applied at larger breakpoints.
+
+					If you’d like to apply a utility only when a specific breakpoint range is active, stack a responsive modifier like md with a max-* modifier to limit that style to a specific range:
+					<code>
+						<div class="borders">
+							&lt;div class="md:max-xl:flex"&gt;<br>
+							&lt;!-- ... --&gt;<br>
+							&lt;/div&gt;
+						</div>
+					</code>
+					Tailwind generates a corresponding max-* modifier for each breakpoint, so out of the box the following modifiers are available:
+					<img src=".\images\image_2.png">
+
+				</p>
+			</section>
+			<section class="main-section" id="Targeting_a_single_breakpoint">
+				<header>Targeting a single breakpoint</header>
+				<p>
+					To target a single breakpoint, target the range for that breakpoint by stacking a responsive modifier like md with the max-* modifier for the next breakpoint:
+				</p>
+				<code>
+					<div>
+						&lt;div class="md:max-lg:flex"&gt;<br>
+						&lt;!-- ... --&gt;<br>
+						&lt;/div&gt;
+					</div>
+				</code>
+				<p>
+					Adding Custom Styles
+					Best practices for adding your own custom styles to Tailwind.
+
+					Often the biggest challenge when working with a framework is figuring out what you’re supposed to do when there’s something you need that the framework doesn’t handle for you.
+
+					Tailwind has been designed from the ground up to be extensible and customizable, so that no matter what you’re building you never feel like you’re fighting the framework.
+
+					This guide covers topics like customizing your design tokens, how to break out of those constraints when necessary, adding your own custom CSS, and extending the framework with plugins.
+
+				</p>
+			</section>
+			<section class="main-section" id="Customizing_your_theme">
+				<header>Customizing your theme</header>
+				<p>
+					If you want to change things like your color palette, spacing scale, typography scale, or breakpoints, add your customizations to the theme section of your tailwind.config.js file:
+				</p>
+				<code>
+					<div>
+						Tailwind.config.js:<br>
+						module.exports = {<br>
+						theme: {<br>
+							screens: {<br>
+							sm: '480px',<br>
+							md: '768px',<br>
+							lg: '976px',<br>
+							xl: '1440px',<br>
+							},<br>
+							colors: {<br>
+							'blue': '#1fb6ff',<br>
+							'pink': '#ff49db',<br>
+							'orange': '#ff7849',<br>
+							'green': '#13ce66',<br>
+							'gray-dark': '#273444',<br>
+							'gray': '#8492a6',<br>
+							'gray-light': '#d3dce6',<br>
+							},<br>
+							fontFamily: {<br>
+							sans: ['Graphik', 'sans-serif'],<br>
+							serif: ['Merriweather', 'serif'],<br>
+							},<br>
+							extend: {<br>
+							spacing: {<br>
+								'128': '32rem',<br>
+								'144': '36rem',<br>
+							},<br>
+							borderRadius: {<br>
+								'4xl': '2rem',<br>
+							}<br>
+							}<br>
+						}<br>
+					}
+					</div>
+				</code>
+			</section>
+			<section class="main-section" id="Dark_Mode">
+			  <header>Dark Mode</header>
+			  <p>Now that dark mode is a first-class feature of many operating systems, it’s becoming more and more common to design a dark version of your website to go along with the default design.
+
+				To make this as easy as possible, Tailwind includes a dark variant that lets you style your site differently when dark mode is enabled:
+				</p>
+				<img src=".\images\image_3.png">
+				<code>
+					<div>
+						&lt;div class="px-6 py-8 bg-white rounded-lg shadow-xl dark:bg-slate-800 ring-1 ring-slate-900/5"&gt;<br>
+						&lt;div&gt;<br>
+						&lt;span class="inline-flex items-center justify-center p-2 bg-indigo-500 rounded-md shadow-lg"&gt;<br>
+						&lt;svg class="w-6 h-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"&gt;&lt;!-- ... --&gt;&lt;/svg&gt;<br>
+						&lt;/span&gt;<br>
+						&lt;/div&gt;<br>
+						&lt;h3 class="mt-5 text-base font-medium tracking-tight text-slate-900 dark:text-white">Writes Upside-Down</h3><br>
+						&lt;p class="mt-2 text-sm text-slate-500 dark:text-slate-400"&gt;<br>
+							The Zero Gravity Pen can be used to write in any orientation, including upside-down. It even works in outer space.<br>
+							&lt;/p&gt;<br>
+							&lt;/div&gt;<br>
+					</div>
+				</code>
+			</section>
+			<section class="main-section" id="Toggling_dark_mode_manually">
+				<header>Toggling dark mode manually</header>
+				<p>If you want to support toggling dark mode manually instead of relying on the operating system preference, use the class strategy instead of the media strategy:</p>
+				<code>
+					<div>
+						Tailwind.config.js<br>
+						module.exports = {<br>
+						darkMode: 'class',<br>
+						// ...<br>
+						}
+					</div>
+				</code>
+				<p>
+					Now instead of dark:{class} classes being applied based on prefers-color-scheme, they will be applied whenever dark class is present earlier in the HTML tree.
+				</p>
+				<code>
+					<div>
+					&lt;!-- Dark mode not enabled --&gt;<br>
+					&lt;html&gt;<br>
+					&lt;body&gt;<br>
+					&lt;!-- Will be white --&gt;<br>
+					&lt;div class="bg-white dark:bg-black"&gt;<br>
+					&lt;!-- ... --&gt;<br>
+					&lt;/div&gt;<br>
+					&lt;/body&gt;<br>
+					&lt;/html&gt;<br>
+					<br>
+					&lt;!-- Dark mode enabled --&gt;<br>
+					&lt;html class="dark"&gt;<br>
+					&lt;body&gt;<br>
+					&lt;!-- Will be black --&gt;<br>
+					&lt;div class="bg-white dark:bg-black"&gt;<br>
+					&lt;!-- ... --&gt;<br>
+					&lt;/div&gt;<br>
+					&lt;/body&gt;<br>
+					&lt;/html&gt;
+					</div>
+				</code>
+			</section>
+			<section class="main-section" id="Functions_&_Directives">
+				<header>Functions & Directives</header>
+				<p>A reference for the custom functions and directives Tailwind exposes to your CSS.</p>
+
+			</section>
+			<section class="main-section" id="Directives">
+				<header>Directives</header>
+				<p>Directives are custom Tailwind-specific at-rules you can use in your CSS that offer special functionality for Tailwind CSS projects.</p>
+			</section>
+			<section class="main-section" id="@tailwind">
+				<header>@tailwind</header>
+				<p>Use the @tailwind directive to insert Tailwind’s base, components, utilities and variants styles into your CSS.</p>
+				<code>
+					<div>
+					/**<br>
+					* This injects Tailwind's base styles and any base styles registered by<br>
+					* plugins.<br>
+					*/<br>
+					@tailwind base;<br>
+					<br>
+					/**<br>
+					* This injects Tailwind's component classes and any component classes<br>
+					* registered by plugins.<br>
+					*/<br>
+					@tailwind components;<br>
+					<br>
+					/**<br>
+					* This injects Tailwind's utility classes and any utility classes registered<br>
+					* by plugins.<br>
+					*/<br>
+					@tailwind utilities;<br>
+					<br>
+					/**<br>
+					* Use this directive to control where Tailwind injects the hover, focus,<br>
+					* responsive, dark mode, and other variants of each class.<br>
+					*<br>
+					* If omitted, Tailwind will append these classes to the very end of<br>
+					* your stylesheet by default.<br>
+					*/<br>
+					@tailwind variants;
+					</div>
+
+				</code>
+
+			</section>
+			<section class="main-section" id="@layer">
+				<header>@layer</header>
+				<p>Use the @layer directive to tell Tailwind which “bucket” a set of custom styles belong to. Valid layers are base, components, and utilities.</p>
+				<code>
+					<div>
+						@tailwind base;<br>
+						@tailwind components;<br>
+						@tailwind utilities;<br>
+						<br>
+						@layer base {<br>
+						h1 {<br>
+							@apply text-2xl;<br>
+						}<br>
+						h2 {<br>
+							@apply text-xl;<br>
+						}<br>
+						}<br>
+						<br>
+						@layer components {<br>
+						.btn-blue {<br>
+							@apply bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded;<br>
+						}<br>
+						}<br>
+						<br>
+						@layer utilities {<br>
+						.filter-none {<br>
+							filter: none;<br>
+						}<br>
+						.filter-grayscale {<br>
+							filter: grayscale(100%);<br>
+						}<br>
+						}
+					</div>
+				</code>
+				<p>Wrapping any custom CSS with @layer also makes it possible to use modifiers with those rules, like hover: and focus: or responsive modifiers like md: and lg:.</p>
+			</section>
+			<section class="main-section" id="@apply">
+				<header>@apply</header>
+				<p>
+					Use @apply to inline any existing utility classes into your own custom CSS.
+
+				This is useful when you need to write custom CSS (like to override the styles in a third-party library) but still want to work with your design tokens and use the same syntax you’re used to using in your HTML.
+				</p>
+				<code>
+					<div>
+						.select2-dropdown {<br>
+						@apply rounded-b-lg shadow-md;<br>
+						}<br>
+						.select2-search {<br>
+						@apply border border-gray-300 rounded;<br>
+						}
+					</div>
+
+				</code>
+			</section>
+		  </main>
+		</div><!-- end of main_container-->
+	  </div><!-- end of container_container-->
+
+	  <script src=".\dist\main.js"></script>
+
+	  <script>
+
+
+
+	  </script>
+</body>
+</html>
