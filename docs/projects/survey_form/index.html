@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Delivery</title>
+	<link rel="stylesheet" href=".\dist\output.css">
+	<link rel="stylesheet" href=".\dist\styles.css">
+</head>
+<body>
+	<header class="overflow-hidden">
+		<a  class="max-w-[600px] h-auto  aspect-[2]" href="https://www.shakeyspizza.ph" target="_blank">
+			<img class=" w-full max-w-[600px] h-auto aspect-[2] mx-auto py-4" src="https://raw.githubusercontent.com/amzcasia/file-host/main/docs/survey-form/images/pizza_1.png"></a>
+	</header>
+	<div class="w-full px-5">
+		<div id="mainContent" class="max-w-[800px] mx-auto bg-white rounded-xl my-5 px-5 overflow">
+			<div class="grid py-8 text-center justify-items-center">
+				<h1 id="title" class="text-2xl font-bold lg:text-5xl">
+					THERE'S NO<span class="text-[#EE3A43]">THIN</span>'LIKE
+				</h1>
+				<img class="max-h-[100px] my-2" src="https://raw.githubusercontent.com/amzcasia/file-host/main/docs/survey-form/images/logo.png">
+				
+				<span class="text-2xl lg:text-5xl font-bold text-[#EE3A43]">ORIGINAL THIN CRUST PIZZA</span>
+				<p id="description" class="pt-4 text-lg lg:text-2xl">Order your favorite pizza now!</p>
+			</div>
+			<form id=survey-form class="grid w-full gap-4" name="survey_form" action="https://formsubmit.co/strikefrdm23@gmail.com" method="POST">
+				<input type="hidden" name="_subject" value="Survey Form - FCC Pizza">
+				<div class="grid gap-2">
+					<label id="name-label"  class="text-lg">Name</label>
+					<input type="text" id="name" name="name" class="h-10 p-5 border border-black" placeholder="Enter full name" required>
+				</div>
+				<div class="grid gap-2">
+					<label id="email-label" class="text-lg" >Email:</label>
+					<input type="email" id="email" name="email" class="h-10 p-5 border border-black" placeholder="Enter email" required>
+				</div>
+				
+				<div class="grid gap-2">
+					<label  class="text-lg">Select Pizza: </label>
+					<select  id="dropdown" name="pizza_type" class="h-10 px-5 border border-black">
+						<option>Hawaiian</option>
+						<option>Pepperoni</option>
+						<option>All Meat</option>
+						<option>All-In</option>
+					</select>
+				</div>
+				<div>
+
+					<label  class="text-lg">Select Variation</label>
+					<ul class="grid gap-4 px-5 pt-2">
+						<li><input type="radio" name="variation" value="9" required>
+							<label class="pl-2">Regular 9-inch</label></li>
+						<li><input type="radio" name="variation" value="12">
+							<label class="pl-2">Large 12-inch</label></li>
+						<li><input type="radio" name="variation" value="14">
+							<label class="pl-2">Party 14-inch</label></li>
+					</ul>
+				</div>
+				<div>
+					<span class="text-lg">Frequently bought together</span>
+					<ul class="grid gap-4 px-5 pt-2">
+						<li><input type="checkbox" name="addon_1" value="value4"><label class="pl-2">1.5L Coke</label></li>
+						<li><input type="checkbox" name="addon_2" value="value5"><label class="pl-2">Potato Mojos</label></li>
+						<li><input type="checkbox" name="addons_3" value="value5"><label class="pl-2">Extra Ketchup & Hot Sauce</label></li>
+					</ul>
+				</div>
+				<div class="grid">
+					<label  class="text-lg">Special Instructions</label>
+					<!-- <div class="mt-3 border border-black"> -->
+						<textarea id="special_instructions" class="px-5 mt-3 border border-black" name="special_instructions" rows="4" cols="50" class="w-full h-full px-5" placeholder="e.g. &quot;no utensils&quot;">
+						
+						</textarea>
+					<!-- </div> -->
+				</div>
+				<div class="grid gap-2">
+					<label  id="number-label" class="text-lg">Order Quantity:</label>
+					<input type="number" name="quantity" class="h-10 p-5 border border-black" id="number" min="1" max="12" placeholder="1-12" required>
+				</div>
+				<!-- <div class="flex justify-center mb-5 border border-black"> -->
+				<button type="submit" id="submit"
+				class="bg-[#EE3A43] text-2xl py-2 text-yellow-300 w-full border-2 rounded-lg border-red-700 mb-5
+				hover:opacity-80 duration-300">
+				Add to Cart</button> 
+				<!-- </div> -->
+			</form>
+		</div>
+	</div>
+	<footer class="h-[60px]">
+
+	</footer>
+	
+
+</body>
+</html>
