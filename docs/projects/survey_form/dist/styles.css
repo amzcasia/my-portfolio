@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500&display=swap');
+
+body {
+    font-family: 'Roboto Slab', serif;
+    font-size: 1rem;   
+    line-height: 1.5rem;
+    background-color: #afafaf;
+
+}
+
+.borders {
+    border: 1px dashed black;
+    
+}
+
+header, footer {
+    background-color: #e5e5f7;
+    opacity: 0.8;
+    background-image: linear-gradient(to right, #ED1B24, #ED1B24 60px, #F36523 60px, #F36523 );
+    background-size: 120px 100%;
+}
+
+.border {
+    border-radius: 0.5rem;
+}
