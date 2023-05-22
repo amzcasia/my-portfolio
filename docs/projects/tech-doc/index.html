@@ -6,24 +6,27 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href=".\dist\output.css">
 	<link rel="stylesheet" href=".\dist\styles.css">
-	<link rel="stylesheet" href="styles.css">
+	<!-- <link rel="stylesheet" href="styles.css"> -->
 	<title>Document</title>
 	<script src="https://kit.fontawesome.com/c322fa12db.js" crossorigin="anonymous"></script>
+	<script src=".\dist\main.js" defer></script>
 	
 </head>
-<body class="bg-[#10182B] text-[#96A4B9] text-base scroll-smooth w-full relative">
-	<div class="fixed right-[7%] bottom-6 z-[100] md:hiddens"><a href="#navbar" class="p-1 px-3 border border-slate-300 text-lg text-slate-300 rounded-full bg-[#10182B] ">Back to top</a></div>
+<body class="bg-[#10182B] text-[#96A4B9] text-base md:text-lg w-full relative scroll-smooth"> 
+	<div id="firstDiv" class="w-full"></div>
+	<div id="backtoTopSmall" class="fixed right-[7%] bottom-6 z-[100] md:hidden"><a href="#navbar" class="p-1 px-3 border border-slate-300 text-xl text-slate-300 rounded-full bg-[#10182B] ">Back to top</a></div>
+	<div id="backtoTopMedium" class="fixed right-[7%] bottom-6 z-[100] hidden md:block p-1 px-3"><a href="#main-doc" class="p-1 px-3 pb-2 text-xl border rounded-full border-slate-300 text-slate-300 bg-[#10182B]">Back to top</a></div> <!--   -->
 	
 	<div class="container_container grid grid-cols-1 md:flex md:px-[7%] w-full relative">
-		<div id="nav_container" class="top-0 left-0 w-full col-span-1 pb-5 lg:text-lg md:w-[28.5%] md:sticky md:top-0 md:h-screen h-[40vh] pl-[7%] md:pl-0 border-y border-slate-500 md:border-0 relative">
+		<div id="nav_container" class=" top-0 left-0 w-full col-span-1 pb-5 md:pb-0 lg:text-lg md:w-[28.5%] md:sticky md:top-0 md:h-screen h-[40vh] pl-[7%] md:pl-0 border-y border-slate-500 md:border-0 relative">
 			<!-- w-full lg:w-1/4  h-screen -->
-		  <nav id="navbar" class="left-0 grid h-full">
-			<header class="sticky top-0 flex items-center justify-center pt-5 bg-[#10182B]">
+		  <nav id="navbar" class="left-0 grid h-full text-xl">
+			<header id="brand" class="sticky top-0 flex items-center justify-center bg-[#10182B] pb-2">
 				<img class="w-10 h-10 -translate-x-4" src="https://raw.githubusercontent.com/amzcasia/amarkc/main/image_hosting/technical_documentation/images/logo.png">
-				<span class="pl-2 -translate-x-4">tailwind CSS</span>
+				<span class="pl-2 text-3xl text-white -translate-x-4">tailwind CSS</span>
 			</header>
 			<div id="contents" class="grid h-full overflow-y-auto">
-				<a class="nav-link" onclick="highlight(1)" href="#Get_started_with_Tailwind_CSS" class="nav_link"><p class="nav_item">Get started with Tailwind CSS</p></a>
+				<a id="firstNav" class="nav-link" onclick="highlight(1)" href="#Get_started_with_Tailwind_CSS" class="nav_link"><p class="nav_item">Get started with Tailwind CSS</p></a>
 				<a class="border-l-2 border-gray-500 nav-link sub-menu" onclick="highlight(2)" href="#Installation" ><p>Installation</p></a>
 
 				<a class="nav-link" onclick="highlight(3)" href="#Utility-First_Fundamentals"><p class="nav_item">Utility-First Fundamentals</p></a>
@@ -43,6 +46,7 @@
 				<a class="border-l-2 border-gray-500 nav-link sub-menu" onclick="highlight(13)" href="#@tailwind"><p>@tailwind</p></a>
 				<a class="border-l-2 border-gray-500 nav-link sub-menu" onclick="highlight(14)" href="#@layer"><p>@layer</p></a>
 				<a class="border-l-2 border-gray-500 nav-link sub-menu" onclick="highlight(15)" href="#@apply" class="pb-5"><p>@apply</p></a>
+				<div id="lastNav" class="w-full"></div>
 			</div>
 			<!-- </div> -->
 		  </nav>
@@ -50,7 +54,7 @@
 		<div id="main_container" class="col-span-3 md:pl-5 md:w-[71.5%] md:inline-block top-[40vh] px-[7%] md:pr-0">
 		  <main id="main-doc">
 			<section class="main-section" id="Get_started_with_Tailwind_CSS">
-				<header>Get started with Tailwind CSS</header>
+				<header class="">Get started with Tailwind CSS</header>
 				<p>
 					Tailwind CSS works by scanning all of your HTML files, JavaScript components, and any other templates for class names, generating the corresponding styles and then writing them to a static CSS file. It's fast, flexible, and reliable — with zero-runtime.
 				</p>
@@ -240,7 +244,7 @@ npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch
 
 					If you’d like to apply a utility only when a specific breakpoint range is active, stack a responsive modifier like md with a max-* modifier to limit that style to a specific range:
 					<code>
-						<div class="borders">
+						<div class="">
 							&lt;div class="md:max-xl:flex"&gt;<br>
 							&lt;!-- ... --&gt;<br>
 							&lt;/div&gt;
@@ -483,8 +487,8 @@ npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch
 		  </main>
 		</div><!-- end of main_container-->
 	  </div><!-- end of container_container-->
-
-	  <script src=".\dist\main.js"></script>
+	  <div id="lastDiv" class="w-full"></div>
+	  
 
 	  <script>
 
