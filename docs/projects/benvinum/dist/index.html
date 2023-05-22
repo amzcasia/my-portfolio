@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="output.css">
+    <link rel="stylesheet" href="styles.css">
+
+    <title>Benvinum | Fine Wine Merchants</title>
+</head>
+<body class="grid">
+    <header class="relative flex items-center justify-between px-10 py-2 bg-white z-[101] border-b-4 border-gray">
+        <button id="menuBtn" class="block w-6 h-6 lg:hidden">
+            <svg id="menuHamburger" class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
+                <path fillRule="evenodd" d="M3 6.75A.75.75 0 013.75 6h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 6.75zM3 12a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 12zm0 5.25a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75z" clipRule="evenodd" />
+            </svg>
+
+            <svg id="menuClose" class="hidden w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
+                <path fillRule="evenodd" d="M5.47 5.47a.75.75 0 011.06 0L12 10.94l5.47-5.47a.75.75 0 111.06 1.06L13.06 12l5.47 5.47a.75.75 0 11-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 01-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 010-1.06z" clipRule="evenodd" />
+              </svg>
+              
+              
+            </button>
+        <div class="flex brand">
+            <div class="hidden lg:block logo h-[50px] w-[50px] mr-2 pt-2">
+                <img src="..\images\glass-and-bottle-of-wine.png" class="h-[50px] w-[50px]">
+            </div>
+            <div class="flex flex-col items-center brand_name">
+                <span class="text-2xl">
+                    BENVINUM
+                </span>
+                <span class="hidden text-lg lg:inline">
+                    Fine Wine Merchants
+                </span>
+            </div>
+        </div>
+        <nav class="hidden lg:block">
+            <ul class="flex items-center content-center h-full gap-6 text-2xl">
+                <li class="transition duration-300 ease-in-out hover:text-primary-light"><a href="#">Home</a></li>
+                <li class="transition duration-300 ease-in-out hover:text-primary-light"><a href="#">Our Wines</a></li>
+                <li class="transition duration-300 ease-in-out hover:text-primary-light"><a href="#">Contacts</a></li>
+                <li class="transition duration-300 ease-in-out hover:text-primary-light"><a href="#">On Sale</a></li>
+                <li class="transition duration-300 ease-in-out hover:text-primary-light"><a href="#">News & Events</a></li>
+            </ul>   
+        </nav>
+        <div class="flex h-full gap-3 cart">
+            <!-- <div class="w-10 h-10 bg-primary"> 
+                <svg class='w-10 h-10 text-white' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
+                    <path fillRule="evenodd" d="M10.5 3.75a6.75 6.75 0 100 13.5 6.75 6.75 0 000-13.5zM2.25 10.5a8.25 8.25 0 1114.59 5.28l4.69 4.69a.75.75 0 11-1.06 1.06l-4.69-4.69A8.25 8.25 0 012.25 10.5z" clipRule="evenodd" />
+                  </svg>
+                  
+            </div> -->
+            <button class="w-8 h-8 duration-300 ease-in-out bg-primary hover:bg-primary-light transtion">
+                <svg class="w-8 h-8 text-white " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
+                    <path d="M2.25 2.25a.75.75 0 000 1.5h1.386c.17 0 .318.114.362.278l2.558 9.592a3.752 3.752 0 00-2.806 3.63c0 .414.336.75.75.75h15.75a.75.75 0 000-1.5H5.378A2.25 2.25 0 017.5 15h11.218a.75.75 0 00.674-.421 60.358 60.358 0 002.96-7.228.75.75 0 00-.525-.965A60.864 60.864 0 005.68 4.509l-.232-.867A1.875 1.875 0 003.636 2.25H2.25zM3.75 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0zM16.5 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0z" />
+                </svg>
+            </button>  
+            
+        </div>
+        
+        
+    </header>
+    <!-- <div class="relative bg-gray"> -->
+        <nav id="navMenu" class="pb-5 bg-white lg:hidden w-full z-[100] h-0 overflow-hidden hidden pt-4"> <!-- hidden  z-[-1]-->
+            <ul id="navItems" class="grid items-center content-center h-full gap-3 pl-10 text-2xl">
+                <li class="transition duration-300 ease-in-out hover:text-primary-light"><a href="#">Home</a></li>
+                <li class="transition duration-300 ease-in-out hover:text-primary-light"><a href="#">Our Wines</a></li>
+                <li class="transition duration-300 ease-in-out hover:text-primary-light"><a href="#">Contacts</a></li>
+                <li class="transition duration-300 ease-in-out hover:text-primary-light"><a href="#">On Sale</a></li>
+                <li class="transition duration-300 ease-in-out hover:text-primary-light"><a href="#">News & Events</a></li>
+            </ul>   
+        </nav>
+    <!-- </div> -->
+    <div class="flex h-10 pl-10 text-white header_contact bg-gray">
+        <div class="flex items-center">
+            <svg class='w-6 h-6' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
+                <path fillRule="evenodd" d="M1.5 4.5a3 3 0 013-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 01-.694 1.955l-1.293.97c-.135.101-.164.249-.126.352a11.285 11.285 0 006.697 6.697c.103.038.25.009.352-.126l.97-1.293a1.875 1.875 0 011.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 01-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 6.75V4.5z" clipRule="evenodd" />
+              </svg>
+              
+            <span class="pl-2 text-sm lg:pl-2 lg:text-base">999 - 9999</span>
+        </div>
+        <div class="flex items-center pl-5 lg:pl-10">
+            <svg class='w-6 h-6' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
+                <path d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z" />
+                <path d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z" />
+              </svg>
+              
+            <span class="pl-2 text-sm lg:text-base">samplemail@email.com</span>
+        </div>
+    </div>
+    <div class="w-full main_content">
+        <section class="relative grid grid-cols-1 p-4 text-2xl text-white lg:min-h-[75vh] justify-items-center bg-primary-dark"> <!-- h-[75vh] -->
+            <div class="absolute w-full h-full overflow-hidden opacity-50 bg-primary-light bg-hero">
+                <!-- <img src="..\images\wine_1.jpg" class="absolute top-[-50%] left-0 right-0 mx-auto w-full opacity-50 blur-sm"> -->
+            </div>
+            <div  class="z-50 grid content-center justify-items-center">
+                <h1 class="text-5xl text-center lg:text-7xl text-bold">
+                    HIGH QUALITY WINES
+                </h1>
+                <p class="pt-10 pb-20 text-center">
+                    Lorem ipsum dolor sit amet. Vel cumque reprehenderit sit porro.<br>
+                    totam quo galisum nulla. Qui quam dolore et earum
+                </p>
+                <button class="yellow transition ease-in-out duration-300 h-[50px] mb-5">
+                    Tell Me More
+                </button>
+            </div>
+            
+        </section> <!-- End of Hero-->
+        <section class="grid text-4xl font-bold text-center text-white lg:grid-cols-3 bg-primary-dark">
+            <div class="relative flex justify-center overflow- bg-primary-dark">
+                <!-- <a href="#" class="absolute top-0 bottom-0 w-full h-full py-5 my-auto overflow-hidden"> -->
+                    <div class="absolute top-0 bottom-0 w-full h-full my-auto overflow-hidden">
+                        <img class="absolute top-[100%] bottom-0 object-none my-auto opacity-30 " src="..\images\wine_5.jpg">
+                    </div>
+                    <a class="z-50 my-5 transition duration-300 ease-in-out hover:text-primary-light" href="#">
+                    <span class="">NEW<br>ARRIVALS</span>
+                    </a>
+                <!-- </a> -->
+            </div>
+            <div class="relative flex justify-center bg-primary-dark">
+                <div class="absolute w-full h-full overflow-hidden topRated">
+                    <img class="absolute top-[-200%] left-0 w-full h-auto opacity-30" src="..\images\wine_7.jpg">
+                </div>
+                <a class="z-50 my-5 transition duration-300 ease-in-out hover:text-primary-light" href="#">
+                    <span class="">TOP-RATED<br>WINES</span>
+                    </a>
+            </div>
+            <div class="relative flex justify-center bg-primary-dark">
+                <div class="absolute w-full h-full overflow-hidden">
+                    <img class="absolute top-[-100%] bottom-0 w-full h-auto my-auto opacity-30" src="..\images\wine_6.jpg">
+                </div>
+                <a class="z-50 my-5 transition duration-300 ease-in-out hover:text-primary-light" href="#">
+                    <span class="">SPECIAL<br>EVENTS</span>
+                    </a>
+            </div>
+        </section> <!-- End of Specials-->
+        <section class="grid w-full p-4 lg:grid-cols-12"> <!-- About Us Section-->
+            <div class="grid p-4 text-2xl lg:col-span-7 justify-items-end text-end">
+                <p class="text-5xl font-extrabold text-primary-dark">OUR STORY</p>
+                <p class="pt-4">necessitatibus At velit quisquam a suscipit nemo et porro velit et vero sint quo dolores aspernatur? Et molestiae iste ut debitis quos et doloribus iusto eum officia vero ab omnis voluptatem quo mollitia </p>
+                <p>maiores quia sit   esse</p>
+                <button class="yellow transition duration-300 ease-in-out w-[300px] h-[50px] mt-10">Know More About Us</button>
+
+            </div>
+            <div class="p-4 lg:col-span-5">
+                <img class="h-[550px] w-auto mx-auto lg:ml-0" src="..\images\wine_2.jpg">
+            </div>
+        </section> <!-- End of Story-->
+        <section class="grid w-full grid-cols-1 text-2xl text-white lg:grid-cols-12"> <!-- Tour Section-->
+            <div class="lg:col-span-7 grid justify-items-end w-full h-[300px] overflow-hidden relative">
+                <img class="absolute left-0 top-[-50%] h-auto w-full" src="..\images\wine_3.jpg">
+
+            </div>
+            <div class="grid content-center col-span-5 p-4 bg-primary">
+                <div class="">
+                    <span class="text-4xl font-semibold">Winery Tour</span>
+                    <p class="pt-5">Loving our wines? There's more.</p>
+                </div>
+                <div class="pt-16">
+                    <button id="beginBtn" class="begin transition duration-300 ease-in-out bg-primary border-2 border-white hover:border-black hover:text-black px-3 py-1 w-[200px]">Let's Begin</button>
+                </div>
+            </div>
+
+        </section> <!-- End of Tour-->
+        <section class="pt-10 lg:grid justify-items-center"> <!-- Section: Best Seller-->
+            <div class="grid px-2 text-center justify-items-center">
+                <span class="text-5xl font-extrabold text-primary-dark">OUR BEST-SELLERS</span>
+                <span class="pt-4">quo dignissimos error et incidunt quasi in numquam porro sed fuga amet</span>
+            </div>
+            <div class="relative pt-10 lg:block w-[300px] lg:w-[900px] mx-auto">
+                <div id="shiftLeft" class="absolute w-6 text-center left-[-24px] top-[calc(50%-12px)] hover:bg-primary-light hover:cursor-pointer rounded-full">
+                    <svg class='w-6 h-6' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
+                        <path fillRule="evenodd" d="M7.72 12.53a.75.75 0 010-1.06l7.5-7.5a.75.75 0 111.06 1.06L9.31 12l6.97 6.97a.75.75 0 11-1.06 1.06l-7.5-7.5z" clipRule="evenodd" />
+                      </svg>
+                </div>
+                <div id="shiftRight" class="absolute w-6 text-center right-[-24px] top-[calc(50%-12px)] hover:bg-primary-light hover:cursor-pointer rounded-full">
+                    <svg class='w-6 h-6 font-bold' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
+                        <path fillRule="evenodd" d="M16.28 11.47a.75.75 0 010 1.06l-7.5 7.5a.75.75 0 01-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 011.06-1.06l7.5 7.5z" clipRule="evenodd" />
+                      </svg>
+                      
+                </div>
+                <div class="relative overflow-hidden w-[300px] lg:w-[900px]">
+                    <div id="itemContainer" class="w-[900px] h-[550px] flex scroll-smooth transition duration-300">
+                        <div class="itemElement w-[300px] h-[550px] grow-0 shrink-0 flex flex-col justify-between py-4 px-2"> <!-- Item # 3 -->
+                            <div class="h-[70%] overflow-hidden">
+                                <img class="w-full h-auto" src="..\images\bestseller_3.jpg">
+                            </div>
+                            <div class="grid justify-items-center h-[30%] pt-4">
+                                <p class="flex items-center text-2xl">Chateau Sta. Me</p>
+                                <p class="flex items-center text-xl">P 999.99</p>
+                                <div class="flex items-center "> <!-- Add to cart button -->
+                                    <button class="flex items-center h-full transition ease-in-out border-4 text-primary border-primary bg-primary hover:text-primary-light hover:bg-primary-light hover:border-primary-light duratin-300">
+                                        <div class="flex items-center h-full px-2 ">
+                                            <svg class="w-6 h-6 text-white " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
+                                                <path d="M2.25 2.25a.75.75 0 000 1.5h1.386c.17 0 .318.114.362.278l2.558 9.592a3.752 3.752 0 00-2.806 3.63c0 .414.336.75.75.75h15.75a.75.75 0 000-1.5H5.378A2.25 2.25 0 017.5 15h11.218a.75.75 0 00.674-.421 60.358 60.358 0 002.96-7.228.75.75 0 00-.525-.965A60.864 60.864 0 005.68 4.509l-.232-.867A1.875 1.875 0 003.636 2.25H2.25zM3.75 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0zM16.5 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0z" />
+                                            </svg>
+                                        </div>
+                                        <span class="flex items-center h-full px-2 text-xl bg-white">Add to Cart</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div> <!-- End of slider Item 3 -->
+                        <div class="itemElement w-[300px] h-[550px] grow-0 shrink-0 flex flex-col justify-between py-4 px-2"> <!-- Item # 4 -->
+                            <div class="h-[70%] overflow-hidden">
+                                <img class="w-full h-auto" src="..\images\bestseller_4.jpg">
+                            </div>
+                            <div class="grid justify-items-center h-[30%] pt-4">
+                                <p class="flex items-center text-2xl">Chateau Sta. Me</p>
+                                <p class="flex items-center text-xl">P 999.99</p>
+                                <div class="flex items-center "> <!-- Add to cart button -->
+                                    <button class="flex items-center h-full transition ease-in-out border-4 text-primary border-primary bg-primary hover:text-primary-light hover:bg-primary-light hover:border-primary-light duratin-300">
+                                        <div class="flex items-center h-full px-2 ">
+                                            <svg class="w-6 h-6 text-white " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
+                                                <path d="M2.25 2.25a.75.75 0 000 1.5h1.386c.17 0 .318.114.362.278l2.558 9.592a3.752 3.752 0 00-2.806 3.63c0 .414.336.75.75.75h15.75a.75.75 0 000-1.5H5.378A2.25 2.25 0 017.5 15h11.218a.75.75 0 00.674-.421 60.358 60.358 0 002.96-7.228.75.75 0 00-.525-.965A60.864 60.864 0 005.68 4.509l-.232-.867A1.875 1.875 0 003.636 2.25H2.25zM3.75 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0zM16.5 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0z" />
+                                            </svg>
+                                        </div>
+                                        <span class="flex items-center h-full px-2 text-xl bg-white">Add to Cart</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div> <!-- End of slider Item 4 -->
+                        <div class="itemElement w-[300px] h-[550px] grow-0 shrink-0 flex flex-col justify-between py-4 px-2"> <!-- Item # 5 -->
+                            <div class="h-[70%] overflow-hidden">
+                                <img class="w-full h-auto" src="..\images\bestseller_5.jpg">
+                            </div>
+                            <div class="grid justify-items-center h-[30%] pt-4">
+                                <p class="flex items-center text-2xl">Chateau Sta. Me</p>
+                                <p class="flex items-center text-xl">P 999.99</p>
+                                <div class="flex items-center "> <!-- Add to cart button -->
+                                    <button class="flex items-center h-full transition ease-in-out border-4 text-primary border-primary bg-primary hover:text-primary-light hover:bg-primary-light hover:border-primary-light duratin-300">
+                                        <div class="flex items-center h-full px-2 ">
+                                            <svg class="w-6 h-6 text-white " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
+                                                <path d="M2.25 2.25a.75.75 0 000 1.5h1.386c.17 0 .318.114.362.278l2.558 9.592a3.752 3.752 0 00-2.806 3.63c0 .414.336.75.75.75h15.75a.75.75 0 000-1.5H5.378A2.25 2.25 0 017.5 15h11.218a.75.75 0 00.674-.421 60.358 60.358 0 002.96-7.228.75.75 0 00-.525-.965A60.864 60.864 0 005.68 4.509l-.232-.867A1.875 1.875 0 003.636 2.25H2.25zM3.75 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0zM16.5 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0z" />
+                                            </svg>
+                                        </div>
+                                        <span class="flex items-center h-full px-2 text-xl bg-white">Add to Cart</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div> <!-- End of slider Item 5 -->
+                        <div class="itemElement w-[300px] h-[550px] grow-0 shrink-0 flex flex-col justify-between py-4 px-2"> <!-- Item # 1 -->
+                            <div class="h-[70%] overflow-hidden">
+                                <img class="w-full h-auto" src="..\images\bestseller_1.jpg">
+                            </div>
+                            <div class="grid justify-items-center h-[30%] pt-4">
+                                <p class="flex items-center text-2xl">Chateau Sta. Me</p>
+                                <p class="flex items-center text-xl">P 999.99</p>
+                                <div class="flex items-center "> <!-- Add to cart button -->
+                                    <button class="flex items-center h-full transition ease-in-out border-4 text-primary border-primary bg-primary hover:text-primary-light hover:bg-primary-light hover:border-primary-light duratin-300">
+                                        <div class="flex items-center h-full px-2 ">
+                                            <svg class="w-6 h-6 text-white " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
+                                                <path d="M2.25 2.25a.75.75 0 000 1.5h1.386c.17 0 .318.114.362.278l2.558 9.592a3.752 3.752 0 00-2.806 3.63c0 .414.336.75.75.75h15.75a.75.75 0 000-1.5H5.378A2.25 2.25 0 017.5 15h11.218a.75.75 0 00.674-.421 60.358 60.358 0 002.96-7.228.75.75 0 00-.525-.965A60.864 60.864 0 005.68 4.509l-.232-.867A1.875 1.875 0 003.636 2.25H2.25zM3.75 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0zM16.5 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0z" />
+                                            </svg>
+                                        </div>
+                                        <span class="flex items-center h-full px-2 text-xl bg-white">Add to Cart</span>
+                                    </button>
+                                </div>
+
+                                
+                            </div>
+                        </div> <!-- End of slider Item 1 -->
+                        <div class="itemElement w-[300px] h-[550px] grow-0 shrink-0 flex flex-col justify-between py-4 px-2"> <!-- Item # 2 -->
+                            <div class="h-[70%] overflow-hidden">
+                                <img class="w-full h-auto" src="..\images\bestseller_2.jpg">
+                            </div>
+                            <div class="grid justify-items-center h-[30%] pt-4">
+                                <p class="flex items-center text-2xl">Chateau Sta. Me</p>
+                                <p class="flex items-center text-xl">P 999.99</p>
+                                <div class="flex items-center "> <!-- Add to cart button -->
+                                    <button class="flex items-center h-full transition ease-in-out border-4 text-primary border-primary bg-primary hover:text-primary-light hover:bg-primary-light hover:border-primary-light duratin-300">
+                                        <div class="flex items-center h-full px-2 ">
+                                            <svg class="w-6 h-6 text-white " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
+                                                <path d="M2.25 2.25a.75.75 0 000 1.5h1.386c.17 0 .318.114.362.278l2.558 9.592a3.752 3.752 0 00-2.806 3.63c0 .414.336.75.75.75h15.75a.75.75 0 000-1.5H5.378A2.25 2.25 0 017.5 15h11.218a.75.75 0 00.674-.421 60.358 60.358 0 002.96-7.228.75.75 0 00-.525-.965A60.864 60.864 0 005.68 4.509l-.232-.867A1.875 1.875 0 003.636 2.25H2.25zM3.75 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0zM16.5 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0z" />
+                                            </svg>
+                                        </div>
+                                        <span class="flex items-center h-full px-2 text-xl bg-white">Add to Cart</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div> <!-- End of slider Item -->
+                        <div class="itemElement w-[300px] h-[550px] grow-0 shrink-0 flex flex-col justify-between py-4 px-2"> <!-- Item # 3 -->
+                            <div class="h-[70%] overflow-hidden">
+                                <img class="w-full h-auto" src="..\images\bestseller_3.jpg">
+                            </div>
+                            <div class="grid justify-items-center h-[30%] pt-4">
+                                <p class="flex items-center text-2xl">Chateau Sta. Me</p>
+                                <p class="flex items-center text-xl">P 999.99</p>
+                                <div class="flex items-center "> <!-- Add to cart button -->
+                                    <button class="flex items-center h-full transition ease-in-out border-4 text-primary border-primary bg-primary hover:text-primary-light hover:bg-primary-light hover:border-primary-light duratin-300">
+                                        <div class="flex items-center h-full px-2 ">
+                                            <svg class="w-6 h-6 text-white " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
+                                                <path d="M2.25 2.25a.75.75 0 000 1.5h1.386c.17 0 .318.114.362.278l2.558 9.592a3.752 3.752 0 00-2.806 3.63c0 .414.336.75.75.75h15.75a.75.75 0 000-1.5H5.378A2.25 2.25 0 017.5 15h11.218a.75.75 0 00.674-.421 60.358 60.358 0 002.96-7.228.75.75 0 00-.525-.965A60.864 60.864 0 005.68 4.509l-.232-.867A1.875 1.875 0 003.636 2.25H2.25zM3.75 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0zM16.5 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0z" />
+                                            </svg>
+                                        </div>
+                                        <span class="flex items-center h-full px-2 text-xl bg-white">Add to Cart</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div> <!-- End of slider Item -->
+                        <div class="itemElement w-[300px] h-[550px] grow-0 shrink-0 flex flex-col justify-between py-4 px-2"> <!-- Item # 4 -->
+                            <div class="h-[70%] overflow-hidden">
+                                <img class="w-full h-auto" src="..\images\bestseller_4.jpg">
+                            </div>
+                            <div class="grid justify-items-center h-[30%] pt-4">
+                                <p class="flex items-center text-2xl">Chateau Sta. Me</p>
+                                <p class="flex items-center text-xl">P 999.99</p>
+                                <div class="flex items-center "> <!-- Add to cart button -->
+                                    <button class="flex items-center h-full transition ease-in-out border-4 text-primary border-primary bg-primary hover:text-primary-light hover:bg-primary-light hover:border-primary-light duratin-300">
+                                        <div class="flex items-center h-full px-2 ">
+                                            <svg class="w-6 h-6 text-white " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
+                                                <path d="M2.25 2.25a.75.75 0 000 1.5h1.386c.17 0 .318.114.362.278l2.558 9.592a3.752 3.752 0 00-2.806 3.63c0 .414.336.75.75.75h15.75a.75.75 0 000-1.5H5.378A2.25 2.25 0 017.5 15h11.218a.75.75 0 00.674-.421 60.358 60.358 0 002.96-7.228.75.75 0 00-.525-.965A60.864 60.864 0 005.68 4.509l-.232-.867A1.875 1.875 0 003.636 2.25H2.25zM3.75 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0zM16.5 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0z" />
+                                            </svg>
+                                        </div>
+                                        <span class="flex items-center h-full px-2 text-xl bg-white">Add to Cart</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div> <!-- End of slider Item -->
+                        <div class="itemElement w-[300px] h-[550px] grow-0 shrink-0 flex flex-col justify-between py-4 px-2"> <!-- Item # 5 -->
+                            <div class="h-[70%] overflow-hidden">
+                                <img class="w-full h-auto" src="..\images\bestseller_5.jpg">
+                            </div>
+                            <div class="grid justify-items-center h-[30%] pt-4">
+                                <p class="flex items-center text-2xl">Chateau Sta. Me</p>
+                                <p class="flex items-center text-xl">P 999.99</p>
+                                <div class="flex items-center "> <!-- Add to cart button -->
+                                    <button class="flex items-center h-full transition ease-in-out border-4 text-primary border-primary bg-primary hover:text-primary-light hover:bg-primary-light hover:border-primary-light duratin-300">
+                                        <div class="flex items-center h-full px-2 ">
+                                            <svg class="w-6 h-6 text-white " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
+                                                <path d="M2.25 2.25a.75.75 0 000 1.5h1.386c.17 0 .318.114.362.278l2.558 9.592a3.752 3.752 0 00-2.806 3.63c0 .414.336.75.75.75h15.75a.75.75 0 000-1.5H5.378A2.25 2.25 0 017.5 15h11.218a.75.75 0 00.674-.421 60.358 60.358 0 002.96-7.228.75.75 0 00-.525-.965A60.864 60.864 0 005.68 4.509l-.232-.867A1.875 1.875 0 003.636 2.25H2.25zM3.75 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0zM16.5 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0z" />
+                                            </svg>
+                                        </div>
+                                        <span class="flex items-center h-full px-2 text-xl bg-white">Add to Cart</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div> <!-- End of slider Item -->
+                        <div class="itemElement w-[300px] h-[550px] grow-0 shrink-0 flex flex-col justify-between py-4 px-2"> <!-- Item # 1 -->
+                            <div class="h-[70%] overflow-hidden">
+                                <img class="w-full h-auto" src="..\images\bestseller_1.jpg">
+                            </div>
+                            <div class="grid justify-items-center h-[30%] pt-4">
+                                <p class="flex items-center text-2xl">Chateau Sta. Me</p>
+                                <p class="flex items-center text-xl">P 999.99</p>
+                                <div class="flex items-center "> <!-- Add to cart button -->
+                                    <button class="flex items-center h-full transition ease-in-out border-4 text-primary border-primary bg-primary hover:text-primary-light hover:bg-primary-light hover:border-primary-light duratin-300">
+                                        <div class="flex items-center h-full px-2 ">
+                                            <svg class="w-6 h-6 text-white " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
+                                                <path d="M2.25 2.25a.75.75 0 000 1.5h1.386c.17 0 .318.114.362.278l2.558 9.592a3.752 3.752 0 00-2.806 3.63c0 .414.336.75.75.75h15.75a.75.75 0 000-1.5H5.378A2.25 2.25 0 017.5 15h11.218a.75.75 0 00.674-.421 60.358 60.358 0 002.96-7.228.75.75 0 00-.525-.965A60.864 60.864 0 005.68 4.509l-.232-.867A1.875 1.875 0 003.636 2.25H2.25zM3.75 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0zM16.5 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0z" />
+                                            </svg>
+                                        </div>
+                                        <span class="flex items-center h-full px-2 text-xl bg-white">Add to Cart</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div> <!-- End of slider Item -->
+                        <div class="itemElement w-[300px] h-[550px] grow-0 shrink-0 flex flex-col justify-between py-4 px-2"> <!-- Item # 2 -->
+                            <div class="h-[70%] overflow-hidden">
+                                <img class="w-full h-auto" src="..\images\bestseller_2.jpg">
+                            </div>
+                            <div class="grid justify-items-center h-[30%] pt-4">
+                                <p class="flex items-center text-2xl">Chateau Sta. Me</p>
+                                <p class="flex items-center text-xl">P 999.99</p>
+                                <div class="flex items-center "> <!-- Add to cart button -->
+                                    <button class="flex items-center h-full transition ease-in-out border-4 text-primary border-primary bg-primary hover:text-primary-light hover:bg-primary-light hover:border-primary-light duratin-300">
+                                        <div class="flex items-center h-full px-2 ">
+                                            <svg class="w-6 h-6 text-white " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
+                                                <path d="M2.25 2.25a.75.75 0 000 1.5h1.386c.17 0 .318.114.362.278l2.558 9.592a3.752 3.752 0 00-2.806 3.63c0 .414.336.75.75.75h15.75a.75.75 0 000-1.5H5.378A2.25 2.25 0 017.5 15h11.218a.75.75 0 00.674-.421 60.358 60.358 0 002.96-7.228.75.75 0 00-.525-.965A60.864 60.864 0 005.68 4.509l-.232-.867A1.875 1.875 0 003.636 2.25H2.25zM3.75 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0zM16.5 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0z" />
+                                            </svg>
+                                        </div>
+                                        <span class="flex items-center h-full px-2 text-xl bg-white">Add to Cart</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div> <!-- End of slider Item -->
+                        <div class="itemElement w-[300px] h-[550px] grow-0 shrink-0 flex flex-col justify-between py-4 px-2"> <!-- Item # 3 -->
+                            <div class="h-[70%] overflow-hidden">
+                                <img class="w-full h-auto" src="..\images\bestseller_3.jpg">
+                            </div>
+                            <div class="grid justify-items-center h-[30%] pt-4">
+                                <p class="flex items-center text-2xl">Chateau Sta. Me</p>
+                                <p class="flex items-center text-xl">P 999.99</p>
+                                <div class="flex items-center "> <!-- Add to cart button -->
+                                    <button class="flex items-center h-full transition ease-in-out border-4 text-primary border-primary bg-primary hover:text-primary-light hover:bg-primary-light hover:border-primary-light duratin-300">
+                                        <div class="flex items-center h-full px-2 ">
+                                            <svg class="w-6 h-6 text-white " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
+                                                <path d="M2.25 2.25a.75.75 0 000 1.5h1.386c.17 0 .318.114.362.278l2.558 9.592a3.752 3.752 0 00-2.806 3.63c0 .414.336.75.75.75h15.75a.75.75 0 000-1.5H5.378A2.25 2.25 0 017.5 15h11.218a.75.75 0 00.674-.421 60.358 60.358 0 002.96-7.228.75.75 0 00-.525-.965A60.864 60.864 0 005.68 4.509l-.232-.867A1.875 1.875 0 003.636 2.25H2.25zM3.75 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0zM16.5 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0z" />
+                                            </svg>
+                                        </div>
+                                        <span class="flex items-center h-full px-2 text-xl bg-white">Add to Cart</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div> <!-- End of slider Item -->
+                    </div> <!-- End of item container -->
+                    
+                    
+
+                </div>
+            </div>
+        </section> <!-- End of Best Sellers-->
+        <section class="grid justify-between w-full px-4 py-4 mt-4 text-center text-white lg:px-12 lg:flex bg-gray bg-red"> <!-- Be Informed Section -->
+            <div class="grid w-full lg:flex">
+                <p class="text-3xl font-bold">Be Informed</p>
+                <!-- <p class="w-[10px] bg-white"></p> -->
+                <div class="hidden h-10 mx-2 border border-white lg:block"></div>
+                <p class="text-3xl font-thin lg:pr-16">Sign up for our Newsletter</p>
+            </div>
+
+            <form class="items-center mt-10 lg:flex lg:mt-0">
+                <input type="email" id="email" placeholder="   Enter email here" class="h-[35px] w-[300px]">
+                <input type="submit" id="submitBtn" value="Submit" class="text-2xl bg-accent px-4 text-black h-[35px] mt-6 lg:mt-0 ml-2 cursor-pointer hover:bg-[#FFEEB3] transition duration-300 ease-in-out font-bold ">
+            </form>
+        </section> <!-- End of Newsletter-->
+        <section class="grid w-full grid-cols-12 text-2xl lg:p-4 lg:pl-6">
+            <div class="grid col-span-12 p-4 lg:col-span-5 justify-items-center">
+                <span class="text-5xl font-extrabold text-center text-primary-dark">NEWS & EVENTS</span>
+                <img class="max-h-[400px] lg:max-h-[550px] w-auto pt-4" src="..\images\wine_4.jpg" >
+            </div>
+            <div class="col-span-12 p-4 pr-6 lg:col-span-7">
+                <div class="grid lg:flex "> <!-- Event 1 -->
+                    <div class="text-center ">
+                        <div class="px-1 border-4 lg:w-24 border-primary-light">
+                        <p>APRIL<br class="hidden lg:block">4-19</p>
+                        </div>
+                    </div>
+                    <div class="pl-4">
+                        <div class="">
+                            <span class="">Wine, Process</span>
+                            <p class="py-2 text-3xl">Living Content Builder</p>
+                            <p class="text-xl">Est autem cupiditate ut saepe aspernatur qui voluptates atque sit nostrum repellendus vel tempore. Est autem cupiditate ut saepe aspernatur qui voluptates atque sit nostrum repellendus vel tempore perferendis. Sit reiciendis impedit ab porro nihil rem cupiditate</p>
+                        </div>
+                        <div class="pt-4">
+                            <button class="flex items-center transition duration-300 ease-in-out text-primary-dark hover:text-primary-light">
+                                <svg class="w-10 h-10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
+                                    <path fillRule="evenodd" d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.348c1.295.712 1.295 2.573 0 3.285L7.28 19.991c-1.25.687-2.779-.217-2.779-1.643V5.653z" clipRule="evenodd" />
+                                  </svg>
+                                <span>Read More ...</span>
+                            </button>
+                        </div>
+                    </div>
+                </div> <!-- End of Event 1 -->
+                <div class="grid pt-5 lg:flex"> <!-- Event 2 -->
+                    <div class="text-center ">
+                        <div class="px-1 border-4 lg:w-24 border-primary-light">
+                        <p>APRIL<br class="hidden lg:block">4-19</p>
+                    </div>
+                    </div>
+                    <div class="pl-4">
+                        <div>
+                            <span class="">Wine, Process</span>
+                            <p class="py-2 text-3xl">Living Content Builder</p>
+                            <p class="text-xl">Est autem cupiditate ut saepe aspernatur qui voluptates atque sit nostrum repellendus vel tempore. Est autem cupiditate ut saepe aspernatur qui voluptates atque sit nostrum repellendus vel tempore perferendis. Sit reiciendis impedit ab porro nihil rem cupiditate</p>
+                        </div>
+                        <div class="pt-4">
+                            <button class="flex items-center transition duration-300 ease-in-out text-primary-dark hover:text-primary-light">
+                                <svg class="w-10 h-10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
+                                    <path fillRule="evenodd" d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.348c1.295.712 1.295 2.573 0 3.285L7.28 19.991c-1.25.687-2.779-.217-2.779-1.643V5.653z" clipRule="evenodd" />
+                                  </svg>
+                                <span>Read More ...</span>
+                            </button>
+                        </div>
+                    </div>
+                </div> <!-- End of Event 2 -->
+            </div>
+        </section> <!-- End of NEws and Events -->
+
+
+    </div>
+    <footer class="">
+        <div class="grid grid-cols-1 lg:grid-cols-4 links">
+            <div class="px-2 py-4 pl-4 border-4 border-primary">  <!-- Links col 1 -->
+                <div class="flex brand">
+                    <div class="logo h-[50px] w-[50px] mr-2 pt-2">
+                        <img src="..\images\glass-and-bottle-of-wine.png" class="h-[50px] w-[50px]">
+                    </div>
+                    <div class="flex flex-col items-center brand_name">
+                        <span class="text-2xl">
+                            BENVINUM
+                        </span>
+                        <span class="text-lg">
+                            Fine Wine Merchants
+                        </span>
+                    </div>
+                </div>
+                <p class="pt-4">Est autem cupiditate ut saepe aspernatur qui voluptates atque sit nostrum repellendus vel.</p>
+
+            </div> <!-- END of col 1-->
+            <div class="px-2 py-4 pl-4 text-lg text-white bg-primary">
+                <p class="text-2xl ">CONTACTS</p>
+                <div class="flex items-center pb-4">
+                    <svg class="w-10 h-10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
+                        <path fillRule="evenodd" d="M11.54 22.351l.07.04.028.016a.76.76 0 00.723 0l.028-.015.071-.041a16.975 16.975 0 001.144-.742 19.58 19.58 0 002.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 00-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 002.682 2.282 16.975 16.975 0 001.145.742zM12 13.5a3 3 0 100-6 3 3 0 000 6z" clipRule="evenodd" />
+                      </svg>
+                      
+                    <span class="pl-2">2nd flr., Axis Bldg., Salvador Extension, Cebu City, 6000
+                    </span>
+                </div>
+                <div class="flex items-center pb-4">
+                    <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
+                        <path fillRule="evenodd" d="M1.5 4.5a3 3 0 013-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 01-.694 1.955l-1.293.97c-.135.101-.164.249-.126.352a11.285 11.285 0 006.697 6.697c.103.038.25.009.352-.126l.97-1.293a1.875 1.875 0 011.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 01-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 6.75V4.5z" clipRule="evenodd" />
+                      </svg>
+                      
+                    <p class="pl-2">999-9999, 000-0000</p>
+                </div>
+                <div class="flex items-center pb-4">
+                    <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
+                        <path d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z" />
+                        <path d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z" />
+                      </svg>
+                      
+                    <p class="pl-2">samplemail@email.com</p>
+                </div>
+            </div> <!-- End of col 2-->
+
+            <div class="px-2 py-4 text-lg text-white bg-primary ">
+                <span class="text-2xl">PAGE LINKS</span>
+                <div class="flex flex-col">
+                    <a href="#" class="flex self-start py-2 transition duration-300 hover:text-primary-dark">
+                        <!-- <a href="#" class="flex items-center self-start justify-start hover:text-primary-dark ">  -->
+                        <svg class="h-7 w-7" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
+                            <path fillRule="evenodd" d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.348c1.295.712 1.295 2.573 0 3.285L7.28 19.991c-1.25.687-2.779-.217-2.779-1.643V5.653z" clipRule="evenodd" />
+                          </svg>
+                        <p class="">Home</p>
+                        <!-- </a> -->
+                    </a>
+                    <a href="#" class="flex items-center self-start py-2 transition duration-300 hover:text-primary-dark">
+                        <svg class="h-7 w-7 " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
+                            <path fillRule="evenodd" d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.348c1.295.712 1.295 2.573 0 3.285L7.28 19.991c-1.25.687-2.779-.217-2.779-1.643V5.653z" clipRule="evenodd" />
+                          </svg>
+                        <p>About Us</p>
+                    </a>
+                    <a href="#" class="flex items-center self-start py-2 transition duration-300 hover:text-primary-dark">
+                        <svg class="h-7 w-7 " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
+                            <path fillRule="evenodd" d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.348c1.295.712 1.295 2.573 0 3.285L7.28 19.991c-1.25.687-2.779-.217-2.779-1.643V5.653z" clipRule="evenodd" />
+                          </svg>
+                        <p>Contacts</p>
+                    </a>
+                    <a href="#" class="flex items-center self-start py-2 transition duration-300 hover:text-primary-dark">
+                        <svg class="h-7 w-7 " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
+                            <path fillRule="evenodd" d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.348c1.295.712 1.295 2.573 0 3.285L7.28 19.991c-1.25.687-2.779-.217-2.779-1.643V5.653z" clipRule="evenodd" />
+                          </svg>
+                        <p>Events</p>
+                        </a>
+                    <a href="#" class="flex items-center self-start py-2 transition duration-300 hover:text-primary-dark">
+                        <svg class="h-7 w-7 " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
+                            <path fillRule="evenodd" d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.348c1.295.712 1.295 2.573 0 3.285L7.28 19.991c-1.25.687-2.779-.217-2.779-1.643V5.653z" clipRule="evenodd" />
+                          </svg>
+                        <p>FAQ</p>
+                    </a>
+                    
+                </div>
+            </div> <!-- End of  col 3-->
+
+            <div class="px-2 py-4 text-lg text-white bg-primary">
+                <span  class="text-2xl">CUSTOMER SERVICE</span>
+                <div class="flex flex-col">
+                    <a href="#" class="flex self-start py-2 transition duration-300 hover:text-primary-dark">
+                        <svg class="h-7 w-7 " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
+                            <path fillRule="evenodd" d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.348c1.295.712 1.295 2.573 0 3.285L7.28 19.991c-1.25.687-2.779-.217-2.779-1.643V5.653z" clipRule="evenodd" />
+                          </svg>
+                        <p>Payment Methods</p>
+                    </a>
+                    <a href="#"class="flex self-start py-2 transition duration-300 hover:text-primary-dark">
+                        <svg class="h-7 w-7 " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
+                            <path fillRule="evenodd" d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.348c1.295.712 1.295 2.573 0 3.285L7.28 19.991c-1.25.687-2.779-.217-2.779-1.643V5.653z" clipRule="evenodd" />
+                          </svg>
+                        <p>Delivery & Returns Policy</p>
+                    </a>
+                    <a href="" class="flex self-start py-2 transition duration-300 hover:text-primary-dark">
+                        <svg class="h-7 w-7 " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
+                            <path fillRule="evenodd" d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.348c1.295.712 1.295 2.573 0 3.285L7.28 19.991c-1.25.687-2.779-.217-2.779-1.643V5.653z" clipRule="evenodd" />
+                          </svg>
+                        <p>Privacy</p>
+                    </a>
+                    <a href="#" class="flex self-start py-2 transition duration-300 hover:text-primary-dark">
+                        <svg class="h-7 w-7 " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
+                            <path fillRule="evenodd" d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.348c1.295.712 1.295 2.573 0 3.285L7.28 19.991c-1.25.687-2.779-.217-2.779-1.643V5.653z" clipRule="evenodd" />
+                          </svg>
+                        <p>Terms & Conditions</p>
+                    </a>
+                    
+                    
+                </div>
+            </div> <!-- End of col 4 -->
+
+
+        </div> <!-- End of links -->
+        <div class="flex items-center w-full text-white socials bg-primary-dark">
+            <span class="px-2 py-4 pl-10 text-2xl">
+                SOCIAL LINKS
+            </span>
+            <div class="px-2">
+                <a href="#" class="">
+                    <img src="..\images\facebook.png" class="h-[35px] w-[35px]">
+                </a>
+            </div>
+            <div class="px-2">
+                <a href="#"class="">
+                <img src="..\images\twitter.png" class="h-[35px] w-[35px]">
+                </a>
+            </div>
+        </div> <!-- End of Socials -->
+    </footer>
+    <div class="hidden">
+        <div class="h-[500px]"></div>
+        <div class="w-full test"> <!-- Test Area -->
+        <h1 class="font-bold text-7xl">text-7xl HIGH QUALITY WINES</h1> 
+        <h2 class="text-6xl font-bold">text-6xl HIGH QUALITY WINES</h1>
+        <h3 class="text-5xl font-bold">text-5xl HIGH QUALITY WINES</h1>
+        <h4 class="text-4xl font-bold">text-4xl HIGH QUALITY WINES</h1>
+        <h5 class="text-3xl font-bold">text-3xl HIGH QUALITY WINES</h1>
+        <h6 class="text-2xl font-bold">text-2xl HIGH QUALITY WINES</h1>
+        </div>
+
+        <button id="testBtn" class="h-[80px] w-[150px] border-2 border-black text-2xl p-2 transition-colors duration-300 bg-[#ff0000] hover:bg-white"> Click Me!</button>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html> 
