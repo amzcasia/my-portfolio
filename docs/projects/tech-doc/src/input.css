@@ -17,13 +17,11 @@
         white-space: -o-pre-wrap;
         word-wrap: break-word;
       }
-
-    
 }
 
 @layer components{
     .tab{
-        @apply rounded-t-2xl px-4 py-1 bg-slate-800 text-[#55BFFB];
+        @apply rounded-t-lg px-4 py-1 bg-slate-800 text-[#55BFFB] ;
         font-family: monospace;
     }
     
@@ -34,16 +32,10 @@
     .nav-link {
         @apply hover:text-white transition duration-200 py-1.5;
     }
-/*
-    .main-section {
-        @apply ;
-    }
-    */
 
     .sub-menu {
         @apply pl-5;
     }
-
 }
 
 @layer utilities {
@@ -59,8 +51,6 @@
     .texthighlight {
         color: #55BFFB !important;
     }
-    
-    
 }
 
 
