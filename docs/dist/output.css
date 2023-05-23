@@ -543,6 +543,14 @@ video {
   height: 250px;
 }
 
+.h-auto {
+  height: auto;
+}
+
+.w-\[500px\] {
+  width: 500px;
+}
+
 .w-full {
   width: 100%;
 }
@@ -554,6 +562,16 @@ video {
 .px-3 {
   padding-left: 0.75rem;
   padding-right: 0.75rem;
+}
+
+.px-\[7\%\] {
+  padding-left: 7%;
+  padding-right: 7%;
+}
+
+.px-\[5\%\] {
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
 .pt-5 {
