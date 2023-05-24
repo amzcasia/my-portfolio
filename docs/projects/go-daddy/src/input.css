@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities{
+    .borders {
+        border: 1px dashed white;
+    }
+
+    .borderss {
+        border: 1px dashed black;
+    }
+
+    .px {
+        @apply px-[5%];
+    }
+    
+}
+
+.price, .arrow {
+    transition-duration: 300ms;
+}
+
+.pricing-box {
+    @apply min-h-[6rem];
+}
+
+.pricing-box:hover {
+   background-color: black;
+   color: white;
+   .price {
+        @apply -translate-x-5;
+   }
+   .arrow {
+        @apply translate-x-2 opacity-100 scale-100 text-white;
+   }
+}
+
+.mobile-nav-list:hover{
+    .arrow {
+        @apply translate-x-2;
+    }
+}
+/*
+.price {
+    @apply transition duration-300;
+}
+*/
