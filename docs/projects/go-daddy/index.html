@@ -116,7 +116,7 @@
 
         </nav>
          <!-- Contact Dropdown Section -translate-y-[120%] -->
-        <section id="contact-dropdown" class="absolute w-full px py-4 grid md:grid-cols-2 content-between z-[49] scale-y-0 scale-x-100 hidden origin-top transition duration-300 bg-white borderss">
+        <section id="contact-dropdown" class="absolute w-full px py-4 grid md:grid-cols-2 content-between z-[49] scale-y-0 scale-x-100 hidden origin-top transition duration-300 bg-white">
             <div class="hidden pt-4 contact-entry">
                 <p class="text-lg font-semibold">Call Us</p>
                 <p>Call our award-winning sales & support team</p>
@@ -339,6 +339,7 @@
             </div>
         </section>
         <!-- End of Services -->
+
         <!-- Domain Search 2 -->
         <section class="text-center">
             <p>It all starts with a domain.</p>
@@ -349,31 +350,41 @@
             </form>
         </section>
         <!-- End of Domain Search 2 -->
+
         <!-- Why go Daddy -->
         <section class="">
             <img>
             <div>
                 <p>GoDaddy guides - logo</p>
-                <p>Why fo with GoDaddy?</p>
+                <p>Why go with GoDaddy?</p>
                 <p>Because we know that even the best technology is only as good as the people behind it. That’s why we offer expert phone support, plus a lot more.  </p>
                 <p>Call our technical support team at Support Manila: (02) 8231-2988.</p>
                 <button class="borderss">Get Help</button>
             </div>
         </section>
         <!-- End of WHy goDaddy -->
+
         <!-- FAQ Section -->
-        <section class="text-center">
-            <p class="text-4xl font-semibold px borderss">Millions of customers rely on our domains and web hosting to get their ideas online.</p>
+        <section class="w-full text-center">
+            <p class="text-4xl font-semibold px">Millions of customers rely on our domains and web hosting to get their ideas online.</p>
             <p class="pt-5 text-2xl font-semibold px">Frequently Asked Questions</p>
            
-            <div class="text-left px borderss">
-                <div class="border-t border-gray-500">
-                    <div class="faq">How does GoDaddy help small business owners succeed?</div>
-                    <div class="faqa">GoDaddy offers more than just a platform to build your website, we offer everything you need to create an effective, memorable online presence. Already have a site? We offer hosting plans that will keep it fast, secure and online. Our professional email helps you build a professional image, while our online marketing tools empower entrepreneurs to get online with an SEO-friendly website. GoDaddy is an all-in-one solution provider to get your idea online, backed with expert, personalized support from GoDaddy Guides.</div>
+            <div class="text-left px-[10%] pt-3 md:max-w-[80%] mx-auto">
+                <div id="faq-1" class="py-5 border-t border-gray-500 cursor-pointer">
+                    <div class="flex justify-between ">
+                        <div class="text-lg font-semibold faq">How does GoDaddy help small business owners succeed?</div>
+                        <span><i id="faq-arrow-1" class="transition fa-solid fa-angle-down skew faq-arrow" data-index="1"></i></span>
+                    </div>
+                    <div id="faq-answer-1" class="hidden pt-5 leading-normal faq-answer" data-index="1">
+                        GoDaddy offers more than just a platform to build your website, we offer everything you need to create an effective, memorable online presence. Already have a site? We offer hosting plans that will keep it fast, secure and online. Our professional email helps you build a professional image, while our online marketing tools empower entrepreneurs to get online with an SEO-friendly website. GoDaddy is an all-in-one solution provider to get your idea online, backed with expert, personalized support from GoDaddy Guides.
+                    </div>
                 </div>
-                <div class="border-t border-gray-500">
-                    <div class="faq" data-index="1">Why do I need a website for my business?</div>
-                    <div>
+                <div id="faq-2" class="py-5 border-t border-gray-500 cursor-pointer">
+                    <div class="flex justify-between ">
+                        <div class="text-lg font-semibold faq">Why do I need a website for my business?</div>
+                        <span><i id="faq-arrow-2" class="transition fa-solid fa-angle-down faq-arrow" data-index="2"></i></span>
+                    </div>
+                    <div id="faq-answer-2" class="hidden pt-5 leading-normal faq-answer" data-index="2">
                         <p>Even small local businesses that only serve their hometown need a site. That's because the web is the first place people go when looking for a product or service. A website helps every business:</p>
                         <ul>
                         <li>Promote and sell their products and services</li>
@@ -385,9 +396,12 @@
                         Best of all, a website is much easier and more affordable than you might think. GoDaddy offers a complete selection of online tools for building websites, along with hosting, email and marketing options to grow their business on the web.
                     </div>
                 </div>
-                <div class="border-t border-gray-500">
-                    <div>Why do I need a professional email?</div>
-                    <div>
+                <div id="faq-3" class="py-5 border-t border-gray-500 cursor-pointer">
+                    <div class="flex justify-between ">
+                        <div class="text-lg font-semibold faq">Why do I need a professional email?</div>
+                        <span><i id="faq-arrow-3" class="transition fa-solid fa-angle-down faq-arrow" data-index="3"></i></span>
+                    </div>
+                    <div id="faq-answer-3" class="hidden pt-5 leading-normal faq-answer" data-index="3">
                         <p>There are a lot of reasons to switch from your free email to a domain-based email, but here are the top 3:</p>
                         <ol>
                             <li>Customers are much more likely to trust a professional address like lily@lilysbikes.com than lilysbikestexas84@notmail.com.</li>
@@ -396,38 +410,89 @@
                         </ol>
                     </div>
                 </div>
-                <div>
-                    <div>Why get a domain name from GoDaddy?</div>
-                    <div>GoDaddy is the world’s largest and trusted domain registrar that empowers people like you with creative ideas to succeed online. <a class="underline hover:no-underline">Buying a domain name</a> is easy with our domain search tool and domain name generator tools you can find the perfect website address for your business.</div>
+
+                <div id="faq-4" class="py-5 border-t border-gray-500 cursor-pointer">
+                    <div class="flex justify-between ">
+                        <div class="text-lg font-semibold faq">Why get a domain name from GoDaddy?</div>
+                        <span><i class="transition fa-solid fa-angle-down faq-arrow" data-index="4"></i></span>
+                    </div>
+                    <div class="hidden pt-5 leading-normal faq-answer" data-index="4">
+                        GoDaddy is the world’s largest and trusted domain registrar that empowers people like you with creative ideas to succeed online. <a class="underline hover:no-underline">Buying a domain name</a> is easy with our domain search tool and domain name generator tools you can find the perfect website address for your business.
+                    </div>
                 </div>
-                <div>
-                    <div>Why use GoDaddy Website Builder?</div>
-                    <div>Because it’s a fast, simple way to create a website that you — and your customers — will love. Simply type in your idea or industry and GoDaddy <a class="underline hover:no-underline">Website Builder</a> will pull up a number of professionally designed, ready-to-launch templates. From there, just add your own text and images and you’re good to go.</div>
+
+                <div id="faq-5" class="py-5 border-t border-gray-500 cursor-pointer">
+                    <div class="flex justify-between ">
+                        <div class="text-lg font-semibold faq">Why use GoDaddy Website Builder?</div>
+                        <span><i class="transition fa-solid fa-angle-down faq-arrow" data-index="5"></i></span>
+                    </div>
+                    <div class="hidden pt-5 leading-normal faq-answer" data-index="5">
+                        Because it’s a fast, simple way to create a website that you — and your customers — will love. Simply type in your idea or industry and GoDaddy <a class="underline hover:no-underline">Website Builder</a> will pull up a number of professionally designed, ready-to-launch templates. From there, just add your own text and images and you’re good to go.
+                    </div>
                 </div>
-                <div>
-                    <div>What makes GoDaddy Web Hosting the world leader?</div>
-                    <div>With nearly 20 years in the industry, we have the experience, the technology and the hosting experts to help web designers, developers, bloggers and online businesses create and maintain their online presence. Our secure <a class="underline hover:no-underline">web hosting platform</a>, complete with cPanel, offers a 99.9% uptime guarantee and award-winning support, which has helped nearly 21+ million customers get online.</div>
+
+                <div id="faq-6" class="py-5 border-t border-gray-500 cursor-pointer">
+                    <div class="flex justify-between ">
+                        <div class="text-lg font-semibold faq">What makes GoDaddy Web Hosting the world leader?</div>
+                        <span><i class="transition fa-solid fa-angle-down faq-arrow" data-index="6"></i></span>
+                    </div>
+                    <div class="hidden pt-5 leading-normal faq-answer" data-index="6">
+                        With nearly 20 years in the industry, we have the experience, the technology and the hosting experts to help web designers, developers, bloggers and online businesses create and maintain their online presence. Our secure <a class="underline hover:no-underline">web hosting platform</a>, complete with cPanel, offers a 99.9% uptime guarantee and award-winning support, which has helped nearly 21+ million customers get online.
+                    </div>
                 </div>
-                <div>
-                    <div>Why choose GoDaddy for WordPress?</div>
-                    <div>GoDaddy offers reliable and affordable <a class="underline hover:no-underline">WordPress hosting</a> plans, one-click installs and the latest version so you have the most recent features available for your site. Your website content is managed from one place; you have a wealth of themes and add-ons giving you limitless options to succeed.</div>
+
+                <div id="faq-7" class="py-5 border-t border-gray-500 cursor-pointer">
+                    <div class="flex justify-between ">
+                        <div class="text-lg font-semibold faq">Why choose GoDaddy for WordPress?</div>
+                        <span><i class="transition fa-solid fa-angle-down faq-arrow" data-index="7"></i></span>
+                    </div>
+                    <div class="hidden pt-5 leading-normal faq-answer" data-index="7">
+                        GoDaddy offers reliable and affordable <a class="underline hover:no-underline">WordPress hosting</a> plans, one-click installs and the latest version so you have the most recent features available for your site. Your website content is managed from one place; you have a wealth of themes and add-ons giving you limitless options to succeed.
+                    </div>
                 </div>
-                <div>
-                    <div>Why should I transfer my domain, website or web hosting to GoDaddy?</div>
-                    <div>There are a few different reasons. Our award-winning support is always high on the list of why people move their presence to GoDaddy. Of course, our prices — including a free 1-year extension on many domain transfers — is another popular reason. And if you already have one or more of our products, transferring your domain, website or hosting to us lets you consolidate your web presence with one provider so it’s easier to manage.</div>
+
+                <div id="faq-8" class="py-5 border-t border-gray-500 cursor-pointer">
+                    <div class="flex justify-between ">
+                        <div class="text-lg font-semibold faq">Why should I transfer my domain, website or web hosting to GoDaddy?</div>
+                        <span><i class="transition fa-solid fa-angle-down faq-arrow" data-index="8"></i></span>
+                    </div>
+                    <div class="hidden pt-5 leading-normal faq-answer" data-index="8">
+                        There are a few different reasons. Our award-winning support is always high on the list of why people move their presence to GoDaddy. Of course, our prices — including a free 1-year extension on many domain transfers — is another popular reason. And if you already have one or more of our products, transferring your domain, website or hosting to us lets you consolidate your web presence with one provider so it’s easier to manage.
+                    </div>
                 </div>
-                <div>
-                    <div>Why use the GoDaddy Logo Maker?</div>
-                    <div>With the <a class="underline hover:no-underline" href="#">GoDaddy Logo Maker</a> it's easy to make a custom logo that'll help define your brand's personality and transform your business. From logomarks to logotypes, there are hundreds of templates to choose from. Or you can design your own in just minutes. No design skills needed.</div>
+
+                <div id="faq-9" class="py-5 border-gray-500 cursor-pointer border-y">
+                    <div class="flex justify-between ">
+                        <div class="text-lg font-semibold faq">Why use the GoDaddy Logo Maker?</div>
+                        <span><i class="transition fa-solid fa-angle-down faq-arrow" data-index="9"></i></span>
+                    </div>
+                    <div class="hidden pt-5 leading-normal faq-answer" data-index="9">
+                        With the <a class="underline hover:no-underline" href="#">GoDaddy Logo Maker</a> it's easy to make a custom logo that'll help define your brand's personality and transform your business. From logomarks to logotypes, there are hundreds of templates to choose from. Or you can design your own in just minutes. No design skills needed.
+                    </div>
                 </div>
+                
             </div>
         </section>
         <!-- End of FAQ -->
     </main>
     <!-- End of Main Content -->
+
+    <section class="w-[100dvw] h-[100dvh] borderss bg-white">
+        <div class="mx-auto bg-white ">
+            <h1>View product limitations and legal policies</h1>
+            <p>Sale/introductory pricing valid for the initial purchase term only. Product renewal pricing subject to change.</p>
+            <p>Products will automatically renew until cancelled. You may turn off the auto-renewal feature by visiting your GoDaddy account. </p>
+            <p>One FREE .COM, .NET, .ORG, .CO, .INFO, .BIZ, .US, .CLUB, .COMPANY, .DESIGN, .EMAIL, .FIT, .LIFE, .LIVE, .ONLINE, .PRO, .ROCKS, .SHOP, .SITE, .SOLUTIONS, .SPACE, .STORE, .TECH, .TODAY, .VIP, .WORK, .WORLD, .XYZ with purchase of a new 12-, 24- or 36-month plan. You must add the domain name into your cart before purchase, and you must select a domain term length equal to or less than the term length of your plan to qualify for the free domain offer. If you purchase a domain name for a term longer than the term of the plan, you will be charged for the additional registration term at the then-current rate. Cannot be used in conjunction with any other offer, sale, discount or promotion. Free domain offer applies only to the initial purchase term. After the initial purchase term, domains purchased through this offer will renew at the then-current renewal price.</p>
+            <p>** Your free trial is for one month. A credit card is not required to sign up for the free trial, however you can choose to subscribe to a Website Builder plan at any time during the free trial. Once the free trial ends you will be required to provide a credit card in your GoDaddy account to continue with a Website Builder plan. If you already have a credit card on file in your GoDaddy account, you can choose to turn on auto-renew for the Website Builder plan and will be charged at the end of the free trial. Plans will automatically renew until cancelled.</p>
+        </div>
+    </section>
+
+    
+
+    <!-- Start of Footer -->
     <footer class="text-white">
         <div class="text-black">
-            <p><ahref="#">** View product limitations and legal policies</a></p>
+            <button class="font-semibold underline">** View product limitations and legal policies</button>
             <p>Third-party logos and marks are registered trademarks of their respective owners. All rights reserved.</p>
 
         </div>

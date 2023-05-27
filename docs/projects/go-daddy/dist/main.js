@@ -7,14 +7,17 @@ const mobileSlidingNav = document.getElementById("mobile-sliding-nav");
 const mobileNavClose = document.getElementById("mobile-nav-close");
 const mobileNavOpen = document.getElementById("mobile-nav-open");
 const mobileNavLogo = document.getElementById("mobile-nav-logo");
+
 const contactNav = document.getElementById("contact-nav");
 const contactNavLg = document.getElementById("contact-nav-lg");
 const contactDropdown = document.getElementById("contact-dropdown");
 const contactEntry = document.querySelectorAll(".contact-entry");
+
 const userLogin = document.getElementById("user-login");
 const userLoginButton = document.getElementById("user-login-button");
 const userLoginButtonSm = document.getElementById("user-login-button-sm");
 const userLoginButtonClose = document.getElementById("user-login-button-close");
+
 const footerAboutHeading = document.getElementById("footer-about-heading");
 const footerAbout = document.getElementById("footer-about");
 const footerSupportHeading = document.getElementById("footer-support-heading");
@@ -28,6 +31,22 @@ const footerAccountHeading = document.getElementById("footer-account-heading");
 const footerAccount = document.getElementById("footer-account");
 const footerShoppingHeading = document.getElementById("footer-shopping-heading");
 const footerShopping = document.getElementById("footer-shopping");
+
+const faq1 = document.getElementById("faq-1");
+const faqAnswer1 = document.getElementById("faq-answer-1");
+const faqArrow1 = document.getElementById("faq-arrow-1");
+
+const faq2 = document.getElementById("faq-2");
+const faq3 = document.getElementById("faq-3");
+const faq4 = document.getElementById("faq-4");
+const faq5 = document.getElementById("faq-5");
+const faq6 = document.getElementById("faq-6");
+const faq7 = document.getElementById("faq-7");
+const faq8 = document.getElementById("faq-8");
+const faq9 = document.getElementById("faq-9");
+
+const faqAnswer = document.querySelectorAll(".faq-answer");
+const faqArrow = document.querySelectorAll(".faq-arrow");
 
 const FOOTER_ABOUT_INDEX = 0;
 const FOOTER_SUPPORT_INDEX = 1;
@@ -87,25 +106,8 @@ userLoginButtonClose.addEventListener("click", ()=>{
     userLogin.classList.toggle("hidden");
 });
 
-let currentIndex = -1;
-
-
 
 footerAboutHeading.addEventListener("click", () => {
-    /*
-    footerLinks.forEach((x) => {
-        x.classList.add("hidden");
-    });
-    setTimeout(() => {
-       if(currentIndex != 0){
-        footerAbout.classList.remove("hidden");
-        currentIndex = 0;
-       }
-       else{
-        currentIndex = -1;
-       }
-    },0);
-    */
     switchActiveLink(FOOTER_ABOUT_INDEX);
 });
 
@@ -129,6 +131,8 @@ footerShoppingHeading.addEventListener("click", () => {
     switchActiveLink(FOOTER_SHOPPING_INDEX);
 })
 
+let currentIndex = -1;
+
 function switchActiveLink(activeIndex){
     if(currentIndex == activeIndex){
         activeIndex = -1;
@@ -142,11 +146,55 @@ function switchActiveLink(activeIndex){
             x.classList.add("hidden");
         }
     });
-
     currentIndex = activeIndex;
-
-    console.log(currentIndex);
 }
+
+faq1.addEventListener("click", ()=>{
+    activateFAQ(1);
+});
+
+faq2.addEventListener("click",()=>{
+    activateFAQ(2);
+});
+
+faq3.addEventListener("click",()=>{
+    activateFAQ(3);
+});
+
+faq4.addEventListener("click",()=>{
+    activateFAQ(4);
+});
+
+faq5.addEventListener("click",()=>{
+    activateFAQ(5);
+});
+
+faq6.addEventListener("click",()=>{
+    activateFAQ(6);
+});
+
+faq7.addEventListener("click",()=>{
+    activateFAQ(7);
+});
+
+faq8.addEventListener("click",()=>{
+    activateFAQ(8);
+});
+
+faq9.addEventListener("click",()=>{
+    activateFAQ(9);
+});
+
+
+function activateFAQ(faqIndex){
+    faqAnswer.forEach((x,index) => {
+        if(x.dataset.index == faqIndex){
+            x.classList.toggle("hidden");
+            faqArrow[index].classList.toggle("rotate-180");
+        }
+    });
+}
+
 
 
 
