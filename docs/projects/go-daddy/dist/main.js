@@ -33,9 +33,6 @@ const footerShoppingHeading = document.getElementById("footer-shopping-heading")
 const footerShopping = document.getElementById("footer-shopping");
 
 const faq1 = document.getElementById("faq-1");
-const faqAnswer1 = document.getElementById("faq-answer-1");
-const faqArrow1 = document.getElementById("faq-arrow-1");
-
 const faq2 = document.getElementById("faq-2");
 const faq3 = document.getElementById("faq-3");
 const faq4 = document.getElementById("faq-4");
@@ -47,6 +44,10 @@ const faq9 = document.getElementById("faq-9");
 
 const faqAnswer = document.querySelectorAll(".faq-answer");
 const faqArrow = document.querySelectorAll(".faq-arrow");
+
+const productLimit = document.getElementById("product-limit");
+const productLimitClose = document.getElementById("product-limit-close");
+const productLimitOpen = document.getElementById("product-limit-open");
 
 const FOOTER_ABOUT_INDEX = 0;
 const FOOTER_SUPPORT_INDEX = 1;
@@ -194,6 +195,17 @@ function activateFAQ(faqIndex){
         }
     });
 }
+
+productLimitOpen.addEventListener("click", () =>{
+    body.classList.add("overflow-hidden");
+    productLimit.classList.remove("hidden");
+});
+
+productLimitClose.addEventListener("click", ()=> {
+    body.classList.remove("overflow-hidden");
+    productLimit.classList.add("hidden");
+
+});
 
 
 
