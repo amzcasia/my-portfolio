@@ -350,7 +350,7 @@
         </section>
         <!-- End of Domain Search 2 -->
         <!-- Why go Daddy -->
-        <section class="borderss">
+        <section class="">
             <img>
             <div>
                 <p>GoDaddy guides - logo</p>
@@ -362,14 +362,15 @@
         </section>
         <!-- End of WHy goDaddy -->
         <!-- FAQ Section -->
-        <section class="text-center borderss">
-            <p>Millions of customers rely on our domains and web hosting to get their ideas online.</p>
-            <p>Frequently Asked Questions</p>
-            <div>
-                <div>How does GoDaddy help small business owners succeed?</div>
-                <div>GoDaddy offers more than just a platform to build your website, we offer everything you need to create an effective, memorable online presence. Already have a site? We offer hosting plans that will keep it fast, secure and online. Our professional email helps you build a professional image, while our online marketing tools empower entrepreneurs to get online with an SEO-friendly website. GoDaddy is an all-in-one solution provider to get your idea online, backed with expert, personalized support from GoDaddy Guides.</div>
-            </div>
-            <div class="text-left">
+        <section class="text-center">
+            <p class="text-4xl font-semibold px borderss">Millions of customers rely on our domains and web hosting to get their ideas online.</p>
+            <p class="pt-5 text-2xl font-semibold px">Frequently Asked Questions</p>
+           
+            <div class="text-left px borderss">
+                <div class="border-t border-gray-500">
+                    <div class="faq">How does GoDaddy help small business owners succeed?</div>
+                    <div class="faqa">GoDaddy offers more than just a platform to build your website, we offer everything you need to create an effective, memorable online presence. Already have a site? We offer hosting plans that will keep it fast, secure and online. Our professional email helps you build a professional image, while our online marketing tools empower entrepreneurs to get online with an SEO-friendly website. GoDaddy is an all-in-one solution provider to get your idea online, backed with expert, personalized support from GoDaddy Guides.</div>
+                </div>
                 <div class="border-t border-gray-500">
                     <div class="faq" data-index="1">Why do I need a website for my business?</div>
                     <div>
@@ -425,7 +426,7 @@
     </main>
     <!-- End of Main Content -->
     <footer class="text-white">
-        <div>
+        <div class="text-black">
             <p><ahref="#">** View product limitations and legal policies</a></p>
             <p>Third-party logos and marks are registered trademarks of their respective owners. All rights reserved.</p>
 
@@ -453,8 +454,12 @@
         <!-- Footer Links -->
         <nav class="grid grid-cols-1 pt-10 text-xs text-white md:grid-cols-2 lg:grid-cols-6 bg-myblk px">
             <div class="">
-                <p class="text-base font-semibold hover:cursor-pointer md:hover:cursor-default">About Go Daddy</p>
-                <ul class="content-start hidden pt-4 gap-y-4 md:grid">
+                <!-- <p class="text-base font-semibold hover:cursor-pointer md:hover:cursor-default">About Go Daddy</p> -->
+                <div id="footer-about-heading" class="flex justify-between hover:cursor-pointer md:hover:cursor-defaults ">
+                    <p class="text-base font-semibold">About Go Daddy</p>
+                    <span class="text-lg font-semibold md:hidden">+</span>
+                </div>
+                <ul id="footer-about" class="grid content-start hidden pt-4 gap-y-4 md:grid footer-links text-slate-400" data-index="0">
                     <li><a class="hover:underline" href="#">About Us</a></li>
                     <li><a class="hover:underline" href="#">Contact Us</a></li>
                     <li><a class="hover:underline" href="#">Investor Relations</a></li>
@@ -462,21 +467,28 @@
                     <li><a class="hover:underline" href="#">Trust Center</a></li>
                     <li><a class="hover:underline" href="#">Legal</a></li>
                     <li><a class="hover:underline" href="#">GoDaddy Blog</a></li>
-                    <li><a class="hover:underline" href="#"></a></li>
+                    
                 </ul>
             </div>
-            <div>
-                <p class="text-base font-semibold">Support</p>
-                <ul class="content-start hidden pt-4 gap-y-4 md:grid">
+            <div class="pt-5 md:pt-0">
+                <div id="footer-support-heading" class="flex justify-between hover:cursor-pointer md:hover:cursor-defaults" >
+                    <p class="text-base font-semibold">Support</p>
+                    <span class="text-lg font-semibold md:hidden">+</span>
+                </div>
+                <ul id="footer-support" class="grid content-start hidden pt-4 gap-y-4 md:grid footer-links text-slate-400" data-index="1">
                     <li><a class="hover:underline" href="#">Product Support</a></li>
                     <li><a class="hover:underline" href="#">Community</a></li>
                     <li><a class="hover:underline" href="#">Report Abuse</a></li>
                     <li><a class="hover:underline" href="#">Resources</a></li>
+                    
                 </ul>
             </div>
-            <div class="md:pt-10 lg:pt-0">
-                <p class="text-base font-semibold">Resources</p>
-                <ul class="content-start hidden pt-4 gap-y-4 md:grid">
+            <div class="pt-5 md:pt-10 lg:pt-0">
+                <div id="footer-resources-heading" class="flex justify-between hover:cursor-pointer md:hover:cursor-defaults">
+                    <p class="text-base font-semibold">Resources</p>
+                    <span class="text-lg font-semibold md:hidden">+</span>
+                </div>
+                <ul id="footer-resources" class="grid content-start hidden pt-4 gap-y-4 md:grid footer-links text-slate-400" data-index="2">
                     <li><a class="hover:underline" href="#">Webmail</a></li>
                     <li><a class="hover:underline" href="#">WHOIS</a></li>
                     <li><a class="hover:underline" href="#">ICANN Confirmation</a></li>
@@ -486,25 +498,34 @@
                     <li><a class="hover:underline" href="#">Business Name Generator</a></li>
                 </ul>
             </div>
-            <div class="md:pt-10 lg:pt-0">
-                <p class="text-base font-semibold">Partner Programs</p>
-                <ul class="content-start hidden pt-4 gap-y-4 md:grid">
+            <div class="pt-5 md:pt-10 lg:pt-0">
+                <div id="footer-partner-heading" class="flex justify-between hover:cursor-pointer md:hover:cursor-defaults">
+                    <p class="text-base font-semibold">Partner Programs</p>
+                    <span class="text-lg font-semibold md:hidden">+</span>
+                </div>
+                <ul id="footer-partner" class="grid content-start hidden pt-4 gap-y-4 md:grid footer-links text-slate-400" data-index="3">
                     <li><a class="hover:underline" href="#">Affiliates</a></li>
                     <li><a class="hover:underline" href="#">Reseller Programs</a></li>
                     <li><a class="hover:underline" href="#">GoDaddy Pro</a></li>
                 </ul>
             </div>
-            <div class="md:pt-10 lg:pt-0">
-                <p class="text-base font-semibold">Account</p>
-                <ul class="content-start hidden pt-4 gap-y-4 md:grid">
+            <div class="pt-5 md:pt-10 lg:pt-0">
+                <div id="footer-account-heading" class="flex justify-between hover:cursor-pointer md:hover:cursor-defaults">
+                    <p class="text-base font-semibold">Account</p>
+                    <span class="text-lg font-semibold md:hidden">+</span>
+                </div>
+                <ul id="footer-account" class="grid content-start hidden pt-4 gap-y-4 md:grid footer-links text-slate-400" data-index="4">
                     <li><a class="hover:underline" href="#">My Products</a></li>
                     <li><a class="hover:underline" href="#">Renewals & Billing</a></li>
                     <li><a class="hover:underline" href="#">Create Account</a></li>
                 </ul>
             </div>
-            <div class="md:pt-10 lg:pt-0">
-                <p class="text-base font-semibold">Shopping</p>
-                <ul class="content-start hidden pt-4 gap-y-4 md:grid">
+            <div class="pt-5 md:pt-10 lg:pt-0">
+                <div id="footer-shopping-heading" class="flex justify-between hover:cursor-pointer md:hover:cursor-defaults">
+                    <p class="text-base font-semibold">Shopping</p>
+                    <span class="text-lg font-semibold md:hidden">+</span>
+                </div>
+                <ul id="footer-shopping" class="grid content-start hidden pt-4 gap-y-4 md:grid footer-links text-slate-400" data-index="5">
                     <li><a class="hover:underline" href="#">Buy a Domain</a></li>
                     <li><a class="hover:underline" href="#">Websites</a></li>
                     <li><a class="hover:underline" href="#">WordPress</a></li>
