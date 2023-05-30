@@ -48,306 +48,353 @@
 				</div>
 
 			</section>
-		</main>
-		<section class="lg:px-[5%] py-20 bg-white" >
-			<div class="p-2 pt-4 bg-primary-dark">
-				<!-- Tabs -->
-				<div class="flex bg-primary-dark"> 
-					<button id="tab-button-1" onclick="changeTab(0)" class="flex gap-2 px-3 py-2 tab-button rounded-t-md text-primary-light bg-primary">
-						<img class="w-[25px] aspect-square" src=".\src\jjj-logo.png">
-						<span class="hidden lg:inline">Jejoju Cafe</span>
-						<span class="hidden md:inline lg:hidden">Jejoju</span>
-					</button>
-					<button id="tab-button-2" onclick="changeTab(1)" class="flex gap-2 px-3 py-2 tab-button rounded-t-md text-primary-light bg-secondary">
-						<img class="w-[25px] aspect-square" src=".\src\wine.png">
-						<span class="hidden lg:inline">Benvinum Wines</span>
-						<span class="hidden md:inline lg:hidden">Benvinum</span>
+			<!-- End of Hero Section -->
+			<!-- Start of About Section -->
+			<section id="about" class="px-[5%] py-10 bg-white">
+				<div class="grid">
+					<div class="flex items-center pl-20">
+						<div class="w-2 h-16 bg-primary"></div>
+						<span class="pl-5 text-5xl font-semibold text-primary">
+							About Me
+						</span>
+					</div>
+					<div class="grid grid-cols-2 pt-10">
+						<div class="flex justify-end pr-16">
+							<img class="max-h-[600px]" src=".\src\about-img.jpg">
+						</div>
+						<div class="pl-16 text-2xl text-primary-dark">
+							<p class="pt-10 text-4xl font-semibold">Anton Mark Z. Casia</p>
+							<p class="pt-8">I am a Web Developer based in Cebu, Philippines.
+								My expertise lies in translating designs into fully functional websites and emails while utilizing my development skills to enhance and customize their features. My goal is to craft visually appealing, user-friendly websites/emails that provide a seamless browsing experience.</p>
+							<p class="pt-6">In my free time, I enjoy playing Valorant and go road cycling during the weekends.</p>
+							<div class="flex pt-24">
+							<a class="" href="#"><span class="px-6 py-2 text-2xl font-semibold text-white bg-primary-dark">Get in Touch</span></a>
+							</div>
+						</div>
 
-					</button>
-					<button id="tab-button-3" onclick="changeTab(2)" class="flex gap-2 px-3 py-2 tab-button rounded-t-md text-primary-light bg-secondary">
-						<img class="w-[25px] aspect-square" src=".\src\GoDaddy-Logo-notext.svg">
-						<span class="hidden lg:inline">GoDaddy</span>
-						<span class="hidden md:inline lg:hidden">GoDaddy</span>
-					</button>
-					<button id="tab-button-4" onclick="changeTab(3)" class="flex items-center gap-2 px-3 py-2 tab-button rounded-t-md text-primary-light bg-secondary">
-						
-						<img class="w-[25px]" src=".\src\shakeys-logo.png">
-						
-						<span class="hidden lg:inline">Shakey’s Pizza</span>
-						<span class="hidden md:inline lg:hidden">Shakey's</span>
-					</button>
-					<button id="tab-button-5" onclick="changeTab(4)" class="flex gap-2 px-3 py-2 tab-button rounded-t-md text-primary-light bg-secondary">
-						<img class="w-[25px] aspect-square" src=".\src\tailwind-logo.png">
-						<span class="hidden lg:inline">Tailwind CSS</span>
-						<span class="hidden md:inline lg:hidden">Tailwind</span>
-					</button>
-					<button id="tab-button-6" onclick="changeTab(5)" class="flex gap-2 px-3 py-2 tab-button rounded-t-md text-primary-light bg-secondary">
-						<img class="w-[25px] aspect-square text-white" src=".\src\free-code-camp-logo.svg">
-						<span class="hidden lg:inline">Responsive Web Design Certification </span>
-						<span class="hidden md:inline lg:hidden">Certification</span>
-					</button>
+					</div>
 				</div>
-				<!-- End of Tabs -->
-				<!-- Project Box -->
-				<div class="p-4 py-10 text-primary-dark bg-primary-light">
-					<!-- Project 1 -->
-					<div class="project-item"> <!-- hidden -->
-						<!-- Project 1 Content -->
-						<div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
-							<!-- P1 Col 1 -->
-							<div class="relative overflow-y-scroll max-h-[400px]">
-								<a class="w-full h-[400px]" href=".\projects\landing-page\dist\index.html" target="_blank">
-								<img class="w-full" src=".\src\jjj-desktop.png">
-								</a>
-								
-							</div>
-							<!-- P1 Col 2 -->
-							<div class="grid content-between text-lg">
-								<div class="">
-									<p class="text-2xl font-semibold">Jejoju Cafe Landing Page</p>
-									<p class="pt-4">Mock landing page for a Bubble Tea store. This project was created as a requirement for the FreeCodeCamp Responsive Web Design Certification.</p>
-									<p class="pt-4">Features:</p>
-									<ul>
-										<li class="indent-4 before:content-['-']"> Dynamic Navigation Highlight</li>
-										<li class="indent-4 before:content-['-']"> Copy code snippet</li>
-										<li class="indent-4 before:content-['-']"> Sticky Heading</li>
-										<li class="indent-4 before:content-['-']"> Tailwind CSS </li>
-										<li class="indent-4 before:content-['-']"> Responsive</li>
-									</ul>
-								</div>
-								<!-- P1 Visit Website Button -->
-								<div class="flex justify-center pt-2 md:justify-start">
-									<a class="px-5 py-2 font-semibold text-center text-white bg-secondary" href=".\projects\landing-page\dist\index.html" target="_blank">
-										<span class="">Visit Website</span>
-									</a>
-								</div>
-							</div>
-							<!-- End of P1 Col 2 -->
-							<!-- P1 Col 3 -->
-							<div class="hidden lg:flex">
-								<div class="max-h-[400px] overflow-y-scroll">
-									<a href=".\projects\landing-page\dist\index.html" target="_blank">
-									<img class="" src=".\src\jjj-mobile.png">
-									</a>
-								</div>
-							</div>
-							<!-- End of P1 Col 3 -->
-						</div><!-- End of Project 1 Content -->
-					</div><!-- End of Project 1-->
 
+			</section>
+			<!-- End of About Section -->
 
-					<!-- Project 2 -->
-					<div class="project-item"> <!-- hidden -->
-						<!-- Project 2 Content -->
-						<div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
-							<!-- P2 Col 1 -->
-							<div class="relative overflow-y-scroll max-h-[400px]">
-								<a class="w-full h-[400px]" href=".\projects\benvinum\dist\index.html" target="_blank">
-								<img class="w-full" src=".\src\benvinum-desktop.png">
-								</a>
-								
-							</div>
-							<!-- P2 Col 2 -->
-							<div class="grid content-between text-lg">
-								<div class="">
-									<p class="text-2xl font-semibold">Benvinum Wines Landing Page</p>
-									<p class="pt-4">Mock landing page for a wine shop. Explain development process</p>
-									<p class="pt-4">Features:</p>
-									<ul>
-										<li class="indent-4 before:content-['-']"> Image Carousel</li>
-										<li class="indent-4 before:content-['-']"> Collapsible Navbar (Mobile)</li>
-										<li class="indent-4 before:content-['-']"> Tailwind CSS </li>
-										<li class="indent-4 before:content-['-']"> Responsive</li>
-									</ul>
-								</div>
-								<!-- P2 Visit Website Button -->
-								<div class="flex justify-center pt-2 md:justify-start">
-									<a class="px-5 py-2 font-semibold text-center text-white bg-secondary" href=".\projects\benvinum\dist\index.html" target="_blank">
-										<span class="">Visit Website</span>
-									</a>
-								</div>
-							</div>
-							<!-- End of P2 Col 2 -->
-							<!-- P2 Col3 -->
-							<div class="hidden lg:flex">
-								<div class="max-h-[400px] overflow-y-scroll">
-									<a href=".\projects\benvinum\dist\index.html" target="_blank">
-									<img class="" src=".\src\benvinum-mobile.png">
-									</a>
-								</div>
-							</div>
-							<!-- End of P2 Col 3 -->
-						</div><!-- End of Project 2 Content -->
-					</div><!-- End of Project 2-->
+			<!-- Services Section -->
+			<section class="h-[600px] pt-10">
+				<div class="flex items-center pl-20">
+					<div class="w-2 h-16 bg-primary"></div>
+					<span class="pl-5 text-5xl font-semibold text-primary">
+						 Services
+					</span>   
+				</div>
+			</section>
+			<!-- End of Services Section -->
+		
+			<section class="lg:px-[5%] py-20 bg-white grid" >
+				<div class="flex items-center pl-20">
+					<div class="w-2 h-16 bg-primary"></div>
+					<span class="pl-5 text-5xl font-semibold text-primary">
+						 Portfolio
+					</span>   
+				</div>
+				<div class="p-2 pt-4 mt-10 bg-primary-dark">
+					<!-- Tabs -->
+					<div class="flex bg-primary-dark"> 
+						<button id="tab-button-1" onclick="changeTab(0)" class="flex gap-2 px-3 py-2 tab-button rounded-t-md text-primary-light bg-primary">
+							<img class="w-[25px] aspect-square" src=".\src\jjj-logo.png">
+							<span class="hidden lg:inline">Jejoju Cafe</span>
+							<span class="hidden md:inline lg:hidden">Jejoju</span>
+						</button>
+						<button id="tab-button-2" onclick="changeTab(1)" class="flex gap-2 px-3 py-2 tab-button rounded-t-md text-primary-light bg-secondary">
+							<img class="w-[25px] aspect-square" src=".\src\wine.png">
+							<span class="hidden lg:inline">Benvinum Wines</span>
+							<span class="hidden md:inline lg:hidden">Benvinum</span>
 
-
-					<!-- Project 3 -->
-					<div class="project-item"> <!-- hidden -->
-						<!-- Project 3 Content -->
-						<div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
-							<!-- P3 Col 1 -->
-							<div class="relative overflow-y-scroll max-h-[400px]">
-								<a class="w-full h-[400px]" href=".\projects\go-daddy\index.html" target="_blank">
-								<img class="w-full" src=".\src\go-daddy-desktop.png">
-								</a>
-								
-							</div>
-							<!-- P3 Col 2 -->
-							<div class="grid content-between text-lg">
-								<div class="">
-									<p class="text-2xl font-semibold">GoDaddy Landing Page</p>
-									<p class="pt-4">Landing page clone of GoDaddy website. </p>
-									<p class="pt-4">Features:</p>
-									<ul>
-										<li class="indent-4 before:content-['-']"> Image Carousel</li>
-										<li class="indent-4 before:content-['-']"> Collapsible Navbar (Mobile)</li>
-										<li class="indent-4 before:content-['-']"> Tailwind CSS </li>
-										<li class="indent-4 before:content-['-']"> Responsive</li>
-									</ul>
-								</div>
-								<!-- P3 Visit Website Button -->
-								<div class="flex justify-center pt-2 md:justify-start">
-									<a class="px-5 py-2 font-semibold text-center text-white bg-secondary" href=".\projects\go-daddy\index.html" target="_blank">
-										<span class="">Visit Website</span>
+						</button>
+						<button id="tab-button-3" onclick="changeTab(2)" class="flex gap-2 px-3 py-2 tab-button rounded-t-md text-primary-light bg-secondary">
+							<img class="w-[25px] aspect-square" src=".\src\GoDaddy-Logo-notext.svg">
+							<span class="hidden lg:inline">GoDaddy</span>
+							<span class="hidden md:inline lg:hidden">GoDaddy</span>
+						</button>
+						<button id="tab-button-4" onclick="changeTab(3)" class="flex items-center gap-2 px-3 py-2 tab-button rounded-t-md text-primary-light bg-secondary">
+							
+							<img class="w-[25px]" src=".\src\shakeys-logo.png">
+							
+							<span class="hidden lg:inline">Shakey’s Pizza</span>
+							<span class="hidden md:inline lg:hidden">Shakey's</span>
+						</button>
+						<button id="tab-button-5" onclick="changeTab(4)" class="flex gap-2 px-3 py-2 tab-button rounded-t-md text-primary-light bg-secondary">
+							<img class="w-[25px] aspect-square" src=".\src\tailwind-logo.png">
+							<span class="hidden lg:inline">Tailwind CSS</span>
+							<span class="hidden md:inline lg:hidden">Tailwind</span>
+						</button>
+						<button id="tab-button-6" onclick="changeTab(5)" class="flex gap-2 px-3 py-2 tab-button rounded-t-md text-primary-light bg-secondary">
+							<img class="w-[25px] aspect-square text-white" src=".\src\free-code-camp-logo.svg">
+							<span class="hidden lg:inline">Responsive Web Design Certification </span>
+							<span class="hidden md:inline lg:hidden">Certification</span>
+						</button>
+					</div>
+					<!-- End of Tabs -->
+					<!-- Project Box -->
+					<div class="p-4 py-10 text-primary-dark bg-primary-light">
+						<!-- Project 1 -->
+						<div class="project-item"> <!-- hidden -->
+							<!-- Project 1 Content -->
+							<div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+								<!-- P1 Col 1 -->
+								<div class="relative overflow-y-scroll max-h-[400px]">
+									<a class="w-full h-[400px]" href=".\projects\landing-page\dist\index.html" target="_blank">
+									<img class="w-full" src=".\src\jjj-desktop.png">
 									</a>
-								</div>
-							</div>
-							<!-- End of P3 Col 2 -->
-							<!-- P3 Col3 -->
-							<div class="hidden lg:flex">
-								<div class="max-h-[400px] overflow-y-scroll">
-									<a href=".\projects\go-daddy\index.html" target="_blank">
-									<img class="" src=".\src\go-daddy-mobile.png">
-									</a>
-								</div>
-							</div>
-							<!-- End of P3 Col 3 -->
-						</div><!-- End of Project 3 Content -->
-					</div><!-- End of Project 3-->
-
-					<!-- Project 4 -->
-					<div class="hidden project-item"> <!-- hidden -->
-						<!-- Project 4 Content -->
-						<div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
-							<!-- P4 Col 1 -->
-							<div class="relative overflow-y-scroll max-h-[400px]">
-								<a class="w-full h-[400px]" href=".\projects\survey-form\index.html" target="_blank">
-								<img class="w-full" src=".\src\survey-form-desktop.png">
-								</a>
-								
-							</div>
-							<!-- P4 Col 2 -->
-							<div class="grid content-between text-lg">
-								<div class="">
-									<p class="text-2xl font-semibold">Shakey’s Pizza Order Form</p>
-									<p class="pt-4">Mock order form for Shakey’s Pizza delivery.
-										This project was created as a requirement for the freeCodeCamp Certification.
-									</p>
-									<p class="pt-4">Features:</p>
-									<ul>
-										<li class="indent-4 before:content-['-']"> Form Submission</li>
-										<li class="indent-4 before:content-['-']"> Tailwind CSS </li>
-										<li class="indent-4 before:content-['-']"> Responsive</li>
-									</ul>
-								</div>
-								<!-- P4 Visit Website Button -->
-								<div class="flex justify-center pt-2 md:justify-start">
-									<a class="px-5 py-2 font-semibold text-center text-white bg-secondary" href=".\projects\survey-form\index.html" target="_blank">
-										<span class="">Visit Website</span>
-									</a>
-								</div>
-							</div>
-							<!-- End of P4 Col 2 -->
-							<!-- P4 Col3 -->
-							<div class="hidden lg:flex">
-								<div class="max-h-[400px] overflow-y-scroll">
-									<a href=".\projects\survey-form\index.html" target="_blank">
-									<img class="" src=".\src\survey-form-mobile.png">
-									</a>
-								</div>
-							</div>
-							<!-- End of P4 Col 3 -->
-						</div><!-- End of Project 4 Content -->
-					</div><!-- End of Project 4-->
-
-
-					<!-- Project 5 -->
-					<div class="hidden project-item"> <!-- hidden -->
-						<!-- Project 5 Content -->
-						<div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
-							<!-- P5 Col 1 -->
-							<div class="relative overflow-y-scroll max-h-[400px]">
-								<a class="w-full h-[400px]" href=".\projects\tech-doc\index.html" target="_blank">
-								<img class="w-full" src=".\src\tech-doc-desktop.png">
-								</a>
-								
-							</div>
-							<!-- P5 Col 2 -->
-							<div class="grid content-between text-lg">
-								<div class="">
-									<p class="text-2xl font-semibold">Tailwind CSS Documentation</p>
-									<p class="pt-4">Technical documentation page for Tailwind CSS. 
-										This project was created as a requirement for the freeCodeCamp Certification.
-									</p>
-									<p class="pt-4">Features:</p>
-									<ul>
-										<li class="indent-4 before:content-['-']"> Dynamic Navigation Highlight</li>
-										<li class="indent-4 before:content-['-']"> Copy code snippet </li>
-										<li class="indent-4 before:content-['-']"> ResSticky Headingponsive</li>
-										<li class="indent-4 before:content-['-']"> Tailwind CSS </li>
-										<li class="indent-4 before:content-['-']"> Responsive</li>
-									</ul>
-								</div>
-								<!-- P5 Visit Website Button -->
-								<div class="flex justify-center pt-2 md:justify-start">
-									<a class="px-5 py-2 font-semibold text-center text-white bg-secondary" href=".\projects\tech-doc\index.html" target="_blank">
-										<span class="">Visit Website</span>
-									</a>
-								</div>
-							</div>
-							<!-- End of P5 Col 2 -->
-							<!-- P5 Col3 -->
-							<div class="hidden lg:flex">
-								<div class="max-h-[400px] overflow-y-scroll">
-									<a href=".\projects\tech-doc\index.html" target="_blank">
-									<img class="" src=".\src\tech-doc-mobile.png">
-									</a>
-								</div>
-							</div>
-							<!-- End of P5 Col 3 -->
-						</div><!-- End of Project 4 Content -->
-					</div><!-- End of Project 5-->
-
-					<div class="hidden project-item"> <!-- hidden -->
-						<!-- Project 5 Content -->
-						<div class="grid grid-cols-1 gap-4 md:grid-cols-2">
-							<!-- P5 Col 1 -->
-							<div class="relative max-h-[400px] ">
-								<a class="flex justify-center h-full" href="https://www.freecodecamp.org/certification/amarkzc/responsive-web-design" target="_blank">
-									<img class="h-full" src=".\src\certificate.png">
-								</a>
-								
-							</div>
-							<div class="grid content-between text-lg">
-								<div class="">
-									<p class="text-2xl font-semibold">Responsive Web Design Certification </p>
-									<p class="pt-4">Certification for completing the Responsive Web Design Course on FreeCodeCamp. FCC learning experience?
-									</p>
 									
 								</div>
-								<!-- P5 Visit Website Button -->
-								<div class="flex justify-center pt-2 md:justify-start">
-									<a class="px-5 py-2 font-semibold text-center text-white bg-secondary" href="https://www.freecodecamp.org/certification/amarkzc/responsive-web-design" target="_blank">
-										<span class="">Visit Website</span>
+								<!-- P1 Col 2 -->
+								<div class="grid content-between text-lg">
+									<div class="">
+										<p class="text-2xl font-semibold">Jejoju Cafe Landing Page</p>
+										<p class="pt-4">Mock landing page for a Bubble Tea store. This project was created as a requirement for the FreeCodeCamp Responsive Web Design Certification.</p>
+										<p class="pt-4">Features:</p>
+										<ul>
+											<li class="indent-4 before:content-['-']"> Dynamic Navigation Highlight</li>
+											<li class="indent-4 before:content-['-']"> Copy code snippet</li>
+											<li class="indent-4 before:content-['-']"> Sticky Heading</li>
+											<li class="indent-4 before:content-['-']"> Tailwind CSS </li>
+											<li class="indent-4 before:content-['-']"> Responsive</li>
+										</ul>
+									</div>
+									<!-- P1 Visit Website Button -->
+									<div class="flex justify-center pt-2 md:justify-start">
+										<a class="px-5 py-2 font-semibold text-center text-white bg-secondary" href=".\projects\landing-page\dist\index.html" target="_blank">
+											<span class="">Visit Website</span>
+										</a>
+									</div>
+								</div>
+								<!-- End of P1 Col 2 -->
+								<!-- P1 Col 3 -->
+								<div class="hidden lg:flex">
+									<div class="max-h-[400px] overflow-y-scroll">
+										<a href=".\projects\landing-page\dist\index.html" target="_blank">
+										<img class="" src=".\src\jjj-mobile.png">
+										</a>
+									</div>
+								</div>
+								<!-- End of P1 Col 3 -->
+							</div><!-- End of Project 1 Content -->
+						</div><!-- End of Project 1-->
+
+
+						<!-- Project 2 -->
+						<div class="project-item"> <!-- hidden -->
+							<!-- Project 2 Content -->
+							<div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+								<!-- P2 Col 1 -->
+								<div class="relative overflow-y-scroll max-h-[400px]">
+									<a class="w-full h-[400px]" href=".\projects\benvinum\dist\index.html" target="_blank">
+									<img class="w-full" src=".\src\benvinum-desktop.png">
 									</a>
+									
+								</div>
+								<!-- P2 Col 2 -->
+								<div class="grid content-between text-lg">
+									<div class="">
+										<p class="text-2xl font-semibold">Benvinum Wines Landing Page</p>
+										<p class="pt-4">Mock landing page for a wine shop. Explain development process</p>
+										<p class="pt-4">Features:</p>
+										<ul>
+											<li class="indent-4 before:content-['-']"> Image Carousel</li>
+											<li class="indent-4 before:content-['-']"> Collapsible Navbar (Mobile)</li>
+											<li class="indent-4 before:content-['-']"> Tailwind CSS </li>
+											<li class="indent-4 before:content-['-']"> Responsive</li>
+										</ul>
+									</div>
+									<!-- P2 Visit Website Button -->
+									<div class="flex justify-center pt-2 md:justify-start">
+										<a class="px-5 py-2 font-semibold text-center text-white bg-secondary" href=".\projects\benvinum\dist\index.html" target="_blank">
+											<span class="">Visit Website</span>
+										</a>
+									</div>
+								</div>
+								<!-- End of P2 Col 2 -->
+								<!-- P2 Col3 -->
+								<div class="hidden lg:flex">
+									<div class="max-h-[400px] overflow-y-scroll">
+										<a href=".\projects\benvinum\dist\index.html" target="_blank">
+										<img class="" src=".\src\benvinum-mobile.png">
+										</a>
+									</div>
+								</div>
+								<!-- End of P2 Col 3 -->
+							</div><!-- End of Project 2 Content -->
+						</div><!-- End of Project 2-->
+
+
+						<!-- Project 3 -->
+						<div class="project-item"> <!-- hidden -->
+							<!-- Project 3 Content -->
+							<div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+								<!-- P3 Col 1 -->
+								<div class="relative overflow-y-scroll max-h-[400px]">
+									<a class="w-full h-[400px]" href=".\projects\go-daddy\index.html" target="_blank">
+									<img class="w-full" src=".\src\go-daddy-desktop.png">
+									</a>
+									
+								</div>
+								<!-- P3 Col 2 -->
+								<div class="grid content-between text-lg">
+									<div class="">
+										<p class="text-2xl font-semibold">GoDaddy Landing Page</p>
+										<p class="pt-4">Landing page clone of GoDaddy website. </p>
+										<p class="pt-4">Features:</p>
+										<ul>
+											<li class="indent-4 before:content-['-']"> Image Carousel</li>
+											<li class="indent-4 before:content-['-']"> Collapsible Navbar (Mobile)</li>
+											<li class="indent-4 before:content-['-']"> Tailwind CSS </li>
+											<li class="indent-4 before:content-['-']"> Responsive</li>
+										</ul>
+									</div>
+									<!-- P3 Visit Website Button -->
+									<div class="flex justify-center pt-2 md:justify-start">
+										<a class="px-5 py-2 font-semibold text-center text-white bg-secondary" href=".\projects\go-daddy\index.html" target="_blank">
+											<span class="">Visit Website</span>
+										</a>
+									</div>
+								</div>
+								<!-- End of P3 Col 2 -->
+								<!-- P3 Col3 -->
+								<div class="hidden lg:flex">
+									<div class="max-h-[400px] overflow-y-scroll">
+										<a href=".\projects\go-daddy\index.html" target="_blank">
+										<img class="" src=".\src\go-daddy-mobile.png">
+										</a>
+									</div>
+								</div>
+								<!-- End of P3 Col 3 -->
+							</div><!-- End of Project 3 Content -->
+						</div><!-- End of Project 3-->
+
+						<!-- Project 4 -->
+						<div class="hidden project-item"> <!-- hidden -->
+							<!-- Project 4 Content -->
+							<div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+								<!-- P4 Col 1 -->
+								<div class="relative overflow-y-scroll max-h-[400px]">
+									<a class="w-full h-[400px]" href=".\projects\survey-form\index.html" target="_blank">
+									<img class="w-full" src=".\src\survey-form-desktop.png">
+									</a>
+									
+								</div>
+								<!-- P4 Col 2 -->
+								<div class="grid content-between text-lg">
+									<div class="">
+										<p class="text-2xl font-semibold">Shakey’s Pizza Order Form</p>
+										<p class="pt-4">Mock order form for Shakey’s Pizza delivery.
+											This project was created as a requirement for the freeCodeCamp Certification.
+										</p>
+										<p class="pt-4">Features:</p>
+										<ul>
+											<li class="indent-4 before:content-['-']"> Form Submission</li>
+											<li class="indent-4 before:content-['-']"> Tailwind CSS </li>
+											<li class="indent-4 before:content-['-']"> Responsive</li>
+										</ul>
+									</div>
+									<!-- P4 Visit Website Button -->
+									<div class="flex justify-center pt-2 md:justify-start">
+										<a class="px-5 py-2 font-semibold text-center text-white bg-secondary" href=".\projects\survey-form\index.html" target="_blank">
+											<span class="">Visit Website</span>
+										</a>
+									</div>
+								</div>
+								<!-- End of P4 Col 2 -->
+								<!-- P4 Col3 -->
+								<div class="hidden lg:flex">
+									<div class="max-h-[400px] overflow-y-scroll">
+										<a href=".\projects\survey-form\index.html" target="_blank">
+										<img class="" src=".\src\survey-form-mobile.png">
+										</a>
+									</div>
+								</div>
+								<!-- End of P4 Col 3 -->
+							</div><!-- End of Project 4 Content -->
+						</div><!-- End of Project 4-->
+
+
+						<!-- Project 5 -->
+						<div class="hidden project-item"> <!-- hidden -->
+							<!-- Project 5 Content -->
+							<div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+								<!-- P5 Col 1 -->
+								<div class="relative overflow-y-scroll max-h-[400px]">
+									<a class="w-full h-[400px]" href=".\projects\tech-doc\index.html" target="_blank">
+									<img class="w-full" src=".\src\tech-doc-desktop.png">
+									</a>
+									
+								</div>
+								<!-- P5 Col 2 -->
+								<div class="grid content-between text-lg">
+									<div class="">
+										<p class="text-2xl font-semibold">Tailwind CSS Documentation</p>
+										<p class="pt-4">Technical documentation page for Tailwind CSS. 
+											This project was created as a requirement for the freeCodeCamp Certification.
+										</p>
+										<p class="pt-4">Features:</p>
+										<ul>
+											<li class="indent-4 before:content-['-']"> Dynamic Navigation Highlight</li>
+											<li class="indent-4 before:content-['-']"> Copy code snippet </li>
+											<li class="indent-4 before:content-['-']"> ResSticky Headingponsive</li>
+											<li class="indent-4 before:content-['-']"> Tailwind CSS </li>
+											<li class="indent-4 before:content-['-']"> Responsive</li>
+										</ul>
+									</div>
+									<!-- P5 Visit Website Button -->
+									<div class="flex justify-center pt-2 md:justify-start">
+										<a class="px-5 py-2 font-semibold text-center text-white bg-secondary" href=".\projects\tech-doc\index.html" target="_blank">
+											<span class="">Visit Website</span>
+										</a>
+									</div>
+								</div>
+								<!-- End of P5 Col 2 -->
+								<!-- P5 Col3 -->
+								<div class="hidden lg:flex">
+									<div class="max-h-[400px] overflow-y-scroll">
+										<a href=".\projects\tech-doc\index.html" target="_blank">
+										<img class="" src=".\src\tech-doc-mobile.png">
+										</a>
+									</div>
+								</div>
+								<!-- End of P5 Col 3 -->
+							</div><!-- End of Project 4 Content -->
+						</div><!-- End of Project 5-->
+
+						<div class="hidden project-item"> <!-- hidden -->
+							<!-- Project 5 Content -->
+							<div class="grid grid-cols-1 gap-4 md:grid-cols-2">
+								<!-- P5 Col 1 -->
+								<div class="relative max-h-[400px] ">
+									<a class="flex justify-center h-full" href="https://www.freecodecamp.org/certification/amarkzc/responsive-web-design" target="_blank">
+										<img class="h-full" src=".\src\certificate.png">
+									</a>
+									
+								</div>
+								<div class="grid content-between text-lg">
+									<div class="">
+										<p class="text-2xl font-semibold">Responsive Web Design Certification </p>
+										<p class="pt-4">Certification for completing the Responsive Web Design Course on FreeCodeCamp. FCC learning experience?
+										</p>
+										
+									</div>
+									<!-- P5 Visit Website Button -->
+									<div class="flex justify-center pt-2 md:justify-start">
+										<a class="px-5 py-2 font-semibold text-center text-white bg-secondary" href="https://www.freecodecamp.org/certification/amarkzc/responsive-web-design" target="_blank">
+											<span class="">Visit Website</span>
+										</a>
+									</div>
 								</div>
 							</div>
 						</div>
-					</div>
 
-				</div><!-- End of Project Box -->
-			</div>
-		</section>
+					</div><!-- End of Project Box -->
+				</div>
+			</section>
+		</main>
 
 	</body>
 </html>
