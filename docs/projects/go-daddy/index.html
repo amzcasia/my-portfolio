@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Go-Daddy</title>
+    <link rel="stylesheet" href=".\dist\output.css">
+    <script src="https://kit.fontawesome.com/c322fa12db.js" crossorigin="anonymous"></script>
+    <script src=".\dist\main.js" defer></script>
+</head>
+<body class="relative text-base">
+    <header>
+        <nav class="h-[60px] w-full flex bg-myblk text-white justify-between items-center px z-[50]">
+            <div class="hidden lg:flex lg:items-center">
+                <div id="brand">
+                    <a href="#">
+                    <img class="h-[25px] w-auto aspect-[512/105]" src=".\images\godaddy-logo.svg"></a>
+                </div>
+                
+                <ul id="main-nav" class="flex gap-1 pl-5 font-semibold ">
+                    <li><a class="p-2 px-3 rounded-lg hover:bg-[#5e5e5e]" href="#">Domain Names</a></li>
+                    <li><a class="p-2 px-3 rounded-lg hover:bg-[#5e5e5e]" href="#">Website Hosting</a></li>
+                    <li><a class="p-2 px-3 rounded-lg hover:bg-[#5e5e5e]" href="#">Email & Marketing</a></li>
+                </ul>
+            </div>
+            <ul id="sub-nav" class="items-center hidden gap-4 text-sm lg:flex">
+                <li><button id="contact-nav-lg" class="p-2 px-3 rounded-lg hover:bg-[#5e5e5e]">Support Manila: (99) 9999-9999</button></li>
+                <li><a class="p-2 px-3 rounded-lg hover:bg-[#5e5e5e]" href="#">Help</a></li>
+                <li><button id="user-login-button" class="p-2 px-3 rounded-lg hover:bg-[#5e5e5e]">Sign-in</button></li>
+                <li><button class="w-6 h-6"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
+                    </svg></button>
+                </li>
+            </ul>
+            <div class="flex items-center gap-3 lg:hidden">
+                <button id="mobile-nav-open" class="w-10 h-10 " ><i class="text-xl fa-solid fa-bars"></i></button>
+                <a href="#"><img class="w-10 h-10" src=".\images\GoDaddy-Logo-notext.svg"></a>
+            </div>
+            <ul class="flex items-center gap-3 lg:hidden">
+                <li><button id="contact-nav"><svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
+                </svg>
+                </button></li>
+                <li><a href="#"><svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 5.25h.008v.008H12v-.008z" />
+                </svg>
+                </a></li>
+                <li><button id="user-login-button-sm" class=""><svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
+                </svg>
+            </button></li>
+                <li><button><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
+                    </svg>
+                </button></li>
+            </ul>
+        </nav>
+        <!-- Mobile sliding navigation -->
+
+        <nav id="mobile-sliding-nav" class="h-screen w-screen absolute top-0 left-0 z-50 flex transition duration-700 translate-x-[-100%]">
+            <div class="h-[100dvh] w-[90dvw] bg-white px-5 grid content-between pb-5">
+                <ul class="grid gap-y-8">
+                    <li class=""><button id="mobile-nav-logo" class="h-[60px] flex items-center"><img class="w-12 h-12 -translate-x-1" src=".\images\GoDaddy-Logo-notext.svg"></button>
+                    </li>
+                    <li class="">
+                        <a class="flex items-center justify-between mobile-nav-list" href="#">
+                        <span class="text-2xl">Domain Names</span>
+                        <svg class="w-10 h-10 arrow" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
+                        </svg>
+                        </a>
+                    </li>
+                    <li class="">
+                        <a class="flex items-center justify-between mobile-nav-list" href="#">
+                        <span class="text-2xl">Websites & Hosting</span>
+                        <svg class="w-10 h-10 arrow" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
+                        </svg>
+                        </a>
+
+                    </li>
+                    <li class="">
+                        <a class="flex items-center justify-between mobile-nav-list" href="#">
+                        <span class="text-2xl">Email & Marketing</span>
+                        <svg class="w-10 h-10 arrow" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
+                        </svg>
+                        </a>
+
+                    </li>
+                </ul>
+                <ul class="grid gap-4">
+                    <li class=""><a class="flex gap-x-2" href="#"><svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 5.25h.008v.008H12v-.008z" />
+                    </svg>
+                    <span>Help Center</span>
+                    </a></li>
+                    <li><a class="flex gap-x-2" href="#"><svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
+                    </svg>
+                    <span>Account</span>
+                    </a></li>
+                    <li><button class="flex gap-x-2"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
+                        </svg>
+                        <span>Basket</span>
+                    </button></li>
+                </ul>
+            </div>
+            <button id="mobile-nav-close" class="h-screen w-[10dvw] backdrop-blur-[2px] bg-black bg-opacity-60 flex justify-center">
+                <div class="flex justify-center h-[60px] items-center">
+                    <i class="text-3xl text-white fa-solid fa-xmark"></i>
+                </div>
+            </button>
+
+        </nav>
+         <!-- Contact Dropdown Section -translate-y-[120%] -->
+        <section id="contact-dropdown" class="absolute w-full px py-4 grid md:grid-cols-2 content-between z-[49] scale-y-0 scale-x-100 hidden origin-top transition duration-300 bg-white">
+            <div class="hidden pt-4 contact-entry">
+                <p class="text-lg font-semibold">Call Us</p>
+                <p>Call our award-winning sales & support team</p>
+                <p><a class="hover:scale-[103%] flex hover:underline" href="#">Support Manila: (02) 8231-2988</a></p>
+                <p class="pt-3">Global Directory</p>
+                <p><a class="hover:scale-[103%] flex hover:underline" href="#">Phone numbers and hours</a></p>
+            </div>
+            <div class="hidden pt-4 contact-entry">
+                <p class="text-lg font-semibold">Chat Now</p>
+                <p class="pt-4">Chat with our sales & support team for quick answers on product features, pricing and more.</p>
+                <div class="flex gap-2 pt-3 font-semibold">
+                    <button class="px-5 py-2 text-white bg-black shadow-3xl">
+                        <i class="mr-1 fa-regular fa-message fa-flip-horizontal"></i>
+                        <span>Chat Now</span>
+                    </button>
+                    <button class="px-5 py-2 shadow-3xl">
+                        <i class="fa-brands fa-whatsapp"></i>
+                        <span>WhatsApp</span>
+                    </button>
+                    <button class="px-5 py-2 shadow-3xl">
+                        <i class="fa-brands fa-facebook-messenger"></i>
+                        <span>Messenger</span>
+                
+                        </button>
+                </div>
+                <p>24x7</p>
+            </div>
+        </section>
+        <!-- End of Contact Dropdown -->
+        <!-- User Login Section -->
+        <section id="user-login" class="fixed top-0 h-[100dvh] w-full right-0 z-50 lg:absolute lg:top-[50px] lg:right-[60px] hidden">
+            <div class="blur-and-opacity bg-slate-300 w-[calc(100vw-320px)]  h-[100dvh] lg:hidden absolute left-0 opacity-50">
+
+            </div>
+            <div class="flex flex-col p-5 max-w-[320px] absolute right-0 bg-white h-full lg:h-auto lg:rounded-md lg:border">
+                <button id="user-login-button-close" class="absolute w-5 h-5 borderss top-2 right-2 ">
+                    <i class="text-base text-black fa-solid fa-xmark"></i>
+                </button>
+                <div class="grid content-between gap-4 pb-5">
+                    <p class="font-semibold">Registered Users</p>
+                    <p>Have an account? Sign in now.</p>
+                    <p><a class="underline hover:no-underline" href="#">Sign In</a></p>
+                </div>
+                <div class="grid content-between gap-4 pt-4 pb-5 border-t border-black">
+                    <p>New Customer</p>
+                    <p>New to GoDaddy? Create an account to get started today.</p>
+                    <p><a class="underline hover:no-underline" href="#">Create an Account</a></p>
+                </div>
+                <div class="grid content-between gap-4 pt-4 border-t border-black">
+                    <p>INBOX LINKS</p>
+                    <p><a href="#">Sign in to Office 365 Email</a></p>
+                    <p><a href="#">Sign in to GoDaddy Webmail</a></p>
+                </div>
+
+            </div>
+
+        </section>
+        <!-- End of User Login -->
+    </header>
+    <!-- End of Mobile Navigation -->
+    <!-- Start of Main Content -->
+    <main class="">
+        <!-- Start of Domain Search 1 -->
+        <section>
+
+        </section>
+        <!-- End of Domain Search 1 -->
+        <!-- Start of Hero -->
+        <section class="grid w-full gap-4 pt-10 px lg:flex">
+            <div class="lg:w-[70%] min-h-[400px] bg-[#E3DDDB]">
+
+            </div>
+            <div class="lg:w-[30%] min-h-[400px] bg-[#FBE9DA] grid md:grid-cols-12 lg:grid-cols-1">
+                <div class="md:col-span-7 lg:col-span-1">
+                    <p>Domain Names</p>
+                    <p>Grab a .com for ₱10.90/1st yr.</p>
+                    <p>3-year purchase required</p>
+                </div>
+                <div class="md:col-span-5 lg:col-span-1">
+                    <button>Find Your Domain</button>
+                    <p><a class="underline hover:no-underline" href="#">Transfer Your Domain</a></p>
+                </div>
+            </div>
+        </section> 
+        <!-- End of Hero -->
+        <!-- Pricing Section -->
+        <section class="pt-20 px">
+            <ul class="grid grid-cols-2 font-semibold border-r border-black lg:grid-rows-2 lg:grid-flow-col lg:grid-cols-5 lg:border-b">
+                <li class="border-t border-l border-black">
+                    <a class="flex justify-center w-full h-full text-center pricing-box" href="#">
+                        <div class="grid content-center translate-x-6 price">
+                            <p class="">.com</p>
+                            <p>P388.92/1st yr</p>
+                        </div>
+                        <div class="flex items-center scale-0 -translate-x-5 opacity-0 arrow">
+                            <svg class="w-10 h-10 " xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
+                            </svg>
+                        </div>
+                    </a>
+                </li>
+                <li class="border-t border-l border-black ">
+                    <a class="flex justify-center w-full h-full text-center pricing-box" href="#">
+                        <div class="grid content-center translate-x-6 price">
+                            <p class="">.ph</p>
+                            <p>P969.00/1st yr</p>
+                        </div>
+                        <div class="flex items-center scale-0 -translate-x-5 opacity-0 arrow">
+                            <svg class="w-10 h-10 " xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
+                            </svg>
+                        </div>
+                    </a>
+                </li>
+                <li class="border-t border-l border-black">
+                    <a class="flex justify-center w-full h-full text-center pricing-box" href="#">
+                        <div class="grid content-center translate-x-6 price">
+                            <p class="">SSL Security</p>
+                            <p>P1,999.00/1st yr</p>
+                        </div>
+                        <div class="flex items-center scale-0 -translate-x-5 opacity-0 arrow">
+                            <svg class="w-10 h-10 " xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
+                            </svg>
+                        </div>
+                    </a>
+                </li>
+                <li class="border-t border-l border-black">
+                    <a class="flex justify-center w-full h-full text-center pricing-box" href="#">
+                        <div class="grid content-center translate-x-6 price">
+                            <p class="">Web Hosting</p>
+                            <p>P89.00/1st yr</p>
+                        </div>
+                        <div class="flex items-center scale-0 -translate-x-5 opacity-0 arrow">
+                            <svg class="w-10 h-10 " xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
+                            </svg>
+                        </div>
+                    </a>
+                </li>
+                <li class="border-t border-l border-black">
+                    <a class="flex justify-center w-full h-full text-center pricing-box" href="#">
+                        <div class="grid content-center translate-x-6 price">
+                            <p class="">Professional Email</p>
+                            <p>P29.00 per user/mo</p>
+                        </div>
+                        <div class="flex items-center scale-0 -translate-x-5 opacity-0 arrow">
+                            <svg class="w-10 h-10 " xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
+                            </svg>
+                        </div>
+                    </a>
+                </li>
+                <li class="border-t border-l border-black">
+                    <a class="flex justify-center w-full h-full text-center pricing-box" href="#">
+                        <div class="grid content-center translate-x-6 price">
+                            <p class="">WordPress</p>
+                            <p>P199.00/mo</p>
+                        </div>
+                        <div class="flex items-center scale-0 -translate-x-5 opacity-0 arrow">
+                            <svg class="w-10 h-10 " xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
+                            </svg>
+                        </div>
+                    </a>
+                </li>
+                <li class="border-t border-l border-black">
+                    <a class="flex justify-center w-full h-full text-center pricing-box" href="#">
+                        <div class="grid content-center translate-x-6 price">
+                            <p class="">Microsoft 365</p>
+                            <p>P99.00/mo</p>
+                        </div>
+                        <div class="flex items-center scale-0 -translate-x-5 opacity-0 arrow">
+                            <svg class="w-10 h-10 " xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
+                            </svg>
+                        </div>
+                    </a>
+                </li>
+                <li class="border-t border-l border-black">
+                    <a class="flex justify-center w-full h-full text-center pricing-box" href="#">
+                        <div class="grid content-center translate-x-6 price">
+                            <p class="">Website Builder</p>
+                            <p>Free Trial</p>
+                        </div>
+                        <div class="flex items-center scale-0 -translate-x-5 opacity-0 arrow">
+                            <svg class="w-10 h-10 " xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
+                            </svg>
+                        </div>
+                    </a>
+                </li>
+                
+                <li class="col-span-2 border-l border-black lg:border-t lg:border-l border-y lg:row-span-2">
+                    <a class="flex justify-center w-full h-full text-center pricing-box" href="#">
+                        <div class="grid content-center translate-x-6 ">
+                            <p class="">Sale! P200.00/1st yr.</p>
+                            <p>Short, sweet and recognizable.</p>
+                        </div>
+                        <div class="flex items-center scale-0 -translate-x-5 opacity-0">
+                            <svg class="w-10 h-10 " xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
+                            </svg>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </section> 
+        <!-- End of Pricing Section-->
+        <!-- Testimonials Section -->
+        <section>
+
+        </section>
+        <!-- End of Testimonials -->
+        <!-- Services Section -->
+        <section class="grid md:grid-cols-2 gap-y-2 px">
+            <div class="flex items-center justify-center order-2 px-32 md:order-1">
+                <div class="">
+                    <p>Professional Email</p>
+                    <p class="py-5 text-4xl">Build on your success.</p>
+                    <p>Everyone has email, but that doesn’t mean all email is the same. Customers are nine times more likely to choose a business with a professional address like you@NeueBloom.com.</p>
+                    <button class="px-4 py-2 mt-3 text-xl font-semibold border-2 border-black rounded-md
+                    hover:scale-[103%] transition">See Email Plans</button>
+                </div>
+            </div>
+            <div class="relative order-1 md:order-2">
+                <img class="w-full bg-center" src=".\images\bg-1.jpg">
+            </div>
+            <div class="order-3">
+                <img class="w-full bg-center" src=".\images\bg-2.jpg">
+                
+            </div>
+            <div class="order-4">
+                <p>Professional Email</p>
+                <p>Build on your success.</p>
+                <p>Everyone has email, but that doesn’t mean all email is the same. Customers are nine times more likely to choose a business with a professional address like you@NeueBloom.com.</p>
+                <button>See Email Plans</button>
+            </div>
+            <div class="order-6 md:order-5">
+                <p>Professional Email</p>
+                <p>Build on your success.</p>
+                <p>Everyone has email, but that doesn’t mean all email is the same. Customers are nine times more likely to choose a business with a professional address like you@NeueBloom.com.</p>
+                <button>See Email Plans</button>
+            </div>
+            <div class="order-5 md:order-6">
+                <img class="w-full bg-center" src=".\images\bg-3.jpg">
+            </div>
+        </section>
+        <!-- End of Services -->
+
+        <!-- Domain Search 2 -->
+        <section class="text-center bg-[#D8EFEF] py-20">
+            <p class="text-4xl">It all starts with a domain.</p>
+            <p class="pt-10 font-semibold">Make your idea real. Claim your space online with a domain.</p>
+            <form class="pt-3">
+                <input class="p-2 borderss max-w-[500px] w-full" type="text" id="domain-input-2" name="domain-input-2" placeholder="Find your perfect domain" required>
+                
+                <button class="borderss bg-[#00838C] text-white px-4 py-2"><input type="submit" value="Submit"></button>
+            </form>
+        </section>
+        <!-- End of Domain Search 2 -->
+
+        <!-- Why go Daddy -->
+        <section class="">
+            <img>
+            <div>
+                <p>GoDaddy guides - logo</p>
+                <p>Why go with GoDaddy?</p>
+                <p>Because we know that even the best technology is only as good as the people behind it. That’s why we offer expert phone support, plus a lot more.  </p>
+                <p>Call our technical support team at Support Manila: (02) 8231-2988.</p>
+                <button class="borderss">Get Help</button>
+            </div>
+        </section>
+        <!-- End of WHy goDaddy -->
+
+        <!-- FAQ Section -->
+        <section class="w-full text-center">
+            <p class="text-4xl font-semibold px">Millions of customers rely on our domains and web hosting to get their ideas online.</p>
+            <p class="pt-5 text-2xl font-semibold px">Frequently Asked Questions</p>
+           
+            <div class="text-left px-[10%] pt-3 md:max-w-[80%] mx-auto">
+                <div id="faq-1" class="py-5 border-t border-gray-500 cursor-pointer">
+                    <div class="flex justify-between ">
+                        <div class="text-lg font-semibold faq">How does GoDaddy help small business owners succeed?</div>
+                        <span><i id="faq-arrow-1" class="transition fa-solid fa-angle-down skew faq-arrow" data-index="1"></i></span>
+                    </div>
+                    <div id="faq-answer-1" class="hidden pt-5 leading-normal faq-answer" data-index="1">
+                        GoDaddy offers more than just a platform to build your website, we offer everything you need to create an effective, memorable online presence. Already have a site? We offer hosting plans that will keep it fast, secure and online. Our professional email helps you build a professional image, while our online marketing tools empower entrepreneurs to get online with an SEO-friendly website. GoDaddy is an all-in-one solution provider to get your idea online, backed with expert, personalized support from GoDaddy Guides.
+                    </div>
+                </div>
+                <div id="faq-2" class="py-5 border-t border-gray-500 cursor-pointer">
+                    <div class="flex justify-between ">
+                        <div class="text-lg font-semibold faq">Why do I need a website for my business?</div>
+                        <span><i id="faq-arrow-2" class="transition fa-solid fa-angle-down faq-arrow" data-index="2"></i></span>
+                    </div>
+                    <div id="faq-answer-2" class="hidden pt-5 leading-normal faq-answer" data-index="2">
+                        <p>Even small local businesses that only serve their hometown need a site. That's because the web is the first place people go when looking for a product or service. A website helps every business:</p>
+                        <ul>
+                        <li>Promote and sell their products and services</li>
+                        <li>Connect with new customers (and keep existing customers)</li>
+                        <li>Build credibility</li>
+                        <li>Compete with bigger businesses</li>
+                        <li>Control their brand and keep their marketing fresh and current</li>
+                        </ul>
+                        Best of all, a website is much easier and more affordable than you might think. GoDaddy offers a complete selection of online tools for building websites, along with hosting, email and marketing options to grow their business on the web.
+                    </div>
+                </div>
+                <div id="faq-3" class="py-5 border-t border-gray-500 cursor-pointer">
+                    <div class="flex justify-between ">
+                        <div class="text-lg font-semibold faq">Why do I need a professional email?</div>
+                        <span><i id="faq-arrow-3" class="transition fa-solid fa-angle-down faq-arrow" data-index="3"></i></span>
+                    </div>
+                    <div id="faq-answer-3" class="hidden pt-5 leading-normal faq-answer" data-index="3">
+                        <p>There are a lot of reasons to switch from your free email to a domain-based email, but here are the top 3:</p>
+                        <ol>
+                            <li>Customers are much more likely to trust a professional address like lily@lilysbikes.com than lilysbikestexas84@notmail.com.</li>
+                            <li><a class="underline hover:no-underline">Professional Email</a> provides world-class security with industry-leading spam and virus filters.</li>
+                            <li>Personalized email addresses promote your business more effectively. Every time you send an email, you are giving your web address to customers and prospects, encouraging them to visit your website.</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div id="faq-4" class="py-5 border-t border-gray-500 cursor-pointer">
+                    <div class="flex justify-between ">
+                        <div class="text-lg font-semibold faq">Why get a domain name from GoDaddy?</div>
+                        <span><i class="transition fa-solid fa-angle-down faq-arrow" data-index="4"></i></span>
+                    </div>
+                    <div class="hidden pt-5 leading-normal faq-answer" data-index="4">
+                        GoDaddy is the world’s largest and trusted domain registrar that empowers people like you with creative ideas to succeed online. <a class="underline hover:no-underline">Buying a domain name</a> is easy with our domain search tool and domain name generator tools you can find the perfect website address for your business.
+                    </div>
+                </div>
+
+                <div id="faq-5" class="py-5 border-t border-gray-500 cursor-pointer">
+                    <div class="flex justify-between ">
+                        <div class="text-lg font-semibold faq">Why use GoDaddy Website Builder?</div>
+                        <span><i class="transition fa-solid fa-angle-down faq-arrow" data-index="5"></i></span>
+                    </div>
+                    <div class="hidden pt-5 leading-normal faq-answer" data-index="5">
+                        Because it’s a fast, simple way to create a website that you — and your customers — will love. Simply type in your idea or industry and GoDaddy <a class="underline hover:no-underline">Website Builder</a> will pull up a number of professionally designed, ready-to-launch templates. From there, just add your own text and images and you’re good to go.
+                    </div>
+                </div>
+
+                <div id="faq-6" class="py-5 border-t border-gray-500 cursor-pointer">
+                    <div class="flex justify-between ">
+                        <div class="text-lg font-semibold faq">What makes GoDaddy Web Hosting the world leader?</div>
+                        <span><i class="transition fa-solid fa-angle-down faq-arrow" data-index="6"></i></span>
+                    </div>
+                    <div class="hidden pt-5 leading-normal faq-answer" data-index="6">
+                        With nearly 20 years in the industry, we have the experience, the technology and the hosting experts to help web designers, developers, bloggers and online businesses create and maintain their online presence. Our secure <a class="underline hover:no-underline">web hosting platform</a>, complete with cPanel, offers a 99.9% uptime guarantee and award-winning support, which has helped nearly 21+ million customers get online.
+                    </div>
+                </div>
+
+                <div id="faq-7" class="py-5 border-t border-gray-500 cursor-pointer">
+                    <div class="flex justify-between ">
+                        <div class="text-lg font-semibold faq">Why choose GoDaddy for WordPress?</div>
+                        <span><i class="transition fa-solid fa-angle-down faq-arrow" data-index="7"></i></span>
+                    </div>
+                    <div class="hidden pt-5 leading-normal faq-answer" data-index="7">
+                        GoDaddy offers reliable and affordable <a class="underline hover:no-underline">WordPress hosting</a> plans, one-click installs and the latest version so you have the most recent features available for your site. Your website content is managed from one place; you have a wealth of themes and add-ons giving you limitless options to succeed.
+                    </div>
+                </div>
+
+                <div id="faq-8" class="py-5 border-t border-gray-500 cursor-pointer">
+                    <div class="flex justify-between ">
+                        <div class="text-lg font-semibold faq">Why should I transfer my domain, website or web hosting to GoDaddy?</div>
+                        <span><i class="transition fa-solid fa-angle-down faq-arrow" data-index="8"></i></span>
+                    </div>
+                    <div class="hidden pt-5 leading-normal faq-answer" data-index="8">
+                        There are a few different reasons. Our award-winning support is always high on the list of why people move their presence to GoDaddy. Of course, our prices — including a free 1-year extension on many domain transfers — is another popular reason. And if you already have one or more of our products, transferring your domain, website or hosting to us lets you consolidate your web presence with one provider so it’s easier to manage.
+                    </div>
+                </div>
+
+                <div id="faq-9" class="py-5 border-gray-500 cursor-pointer border-y">
+                    <div class="flex justify-between ">
+                        <div class="text-lg font-semibold faq">Why use the GoDaddy Logo Maker?</div>
+                        <span><i class="transition fa-solid fa-angle-down faq-arrow" data-index="9"></i></span>
+                    </div>
+                    <div class="hidden pt-5 leading-normal faq-answer" data-index="9">
+                        With the <a class="underline hover:no-underline" href="#">GoDaddy Logo Maker</a> it's easy to make a custom logo that'll help define your brand's personality and transform your business. From logomarks to logotypes, there are hundreds of templates to choose from. Or you can design your own in just minutes. No design skills needed.
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        <!-- End of FAQ -->
+    </main>
+    <!-- End of Main Content -->
+
+    <section id="product-limit" class="hidden w-full h-[100dvh] fixed top-0 left-0 bg-gray-300 bg-opacity-50 p-5 flex items-center overflow-y-scroll">
+        <div class="relative p-10 pt-16 m-auto bg-white rounded-md shadow-3xl max-w-[1280px]">
+            <button id="product-limit-close" class="absolute flex items-center justify-center w-6 h-6 hover:bg-gray-300 top-10 right-10">
+                <i class="text-2xl text-black fa-solid fa-xmark"></i>
+            </button>
+            <h1 class="text-2xl">View product limitations and legal policies</h1>
+            <p class="pt-2">Sale/introductory pricing valid for the initial purchase term only. Product renewal pricing subject to change.</p>
+            <p class="pt-3">Products will automatically renew until cancelled. You may turn off the auto-renewal feature by visiting your GoDaddy account. </p>
+            <p class="pt-3">One FREE .COM, .NET, .ORG, .CO, .INFO, .BIZ, .US, .CLUB, .COMPANY, .DESIGN, .EMAIL, .FIT, .LIFE, .LIVE, .ONLINE, .PRO, .ROCKS, .SHOP, .SITE, .SOLUTIONS, .SPACE, .STORE, .TECH, .TODAY, .VIP, .WORK, .WORLD, .XYZ with purchase of a new 12-, 24- or 36-month plan. You must add the domain name into your cart before purchase, and you must select a domain term length equal to or less than the term length of your plan to qualify for the free domain offer. If you purchase a domain name for a term longer than the term of the plan, you will be charged for the additional registration term at the then-current rate. Cannot be used in conjunction with any other offer, sale, discount or promotion. Free domain offer applies only to the initial purchase term. After the initial purchase term, domains purchased through this offer will renew at the then-current renewal price.</p>
+            <p class="pt-3">** Your free trial is for one month. A credit card is not required to sign up for the free trial, however you can choose to subscribe to a Website Builder plan at any time during the free trial. Once the free trial ends you will be required to provide a credit card in your GoDaddy account to continue with a Website Builder plan. If you already have a credit card on file in your GoDaddy account, you can choose to turn on auto-renew for the Website Builder plan and will be charged at the end of the free trial. Plans will automatically renew until cancelled.</p>
+        </div>
+    </section>
+
+    
+
+    <!-- Start of Footer -->
+    <footer class="text-white">
+        <div class="pb-10 text-black px">
+            <button id="product-limit-open" class="pt-10 font-semibold underline">** View product limitations and legal policies</button>
+            <p class="pt-5">Third-party logos and marks are registered trademarks of their respective owners. All rights reserved.</p>
+
+        </div>
+        <div class="py-10 text-xl font-semibold text-center text-black px bg-mygray">
+            <span class="">Need help? Call our award-winning support team at Support&nbsp;Manila: (00) 9999-9999</span>
+        </div> 
+        <div class="bg-myblk px">
+            <a class="block py-10" href="#">
+                <p class="text-xl font-semibold">We love taking your call.</p>
+                <div class="flex items-center">
+                    <img class="h-[50px] w-auto aspect-[512/105]" src=".\images\godaddy-logo.svg">
+                    <span class="text-3xl font-thin">guides</span>
+                    <!-- from-[#8951B8] to-[#486ECA] -->
+                    <svg class="h-24 pl-5 text-blue-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
+                      </svg>
+                      
+                </div>
+            </a>
+        </div>
+        <div class="pb-4 text-center bg-myblk border-y border-slate-400 pt-7">
+            <span class="">Prices include applicable taxes and ICANN fees.</span>
+        </div>
+        <!-- Footer Links -->
+        <nav class="grid grid-cols-1 pt-10 text-xs text-white md:grid-cols-2 lg:grid-cols-6 bg-myblk px">
+            <div class="">
+                <!-- <p class="text-base font-semibold hover:cursor-pointer md:hover:cursor-default">About Go Daddy</p> -->
+                <div id="footer-about-heading" class="flex justify-between hover:cursor-pointer md:hover:cursor-defaults ">
+                    <p class="text-base font-semibold">About Go Daddy</p>
+                    <span class="text-lg font-semibold md:hidden">+</span>
+                </div>
+                <ul id="footer-about" class="grid content-start hidden pt-4 gap-y-4 md:grid footer-links text-slate-400" data-index="0">
+                    <li><a class="hover:underline" href="#">About Us</a></li>
+                    <li><a class="hover:underline" href="#">Contact Us</a></li>
+                    <li><a class="hover:underline" href="#">Investor Relations</a></li>
+                    <li><a class="hover:underline" href="#">Careers</a></li>
+                    <li><a class="hover:underline" href="#">Trust Center</a></li>
+                    <li><a class="hover:underline" href="#">Legal</a></li>
+                    <li><a class="hover:underline" href="#">GoDaddy Blog</a></li>
+                    
+                </ul>
+            </div>
+            <div class="pt-5 md:pt-0">
+                <div id="footer-support-heading" class="flex justify-between hover:cursor-pointer md:hover:cursor-defaults" >
+                    <p class="text-base font-semibold">Support</p>
+                    <span class="text-lg font-semibold md:hidden">+</span>
+                </div>
+                <ul id="footer-support" class="grid content-start hidden pt-4 gap-y-4 md:grid footer-links text-slate-400" data-index="1">
+                    <li><a class="hover:underline" href="#">Product Support</a></li>
+                    <li><a class="hover:underline" href="#">Community</a></li>
+                    <li><a class="hover:underline" href="#">Report Abuse</a></li>
+                    <li><a class="hover:underline" href="#">Resources</a></li>
+                    
+                </ul>
+            </div>
+            <div class="pt-5 md:pt-10 lg:pt-0">
+                <div id="footer-resources-heading" class="flex justify-between hover:cursor-pointer md:hover:cursor-defaults">
+                    <p class="text-base font-semibold">Resources</p>
+                    <span class="text-lg font-semibold md:hidden">+</span>
+                </div>
+                <ul id="footer-resources" class="grid content-start hidden pt-4 gap-y-4 md:grid footer-links text-slate-400" data-index="2">
+                    <li><a class="hover:underline" href="#">Webmail</a></li>
+                    <li><a class="hover:underline" href="#">WHOIS</a></li>
+                    <li><a class="hover:underline" href="#">ICANN Confirmation</a></li>
+                    <li><a class="hover:underline" href="#">Designers & Developers</a></li>
+                    <li><a class="hover:underline" href="#">Redeem Code</a></li>
+                    <li><a class="hover:underline" href="#">Product Catalog</a></li>
+                    <li><a class="hover:underline" href="#">Business Name Generator</a></li>
+                </ul>
+            </div>
+            <div class="pt-5 md:pt-10 lg:pt-0">
+                <div id="footer-partner-heading" class="flex justify-between hover:cursor-pointer md:hover:cursor-defaults">
+                    <p class="text-base font-semibold">Partner Programs</p>
+                    <span class="text-lg font-semibold md:hidden">+</span>
+                </div>
+                <ul id="footer-partner" class="grid content-start hidden pt-4 gap-y-4 md:grid footer-links text-slate-400" data-index="3">
+                    <li><a class="hover:underline" href="#">Affiliates</a></li>
+                    <li><a class="hover:underline" href="#">Reseller Programs</a></li>
+                    <li><a class="hover:underline" href="#">GoDaddy Pro</a></li>
+                </ul>
+            </div>
+            <div class="pt-5 md:pt-10 lg:pt-0">
+                <div id="footer-account-heading" class="flex justify-between hover:cursor-pointer md:hover:cursor-defaults">
+                    <p class="text-base font-semibold">Account</p>
+                    <span class="text-lg font-semibold md:hidden">+</span>
+                </div>
+                <ul id="footer-account" class="grid content-start hidden pt-4 gap-y-4 md:grid footer-links text-slate-400" data-index="4">
+                    <li><a class="hover:underline" href="#">My Products</a></li>
+                    <li><a class="hover:underline" href="#">Renewals & Billing</a></li>
+                    <li><a class="hover:underline" href="#">Create Account</a></li>
+                </ul>
+            </div>
+            <div class="pt-5 md:pt-10 lg:pt-0">
+                <div id="footer-shopping-heading" class="flex justify-between hover:cursor-pointer md:hover:cursor-defaults">
+                    <p class="text-base font-semibold">Shopping</p>
+                    <span class="text-lg font-semibold md:hidden">+</span>
+                </div>
+                <ul id="footer-shopping" class="grid content-start hidden pt-4 gap-y-4 md:grid footer-links text-slate-400" data-index="5">
+                    <li><a class="hover:underline" href="#">Buy a Domain</a></li>
+                    <li><a class="hover:underline" href="#">Websites</a></li>
+                    <li><a class="hover:underline" href="#">WordPress</a></li>
+                    <li><a class="hover:underline" href="#">Hosting</a></li>
+                    <li><a class="hover:underline" href="#">Web Security</a></li>
+                    <li><a class="hover:underline" href="#">Email & Office</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- End of Footer Links -->
+        <!-- Language -->
+        <div class="hidden language"></div>
+        <div class="hidden currency"></div>
+        <!-- Currency -->
+        <!-- Language and Currency -->
+        <section class="hidden pt-10 pb-4 text-white bg-myblk md:grid lg:hidden px">
+            <div class="flex justify-around pt-8">
+                <button class="mx-4 ml-8">
+                    <span>Philippines - English</span>
+                    <i class="pl-3 fa-solid fa-angle-up"></i>
+                </button>
+                <button class="mx-4">
+                    <span>PHP</span><i class="pl-3 fa-solid fa-angle-up"></i>
+                </button>
+            </div>
+            <div class="block pt-5 bg-myblk lg:hidden"><hr></div> <!-- horizontal line -->
+            <div class="grid pt-5 language md:flex md:justify-between md:items-center">
+                <img class="h-[50px] w-auto aspect-[512/105]" src=".\images\godaddy-logo.svg">
+                
+                <div class="pt-4 socials md:flex md:gap-x-5">
+                    <i class="text-2xl text-white fa-brands fa-facebook"></i>
+                    <i class="text-2xl text-white fa-brands fa-twitter"></i>
+                    <i class="text-2xl text-white fa-brands fa-youtube"></i>
+                </div>
+            </div>
+            
+        </section>
+        <section class="grid pt-10 pb-4 text-white bg-myblk md:hidden lg:flex lg:justify-between lg:items-center px ">
+            <div class="grid language lg:flex lg:items-center">
+                <img class="h-[50px] w-auto aspect-[512/105]" src=".\images\godaddy-logo.svg">
+                <div class="block pt-5 bg-myblk lg:hidden"><hr></div> <!-- horizontal line -->
+                <div class="flex justify-around pt-8 lg:pt-0">
+                    <button class="mx-4 ml-8">
+                        <span>Philippines - English</span>
+                        <i class="pl-3 fa-solid fa-angle-up"></i>
+                    </button>
+                    <button class="mx-4">
+                        <span>PHP</span><i class="pl-3 fa-solid fa-angle-up"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="flex justify-around pt-4 socials lg:gap-x-14">
+                <i class="text-2xl text-white fa-brands fa-facebook"></i>
+                <i class="text-2xl text-white fa-brands fa-twitter"></i>
+                <i class="text-2xl text-white fa-brands fa-youtube"></i>
+            </div>
+        </section>
+        <div class="hidden px bg-myblk md:col-span-2 lg:block"><hr></div> <!-- horizontal line -->
+        <!-- End of language and currency -->
+        <!-- Copyright -->
+        <section class="grid pb-10 text-sm bg-myblk lg:flex lg:flex-row-reverse px">
+            <ul class="flex justify-between px-5 gap-x-8 lg:pt-5">
+                <li><a class="hover:underline" href="#">Legal</a></li>
+                <li><a class="hover:underline" href="#">Privacy&nbsp;Policy</a></li>
+                <li><a class="hover:underline" href="#">Cookies</a></li>
+            </ul>
+            <div class="pt-5">
+            <p class="text-center lg:text-left">
+                Copyright © 1999 - 2023 GoDaddy Operating Company, LLC. All Rights Reserved. The GoDaddy word mark is a registered trademark of GoDaddy Operating Company, LLC in the US and other countries. The “GO” logo is a registered trademark of GoDaddy.com, LLC in the US.
+            </p>
+            <p class="text-center lg:text-left"><br>
+                Use of this Site is subject to express terms of use. By using this site, you signify that you agree to be bound by these <a class="hover:underline text-[#1BDBDB]" href="#">Universal Terms of Service</a>.
+            </p>
+            </div>
+        </section>
+        <!-- End of Copyright -->
+    </footer>
+    <!-- Fixed Button -->
+    <div class="message fixed right-10 bottom-5 z-[51]"> 
+        <button class="bg-gradient-to-r from-[#8951B8] to-[#486ECA] px-1 py-[10px]  rounded-full ">
+            
+            <span class="px-4 py-2 font-bold bg-white rounded-full">
+                <i class="mr-1 fa-regular fa-message fa-flip-horizontal"></i>Contact Us</span>
+        </button>
+    </div>
+</body>
+</html>
