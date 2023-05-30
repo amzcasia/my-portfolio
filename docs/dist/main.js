@@ -10,7 +10,7 @@ const BUTTON_3 = 3;
 const BUTTON_4 = 4;
 const BUTTON_5 = 5;
 
-changeTab(5);
+changeTab(0);
 
 function changeTab(tabIndex){
     tabButtons.forEach( (x,i) => {

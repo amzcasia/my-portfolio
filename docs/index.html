@@ -1,74 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<script src=".\dist\main.js" defer></script>
-    <title>Mark - Web Developer</title>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<script src=".\dist\main.js" defer></script>
+		<title>Mark - Web Developer</title>
 		<link rel="stylesheet" href=".\dist\output.css">
 		<link rel="stylesheet" href=".\dist\styles.css">
 	</head>
-	<body class="relative">
+	<body class="relative w-full bg-primary-dark">
 		<!-- Header -->
-		<section id="hero-section" class="fixed top-0 left-0 w-full aspect-auto bg-primary-dark -z-[1]">
-			<img class="w-full opacity-20 blur-sm" src=".\src\pcb.png">
-		</section>
-
-		<header class="px-[5%] py-2 bg-primary text-primary-dark">
+		<!-- <section id="hero-section" class="fixed top-0 w-full h-screen bg-primary-dark -z-[1]">
+			<img class="h-full opacity-20 aspect-[calc(1195/847)]" src=".\src\pcb.png">
+		</section> -->
+		<div class="fixed top-0 left-0 w-full h-screen overflow-hidden -z-10">
+			<div class="top-0 left-0 bottom-0 right-0 inset-0 absolute -z-[10] h-full w-[2000px]">
+				<img class="opacity-20 w-auto h-full aspect-[1990/1441] -translate-x-[17%] -z-[10] 
+				md:translate-x-0 md:w-auto md:h-full lg:w-screen lg:h-auto xl:-translate-y-[15%]
+				" src=".\src\pcb.png">
+			</div>
+			<!-- [calc(100vw+30px)] -->
+			<!-- lg:w-screen lg:h-auto lg:translate-x-0 xl:-translate-y-[25%] -->
+		</div>
+	
+		
+		<!-- aspect-[calc(1195/847)] -->
+		<header class="px-[7%] py-3 text-primary-light shadow-md">
 			<nav class="flex justify-between">
 				<div class="flex items-center gap-4">
 					<img class="rounded-full h-[50px] aspect-square" src=".\src\1x1.jpg">
 					<span class="text-3xl font-bold">AMZC</span>
 				</div>
-				<div class="flex items-center gap-8 text-2xl font-semibold">
-					<a href="#">Home</a>
-					<a href="#">About</a>
-					<a href="#">Services</a>
-					<a href="#">Portfolio</a>
-					<a href="#">Contact</a>
+				<div class="items-center hidden gap-8 text-2xl font-semibold lg:flex">
+					<a href="index.html">Home</a>
+					<a href="#about">About</a>
+					<a href="#services">Services</a>
+					<a href="#portfolio">Portfolio</a>
+					<a href="#contact">Contact</a>
 				</div>
 			</nav>
 		</header> <!-- End of Header -->
 		
-		<main >
+		
+		<main class="w-full">
 			<!-- Start of Hero Section -->
-			<section id="hero-section" class="grid grid-cols-2 gap-5 px-[5%] py-10">
-				<div class="flex flex-col justify-center pl-20 pr-10 text-2xl text-white">
-					<p class="text-5xl font-semibold">Hi I’m Mark</p>
-					<p class="pt-5">I am a Web Developer. I build functional and refined websites for small and medium businesses.</p>
-					<p class="pt-5">Converting designs to fully functional websites or email is my forte. If you have any HTML and CSS related needs, I’m the man for the job.</p>
-					<div class="flex gap-4 pt-24 font-semibold">
-						<a class="flex" href="#"><span class="px-5 py-2 text-black bg-accent">Contact Me</span></a>
-						<a class="flex" href="#"><span class="px-5 py-2 border-2 border-accent text-accent">My Portfolio</span></a>
+			<section id="hero-section" class="grid md:grid-cols-2 px-[7%] py-5 lg:py-14 text-xl lg:text-2xl">
+				<div class="grid content-center text-primary-light lg:pl-[30%] md:pr-5">
+					<p class="text-4xl font-semibold lg:text-5xl">Hi I’m Mark</p>
+					<p class="pt-5 lg:pt-8">I am a Web Developer. I build functional and refined websites for small and medium businesses.</p>
+					<p class="pt-3">Converting designs to fully functional websites or email is my forte. If you have any HTML and CSS related needs, I’m the man for the job.</p>
+					<div class="flex gap-3 pt-10 pb-10 font-semibold md:pt-16">
+						<a class="flex" href="#"><span class="px-4 py-2 text-black bg-accent">Contact Me</span></a>
+						<a class="flex" href="#"><span class="px-4 py-2 border-2 border-accent text-accent">My Portfolio</span></a>
 					</div>
 				</div>
-				<div class="pl-20">
-					<img class="max-h-[600px]" src=".\src\hero-img.jpg">
+				<div class="flex lg:justify-end lg:pl-20 lg:pr-[30%]">
+					<img class="max-h-[550px]" src=".\src\hero-img.jpg">
 				</div>
 
 			</section>
 			<!-- End of Hero Section -->
 			<!-- Start of About Section -->
-			<section id="about" class="px-[5%] py-10 bg-white">
+			<section id="about" class="px-[7%] py-10 bg-white text-xl lg:text-2xl">
 				<div class="grid">
-					<div class="flex items-center pl-20">
-						<div class="w-2 h-16 bg-primary"></div>
-						<span class="pl-5 text-5xl font-semibold text-primary">
+					<div class="flex items-center lg:">
+						<div class="w-2 h-12 lg:h-16 bg-primary"></div>
+						<span class="pl-3 text-4xl font-semibold lg:pl-5 lg:text-5xl text-primary">
 							About Me
 						</span>
 					</div>
-					<div class="grid grid-cols-2 pt-10">
-						<div class="flex justify-end pr-16">
-							<img class="max-h-[600px]" src=".\src\about-img.jpg">
+					<div class="grid pt-10 md:pt-0 lg:pt-10 md:grid-cols-2">
+						<div class="flex justify-start items-center md:pr-5 lg:pl-[30%]">
+							<img class="md:max-h-[450px] lg:max-h-[550px]" src=".\src\about-img.jpg">
 						</div>
-						<div class="pl-16 text-2xl text-primary-dark">
-							<p class="pt-10 text-4xl font-semibold">Anton Mark Z. Casia</p>
-							<p class="pt-8">I am a Web Developer based in Cebu, Philippines.
+						<div class="grid content-center lg:text-2xl text-primary-dark lg:pr-[10%]">
+							<p class="pt-8 text-4xl font-semibold md:pt-0">Anton Mark Z. Casia</p>
+							<p class="pt-4 lg:pt-8">I am a Web Developer based in Cebu, Philippines.
 								My expertise lies in translating designs into fully functional websites and emails while utilizing my development skills to enhance and customize their features. My goal is to craft visually appealing, user-friendly websites/emails that provide a seamless browsing experience.</p>
-							<p class="pt-6">In my free time, I enjoy playing Valorant and go road cycling during the weekends.</p>
-							<div class="flex pt-24">
-							<a class="" href="#"><span class="px-6 py-2 text-2xl font-semibold text-white bg-primary-dark">Get in Touch</span></a>
+							<p class="pt-3">In my free time, I enjoy playing Valorant and go road cycling during the weekends.</p>
+							<div class="flex pt-8">
+								<a class="flex" href="#"><span class="px-6 py-2 text-2xl font-semibold text-white bg-primary-dark">Get in Touch</span></a>
 							</div>
 						</div>
 
@@ -79,24 +91,24 @@
 			<!-- End of About Section -->
 
 			<!-- Services Section -->
-			<section class="h-[600px] pt-10">
-				<div class="flex items-center pl-20">
-					<div class="w-2 h-16 bg-primary"></div>
-					<span class="pl-5 text-5xl font-semibold text-primary">
-						 Services
-					</span>   
+			<section id="services" class="h-[600px] pt-10 px-[7%]">
+				<div class="flex items-center lg:">
+					<div class="w-2 h-12 lg:h-16 bg-primary-light"></div>
+					<span class="pl-3 text-4xl font-semibold lg:pl-5 lg:text-5xl text-primary-light">
+						Services
+					</span>
 				</div>
 			</section>
 			<!-- End of Services Section -->
 		
-			<section class="lg:px-[5%] py-20 bg-white grid" >
-				<div class="flex items-center pl-20">
-					<div class="w-2 h-16 bg-primary"></div>
-					<span class="pl-5 text-5xl font-semibold text-primary">
-						 Portfolio
-					</span>   
+			<section id="portfolio" class="lg:px-[7%] py-10 bg-white grid" >
+				<div class="flex items-center">
+					<div class="w-2 h-12 lg:h-16 bg-primary"></div>
+					<span class="pl-3 text-4xl font-semibold lg:pl-5 lg:text-5xl text-primary">
+						Portfolio
+					</span>
 				</div>
-				<div class="p-2 pt-4 mt-10 bg-primary-dark">
+				<div id="projects" class="p-2 pt-4 mt-10 bg-primary-dark">
 					<!-- Tabs -->
 					<div class="flex bg-primary-dark"> 
 						<button id="tab-button-1" onclick="changeTab(0)" class="flex gap-2 px-3 py-2 tab-button rounded-t-md text-primary-light bg-primary">
@@ -393,7 +405,50 @@
 
 					</div><!-- End of Project Box -->
 				</div>
+				<!-- Portfolio Thumbnails -->
+				<div class="grid gap-10 pt-10 md:grid-cols-2 lg:grid-cols-3 px-[7%]">
+					<div class="max-h-[200px] overflow-hidden border border-primary-dark shadow-xl group ">
+						<a href="#projects" onclick="changeTab(0)">
+							<img class="transition group-hover:scale-[103%]" src=".\src\jjj-desktop.png">
+						</a>
+					</div>
+					<div class="max-h-[200px] overflow-hidden border border-primary-dark">
+						<a href="#projects" onclick="changeTab(1)">
+							<img class="" src=".\src\benvinum-desktop.png">
+						</a>
+					</div>
+					<div class="max-h-[200px] h-[250px] overflow-hidden border border-primary-dark">
+						<a href="#projects" onclick="changeTab(2)">
+							<img class="" src=".\src\go-daddy-desktop.png">
+						</a>
+					</div>
+					<div class="max-h-[200px] overflow-hidden border border-primary-dark">
+						<a href="#projects" onclick="changeTab(3)">
+							<img class="" src=".\src\survey-form-desktop.png">
+						</a>
+					</div>
+					<div class="max-h-[200px] overflow-hidden border border-primary-dark">
+						<a href="#projects" onclick="changeTab(4)">
+							<img class="" src=".\src\tech-doc-desktop.png">
+						</a>
+					</div>
+					<div class="max-h-[200px] overflow-hidden border border-primary-dark">
+						<a href="#projects" onclick="changeTab(5)">
+							<img class="" src=".\src\certificate.png">
+						</a>
+					</div>
+				</div> <!-- End of Portfolio Thumbnails -->
 			</section>
+			<!-- End of Portfolio -->
+			<!-- Contact Section -->
+			<section class="h-[600px] px-[7%] py-10">
+				<div class="flex items-center ">
+					<div class="w-2 h-12 lg:h-16 bg-primary-light"></div>
+					<span class="pl-3 text-4xl font-semibold lg:pl-5 lg:text-5xl text-primary-light">
+						Contact Info
+					</span>
+				</div>
+			</section> <!-- End of Contact Section-->
 		</main>
 
 	</body>
