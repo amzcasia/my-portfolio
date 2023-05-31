@@ -5,11 +5,14 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta http-equiv="X-UA-Compatible" content="ie=edge">
 		<script src=".\dist\main.js" defer></script>
+		<script src="https://kit.fontawesome.com/c322fa12db.js" crossorigin="anonymous"></script>
 		<title>Mark - Web Developer</title>
 		<link rel="stylesheet" href=".\dist\output.css">
 		<link rel="stylesheet" href=".\dist\styles.css">
+		
 	</head>
-	<body class="relative w-full bg-primary-dark">
+	<body  class="relative w-full bg-primary-dark scroll-smooth">
+		<div id="home"></div>
 		<!-- Header -->
 		<!-- <section id="hero-section" class="fixed top-0 w-full h-screen bg-primary-dark -z-[1]">
 			<img class="h-full opacity-20 aspect-[calc(1195/847)]" src=".\src\pcb.png">
@@ -26,43 +29,59 @@
 	
 		
 		<!-- aspect-[calc(1195/847)] -->
-		<header class="px-[7%] py-3 text-primary-light shadow-md">
-			<nav class="flex justify-between">
-				<div class="flex items-center gap-4">
-					<img class="rounded-full h-[50px] aspect-square" src=".\src\1x1.jpg">
-					<span class="text-3xl font-bold">AMZC</span>
+		<header class="px-[7%] py-2 text-primary-light shadow-md sticky top-0 left-0 bg-primary-dark z-10">
+			<nav class="flex items-center justify-between">
+				<div class="flex items-center">
+					<a onclick="toggleMenu2()" class="flex items-center gap-4" href="#home">
+						<img class="rounded-full h-[45px] aspect-square" src=".\src\1x1.jpg">
+						<span class="text-2xl font-bold">AMZC</span>
+					</a>
 				</div>
-				<div class="items-center hidden gap-8 text-2xl font-semibold lg:flex">
-					<a href="index.html">Home</a>
-					<a href="#about">About</a>
-					<a href="#services">Services</a>
-					<a href="#portfolio">Portfolio</a>
-					<a href="#contact">Contact</a>
+				<div class="items-center hidden text-xl font-semibold gap-x-6 lg:flex">
+					<a class="px-6 py-2 transition duration-300 rounded-lg hover:bg-primary hover:text-primary-dark" href="#home">Home</a>
+					<a class="px-6 py-2 transition duration-300 rounded-lg hover:bg-primary hover:text-primary-dark" href="#about">About</a>
+					<a class="px-6 py-2 transition duration-300 rounded-lg hover:bg-primary hover:text-primary-dark" href="#services">Services</a>
+					<a class="px-6 py-2 transition duration-300 rounded-lg hover:bg-primary hover:text-primary-dark" href="#portfolio">Portfolio</a>
+					<a class="px-6 py-2 transition duration-300 rounded-lg hover:bg-primary hover:text-primary-dark" href="#contact">Contact</a>
 				</div>
+				<button  onclick="toggleMobileNav()" class="flex items-center text-2xl lg:hidden">
+					<i id="mobile-nav-button" class="fa-solid fa-bars"></i>
+					<!-- <i class="hidden text-3xl fa-solid fa-xmark"></i> -->
+				</button>
+				
 			</nav>
 		</header> <!-- End of Header -->
-		
+		<nav id="mobile-nav" class="text-2xl text-primary-light lg:hidden z-[9] fixed right-0 w-full shadow-md flex hidden" data-state="active">
+			<div onclick="toggleMobileNav()" class="w-1/2 bg-black opacity-50"></div>
+			<div  class="grid content-start w-1/2 h-screen py-4 pl-5 justify-items-start bg-primary-dark gap-y-4">
+				<a onclick="toggleMobileNav()" href="#home">Home</a>
+				<a onclick="toggleMobileNav()" href="#about">About</a>
+				<a onclick="toggleMobileNav()" href="#services">Services</a>
+				<a onclick="toggleMobileNav()" href="#portfolio">Portfolio</a>
+				<a onclick="toggleMobileNav()" href="#contact">Contact</a>
+			</div>
+		</nav>
 		
 		<main class="w-full">
 			<!-- Start of Hero Section -->
-			<section id="hero-section" class="grid md:grid-cols-2 px-[7%] py-5 lg:py-14 text-xl lg:text-2xl">
+			<section id="hero-section" class="grid md:grid-cols-2 px-[7%] py-5 md:py-10 lg:py-14 text-xl lg:text-2xl">
 				<div class="grid content-center text-primary-light lg:pl-[30%] md:pr-5">
 					<p class="text-4xl font-semibold lg:text-5xl">Hi I’m Mark</p>
 					<p class="pt-5 lg:pt-8">I am a Web Developer. I build functional and refined websites for small and medium businesses.</p>
 					<p class="pt-3">Converting designs to fully functional websites or email is my forte. If you have any HTML and CSS related needs, I’m the man for the job.</p>
-					<div class="flex gap-3 pt-10 pb-10 font-semibold md:pt-16">
-						<a class="flex" href="#"><span class="px-4 py-2 text-black bg-accent">Contact Me</span></a>
-						<a class="flex" href="#"><span class="px-4 py-2 border-2 border-accent text-accent">My Portfolio</span></a>
+					<div class="flex gap-3 pt-10 font-semibold md:pt-16">
+						<a class="flex" href="#contact"><span class="px-4 py-2 text-black transition duration-300 bg-accent hover:bg-yellow-600">Contact Me</span></a>
+						<a class="flex" href="#portfolio"><span class="px-4 py-2 transition duration-300 border-2 border-accent text-accent hover:border-yellow-600 hover:text-yellow-600">My Portfolio</span></a>
 					</div>
 				</div>
-				<div class="flex lg:justify-end lg:pl-20 lg:pr-[30%]">
+				<div class="flex lg:justify-end lg:pl-20 lg:pr-[30%] pt-10 md:pt-0">
 					<img class="max-h-[550px]" src=".\src\hero-img.jpg">
 				</div>
 
 			</section>
 			<!-- End of Hero Section -->
 			<!-- Start of About Section -->
-			<section id="about" class="px-[7%] py-10 bg-white text-xl lg:text-2xl">
+			<section id="about" class="px-[7%] py-10 pt-[calc(1rem+61px)] bg-white text-xl lg:text-2xl">
 				<div class="grid">
 					<div class="flex items-center lg:">
 						<div class="w-2 h-12 lg:h-16 bg-primary"></div>
@@ -80,7 +99,7 @@
 								My expertise lies in translating designs into fully functional websites and emails while utilizing my development skills to enhance and customize their features. My goal is to craft visually appealing, user-friendly websites/emails that provide a seamless browsing experience.</p>
 							<p class="pt-3">In my free time, I enjoy playing Valorant and go road cycling during the weekends.</p>
 							<div class="flex pt-8">
-								<a class="flex" href="#"><span class="px-6 py-2 text-2xl font-semibold text-white bg-primary-dark">Get in Touch</span></a>
+								<a class="flex" href="#contact"><span class="px-6 py-2 text-2xl font-semibold text-white transition duration-300 bg-primary-dark hover:bg-primary">Get in Touch</span></a>
 							</div>
 						</div>
 
@@ -91,55 +110,77 @@
 			<!-- End of About Section -->
 
 			<!-- Services Section -->
-			<section id="services" class="h-[600px] pt-10 px-[7%]">
+			<section id="services" class="pt-[calc(1rem+61px)]  pb-14 px-[7%]">
 				<div class="flex items-center lg:">
 					<div class="w-2 h-12 lg:h-16 bg-primary-light"></div>
 					<span class="pl-3 text-4xl font-semibold lg:pl-5 lg:text-5xl text-primary-light">
 						Services
 					</span>
 				</div>
+				<p class="pt-10 text-2xl text-primary-light lg:text-3xl">Including, but not limited to . . .</p>
+				<div class="grid pt-5 text-2xl text-center text-white lg:pt-10 gap-x-10 md:gap-x-5 lg:text-3xl md:grid-cols-3">
+					<div class="grid content-center py-8 mx-12 my-3 md:py-6 md:mx-3 bg-primary xl:py-10 xl:mx-12">
+						<div class="px-10"><img src=".\src\ux.png"></div>
+						<p class="px-4 pt-3 md:px-2 lg:px-6">HTML Landing Page</p>
+					</div>
+					<div class="grid content-center py-8 mx-12 my-3 bg-primary md:py-6 md:mx-3 xl:py-10 xl:mx-12">
+						<div class="px-10">
+						<img src=".\src\email.png">
+						</div>
+						<p class="pt-3 ">HTML Email</p>
+					</div>
+					<div class="grid content-center py-8 mx-12 my-3 bg-primary md:py-6 md:mx-3 xl:py-10 xl:mx-12">
+						<div class="px-10">
+						<img class="" src=".\src\content.png">
+						</div>
+						<p class="pt-3 ">Content Editing</p>
+					</div>
+
+				</div>
 			</section>
 			<!-- End of Services Section -->
 		
-			<section id="portfolio" class="lg:px-[7%] py-10 bg-white grid" >
-				<div class="flex items-center">
+			<section id="portfolio" class="lg:px-[7%] py-10 pt-[calc(1rem+61px)] bg-white grid" >
+				<div class="flex items-center lg:pl-0 pl-[7%]">
 					<div class="w-2 h-12 lg:h-16 bg-primary"></div>
 					<span class="pl-3 text-4xl font-semibold lg:pl-5 lg:text-5xl text-primary">
 						Portfolio
 					</span>
 				</div>
-				<div id="projects" class="p-2 pt-4 mt-10 bg-primary-dark">
+				
+				<div class="relative p-2 mt-10 bg-primary-dark">
+					<div id="projects" class="absolute -top-[calc(1rem+61px)] left-0"></div>
 					<!-- Tabs -->
 					<div class="flex bg-primary-dark"> 
-						<button id="tab-button-1" onclick="changeTab(0)" class="flex gap-2 px-3 py-2 tab-button rounded-t-md text-primary-light bg-primary">
+						<button id="tab-button-1" onclick="changeTab(0)" class="flex gap-2 px-3 py-2 transition duration-500 tab-button rounded-t-md text-primary-light bg-primary hover:bg-blue-700">
 							<img class="w-[25px] aspect-square" src=".\src\jjj-logo.png">
 							<span class="hidden lg:inline">Jejoju Cafe</span>
 							<span class="hidden md:inline lg:hidden">Jejoju</span>
 						</button>
-						<button id="tab-button-2" onclick="changeTab(1)" class="flex gap-2 px-3 py-2 tab-button rounded-t-md text-primary-light bg-secondary">
+						<button id="tab-button-2" onclick="changeTab(1)" class="flex gap-2 px-3 py-2 transition duration-500 tab-button rounded-t-md text-primary-light bg-secondary hover:bg-blue-700">
 							<img class="w-[25px] aspect-square" src=".\src\wine.png">
 							<span class="hidden lg:inline">Benvinum Wines</span>
 							<span class="hidden md:inline lg:hidden">Benvinum</span>
 
 						</button>
-						<button id="tab-button-3" onclick="changeTab(2)" class="flex gap-2 px-3 py-2 tab-button rounded-t-md text-primary-light bg-secondary">
+						<button id="tab-button-3" onclick="changeTab(2)" class="flex gap-2 px-3 py-2 transition duration-500 tab-button rounded-t-md text-primary-light bg-secondary hover:bg-blue-700">
 							<img class="w-[25px] aspect-square" src=".\src\GoDaddy-Logo-notext.svg">
 							<span class="hidden lg:inline">GoDaddy</span>
 							<span class="hidden md:inline lg:hidden">GoDaddy</span>
 						</button>
-						<button id="tab-button-4" onclick="changeTab(3)" class="flex items-center gap-2 px-3 py-2 tab-button rounded-t-md text-primary-light bg-secondary">
+						<button id="tab-button-4" onclick="changeTab(3)" class="flex items-center gap-2 px-3 py-2 transition duration-500 tab-button rounded-t-md text-primary-light bg-secondary hover:bg-blue-700">
 							
 							<img class="w-[25px]" src=".\src\shakeys-logo.png">
 							
 							<span class="hidden lg:inline">Shakey’s Pizza</span>
 							<span class="hidden md:inline lg:hidden">Shakey's</span>
 						</button>
-						<button id="tab-button-5" onclick="changeTab(4)" class="flex gap-2 px-3 py-2 tab-button rounded-t-md text-primary-light bg-secondary">
+						<button id="tab-button-5" onclick="changeTab(4)" class="flex gap-2 px-3 py-2 transition duration-500 tab-button rounded-t-md text-primary-light bg-secondary hover:bg-blue-700">
 							<img class="w-[25px] aspect-square" src=".\src\tailwind-logo.png">
 							<span class="hidden lg:inline">Tailwind CSS</span>
 							<span class="hidden md:inline lg:hidden">Tailwind</span>
 						</button>
-						<button id="tab-button-6" onclick="changeTab(5)" class="flex gap-2 px-3 py-2 tab-button rounded-t-md text-primary-light bg-secondary">
+						<button id="tab-button-6" onclick="changeTab(5)" class="flex gap-2 px-3 py-2 transition duration-500 tab-button rounded-t-md text-primary-light bg-secondary hover:bg-blue-700">
 							<img class="w-[25px] aspect-square text-white" src=".\src\free-code-camp-logo.svg">
 							<span class="hidden lg:inline">Responsive Web Design Certification </span>
 							<span class="hidden md:inline lg:hidden">Certification</span>
@@ -175,7 +216,7 @@
 									</div>
 									<!-- P1 Visit Website Button -->
 									<div class="flex justify-center pt-2 md:justify-start">
-										<a class="px-5 py-2 font-semibold text-center text-white bg-secondary" href=".\projects\landing-page\dist\index.html" target="_blank">
+										<a class="px-5 py-2 font-semibold text-center text-white transition duration-300 bg-secondary hover:bg-primary" href=".\projects\landing-page\dist\index.html" target="_blank">
 											<span class="">Visit Website</span>
 										</a>
 									</div>
@@ -220,7 +261,7 @@
 									</div>
 									<!-- P2 Visit Website Button -->
 									<div class="flex justify-center pt-2 md:justify-start">
-										<a class="px-5 py-2 font-semibold text-center text-white bg-secondary" href=".\projects\benvinum\dist\index.html" target="_blank">
+										<a class="px-5 py-2 font-semibold text-center text-white transition duration-300 bg-secondary hover:bg-primary" href=".\projects\benvinum\dist\index.html" target="_blank">
 											<span class="">Visit Website</span>
 										</a>
 									</div>
@@ -265,7 +306,7 @@
 									</div>
 									<!-- P3 Visit Website Button -->
 									<div class="flex justify-center pt-2 md:justify-start">
-										<a class="px-5 py-2 font-semibold text-center text-white bg-secondary" href=".\projects\go-daddy\index.html" target="_blank">
+										<a class="px-5 py-2 font-semibold text-center text-white transition duration-300 bg-secondary hover:bg-primary" href=".\projects\go-daddy\index.html" target="_blank">
 											<span class="">Visit Website</span>
 										</a>
 									</div>
@@ -310,7 +351,7 @@
 									</div>
 									<!-- P4 Visit Website Button -->
 									<div class="flex justify-center pt-2 md:justify-start">
-										<a class="px-5 py-2 font-semibold text-center text-white bg-secondary" href=".\projects\survey-form\index.html" target="_blank">
+										<a class="px-5 py-2 font-semibold text-center text-white transition duration-300 bg-secondary hover:bg-primary" href=".\projects\survey-form\index.html" target="_blank">
 											<span class="">Visit Website</span>
 										</a>
 									</div>
@@ -358,7 +399,7 @@
 									</div>
 									<!-- P5 Visit Website Button -->
 									<div class="flex justify-center pt-2 md:justify-start">
-										<a class="px-5 py-2 font-semibold text-center text-white bg-secondary" href=".\projects\tech-doc\index.html" target="_blank">
+										<a class="px-5 py-2 font-semibold text-center text-white transition duration-300 bg-secondary hover:bg-primary" href=".\projects\tech-doc\index.html" target="_blank">
 											<span class="">Visit Website</span>
 										</a>
 									</div>
@@ -395,7 +436,7 @@
 									</div>
 									<!-- P5 Visit Website Button -->
 									<div class="flex justify-center pt-2 md:justify-start">
-										<a class="px-5 py-2 font-semibold text-center text-white bg-secondary" href="https://www.freecodecamp.org/certification/amarkzc/responsive-web-design" target="_blank">
+										<a class="px-5 py-2 font-semibold text-center text-white transition duration-300 bg-secondary hover:bg-primary" href="https://www.freecodecamp.org/certification/amarkzc/responsive-web-design" target="_blank">
 											<span class="">Visit Website</span>
 										</a>
 									</div>
@@ -406,50 +447,116 @@
 					</div><!-- End of Project Box -->
 				</div>
 				<!-- Portfolio Thumbnails -->
-				<div class="grid gap-10 pt-10 md:grid-cols-2 lg:grid-cols-3 px-[7%]">
-					<div class="max-h-[200px] overflow-hidden border border-primary-dark shadow-xl group ">
-						<a href="#projects" onclick="changeTab(0)">
-							<img class="transition group-hover:scale-[103%]" src=".\src\jjj-desktop.png">
-						</a>
-					</div>
-					<div class="max-h-[200px] overflow-hidden border border-primary-dark">
-						<a href="#projects" onclick="changeTab(1)">
-							<img class="" src=".\src\benvinum-desktop.png">
-						</a>
-					</div>
-					<div class="max-h-[200px] h-[250px] overflow-hidden border border-primary-dark">
-						<a href="#projects" onclick="changeTab(2)">
-							<img class="" src=".\src\go-daddy-desktop.png">
-						</a>
-					</div>
-					<div class="max-h-[200px] overflow-hidden border border-primary-dark">
-						<a href="#projects" onclick="changeTab(3)">
-							<img class="" src=".\src\survey-form-desktop.png">
-						</a>
-					</div>
-					<div class="max-h-[200px] overflow-hidden border border-primary-dark">
-						<a href="#projects" onclick="changeTab(4)">
-							<img class="" src=".\src\tech-doc-desktop.png">
-						</a>
-					</div>
-					<div class="max-h-[200px] overflow-hidden border border-primary-dark">
-						<a href="#projects" onclick="changeTab(5)">
-							<img class="" src=".\src\certificate.png">
-						</a>
+				<!-- <p class="pt-4 text-xl lg:text-xl text-primary-dark lg:pl-0 px-[7%]">Click on a thumbnail to display above ^</p> -->
+				<div class="grid gap-5 lg:gap-10 pt-8 md:grid-cols-2 lg:grid-cols-3 px-[7%] text-xl lg:text-2xl text-white">
+					<a class="max-h-[130px] lg:max-h-[200px] overflow-hidden border border-primary-dark shadow-xl relative group" onclick="changeTab(0)" href="#projects">
+						<div class="absolute top-0 h-[130px] lg:h-[200px] flex items-end group-hover:opacity-100 opacity-0 z-[9] transition duration-500 w-full justify-center bg-primary-light bg-opacity-0 group-hover:bg-opacity-50">
+							<div class="flex items-center justify-center w-full transition duration-500 h-1/4 bg-primary-dark hover:bg-primary">Preview
+							</div>
+						</div>
+						<img class="" src=".\src\jjj-desktop.png">
+					</a>
+					<a class="max-h-[130px] lg:max-h-[200px] overflow-hidden border border-primary-dark shadow-xl relative group" onclick="changeTab(1)" href="#projects">
+						<div class="absolute top-0 h-[130px] lg:h-[200px] flex items-end group-hover:opacity-100 opacity-0 z-[9] transition duration-500 w-full justify-center bg-primary-light bg-opacity-0 group-hover:bg-opacity-50">
+							<div class="flex items-center justify-center w-full transition duration-500 h-1/4 bg-primary-dark hover:bg-primary">Preview
+							</div>
+						</div>
+						<img class="" src=".\src\benvinum-desktop.png">
+					</a>
+					
+					<a class=" max-h-[130px] h-[130px] lg:h-[200px] lg:max-h-[200px] overflow-hidden border border-primary-dark shadow-xl relative group" onclick="changeTab(2)" href="#projects">
+						<div class="absolute top-0 h-[130px] lg:h-[200px] flex items-end group-hover:opacity-100 opacity-0 z-[9] transition duration-500 w-full justify-center bg-primary-light bg-opacity-0 group-hover:bg-opacity-50">
+							<div class="flex items-center justify-center w-full transition duration-500 h-1/4 bg-primary-dark hover:bg-primary">Preview
+							</div>
+						</div>
+						<img class="" src=".\src\go-daddy-desktop.png">
+					</a>
+					
+					<a class="max-h-[130px] lg:max-h-[200px] overflow-hidden border border-primary-dark shadow-xl relative group" onclick="changeTab(3)" href="#projects">
+						<div class="absolute top-0 h-[130px] lg:h-[200px] flex items-end group-hover:opacity-100 opacity-0 z-[9] transition duration-500 w-full justify-center bg-primary-light bg-opacity-0 group-hover:bg-opacity-50">
+							<div class="flex items-center justify-center w-full transition duration-500 h-1/4 bg-primary-dark hover:bg-primary">Preview
+							</div>
+						</div>
+						<img class="" src=".\src\survey-form-desktop.png">
+					</a>
+					
+					<a class="max-h-[130px] lg:max-h-[200px] overflow-hidden border border-primary-dark shadow-xl relative group" onclick="changeTab(4)" href="#projects">
+						<div class="absolute top-0 h-[130px] lg:h-[200px] flex items-end group-hover:opacity-100 opacity-0 z-[9] transition duration-500 w-full justify-center bg-primary-light bg-opacity-0 group-hover:bg-opacity-50">
+							<div class="flex items-center justify-center w-full transition duration-500 h-1/4 bg-primary-dark hover:bg-primary">Preview
+							</div>
+						</div>
+						<img class="" src=".\src\tech-doc-desktop.png">
+					</a>
+
+					<a class="max-h-[130px] lg:max-h-[200px] overflow-hidden border border-primary-dark shadow-xl relative group" onclick="changeTab(5)" href="#projects">
+						<div class="absolute top-0 h-[130px] lg:h-[200px] flex items-end group-hover:opacity-100 opacity-0 z-[9] transition duration-500 w-full justify-center bg-primary-light bg-opacity-0 group-hover:bg-opacity-50">
+							<div class="flex items-center justify-center w-full transition duration-500 h-1/4 bg-primary-dark hover:bg-primary">Preview
+							</div>
+						</div>
+						<img class="" src=".\src\certificate.png">
+					</a>
 					</div>
 				</div> <!-- End of Portfolio Thumbnails -->
 			</section>
 			<!-- End of Portfolio -->
 			<!-- Contact Section -->
-			<section class="h-[600px] px-[7%] py-10">
+			<section id="contact" class="px-[7%] py-10 pt-[calc(1rem+61px)]">
 				<div class="flex items-center ">
 					<div class="w-2 h-12 lg:h-16 bg-primary-light"></div>
 					<span class="pl-3 text-4xl font-semibold lg:pl-5 lg:text-5xl text-primary-light">
 						Contact Info
 					</span>
 				</div>
+				<div class="grid md:grid-cols-2">
+					<div class="flex flex-col pt-10 text-xl lg:text-2xl text-primary-light gap-y-4 md:pr-5 lg:pr-14 ">
+						<div class="">
+							<p>Want to work together? I am open for freelance, contract, part-time or full-time work.</p>
+							<p class="pt-5">You can reach me through my contact info below or send a message through the form.</p>
+						</div>
+						<div class="flex gap-3 pt-5">
+							<span class="w-5"><i class="font-light text-white fa-solid fa-at"></i></span>
+							<span><a href="mailto:amarkzc@gmail.com">amarkzc@gmail.com</a></span>
+						</div>
+						<div class="flex gap-3">
+							<span class="w-5"><i class="text-white fa-brands fa-facebook"></i></span>
+							<span><a class="" href="https://www.facebook.com/amarkzc" target="_blank">fb.com/amarkzc</a></span>
+						</div>
+						<div class="flex gap-3">
+							<span class="grid w-5 justify-items-center"><i class="text-white fa-solid fa-location-dot"></i></span>
+							<span><a href="https://goo.gl/maps/ySSWE2aJPRv1dwB46" target="_blank">Cebu City, Cebu, Philippines, 6000</a></span>
+						</div>
+
+					</div>
+					<div class="pt-10 md:pt-10">
+						<p class="text-3xl text-primary-light">Send me a message</p>
+						<form id="form" class="grid pt-5 text-primary-light gap-y-4 lg:pr-20" action="https://formsubmit.co/strikefrdm23@gmail.com" method="POST">
+							<input type="hidden" name="_subject" value="Portfolio - Contact">
+							<div class="grid">
+							  <label class="text-xl after:content-['*'] after:text-accent pb-2">Name:</label>
+							  <input class="p-1 px-2 text-black" type="text" placeholder="" name="name" id="name" required >           
+							</div>
+							<div class="grid">
+							  <label class="text-xl after:content-['*'] after:text-accent pb-2">Email:</label> 
+							  <input class="p-1 px-2 text-black" type="email" name="email" id="email" required>
+							</div>
+							<div class="grid">
+							  <label class="text-xl after:content-['*'] after:text-accent pb-2">Message:</label>
+							  <textarea name="message" class="h-40 p-1 text-black resize-none" placeholder="Let’s talk about the project or ask me anything.
+I will reply as soon as I read it"></textarea>
+							  
+							</div>
+							<div class="pt-6">
+							  <input class="py-2 text-xl font-semibold transition duration-300 px-14 bg-accent text-primary-dark hover:cursor-pointer hover:bg-yellow-600" type="submit" id="submit" value="Send" >                
+							</div>
+							<input type="hidden" name="_next" value="#"> <!-- Link back to page -->
+						  </form>
+					</div>
+				</div>
 			</section> <!-- End of Contact Section-->
 		</main>
+		<div class="h-[1000px]">
+
+		</div>
 
 	</body>
 </html>

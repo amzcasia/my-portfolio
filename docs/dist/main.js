@@ -1,14 +1,10 @@
 console.log("Project Start");
 
+const body = document.querySelector("body");
 const tabButtons = document.querySelectorAll(".tab-button")
 const projectItems = document.querySelectorAll(".project-item");
-
-const BUTTON_0 = 0;
-const BUTTON_1 = 1;
-const BUTTON_2 = 2;
-const BUTTON_3 = 3;
-const BUTTON_4 = 4;
-const BUTTON_5 = 5;
+const mobileNav = document.getElementById("mobile-nav");
+const mobileNavButton = document.getElementById("mobile-nav-button");
 
 changeTab(0);
 
@@ -32,3 +28,14 @@ function changeTab(tabIndex){
         tabButtons[tabIndex].classList.add("bg-primary");
     }, 1);
 }
+
+function toggleMobileNav(){
+    mobileNav.classList.toggle("hidden")
+    body.classList.toggle("overflow-hidden");
+}
+
+function toggleMenu2(){
+    mobileNav.classList.add("hidden")
+    body.classList.remove("overflow-hidden");
+}
+
