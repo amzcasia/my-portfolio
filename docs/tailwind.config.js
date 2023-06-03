@@ -12,7 +12,8 @@ module.exports = {
         'accent':'#E2B628'
       },
       dropShadow: {
-        '3xl': '0 3px 10px rgba(0, 0, 0, 1)'
+        '3xl': '0 3px 5px rgba(0, 0, 0, 1)',
+        '3xl-top': '0 -3px 5px rgba(0, 0, 0, 1)'
       }
     },
   plugins: [],

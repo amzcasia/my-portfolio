@@ -7,16 +7,19 @@
 		<script src=".\dist\main.js" defer></script>
 		<script src="https://kit.fontawesome.com/c322fa12db.js" crossorigin="anonymous"></script>
 		
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
 		<link rel="icon" href=".\src\amzc.png">
 		<link rel="stylesheet" href=".\dist\output.css">
 		<link rel="stylesheet" href=".\dist\styles.css">
 
 		<title>Mark - Web Developer</title>
-
-		
+	
 	</head>
 	<body  class="relative w-full bg-primary-dark scroll-smooth">
-		<div id="home"></div>
+		
 		<!-- Header -->
 		<!-- <section id="hero-section" class="fixed top-0 w-full h-screen bg-primary-dark -z-[1]">
 			<img class="h-full opacity-20 aspect-[calc(1195/847)]" src=".\src\pcb.png">
@@ -35,13 +38,13 @@
 		<!-- aspect-[calc(1195/847)] -->
 		<header class="px-[7%] text-primary-light fixed w-full drop-shadow-3xl top-0 left-0 bg-primary-dark bg-opacity-100 z-10 opacity-100">
 			<nav class="flex items-center justify-between">
-				<div class="flex items-center">
+				<div class="flex items-center py-2">
 					<a onclick="toggleMenu2()" class="flex items-center gap-4" href="#home">
-						<img class="rounded-full h-[45px] border-2 border-primary-light aspect-square" src=".\src\1x1.jpg">
-						<span class="text-2xl font-bold">AMZC</span>
+						<img class="rounded-full h-[45px] border-2 border-secondary aspect-square" src=".\src\1x1.jpg">
+						<span class="text-2xl font-medium">AMZC</span>
 					</a>
 				</div>
-				<div class="items-center hidden h-[calc(45px+1rem)] text-xl font-semibold gap-x-6 lg:flex">
+				<div class="items-center hidden h-[calc(45px+1rem)] text-xl gap-x-6 lg:flex">
 					<a class="relative flex items-center h-full px-6 py-2 group" href="#home">
 						<span>Home</span>
 						<div class="absolute bottom-0 left-0 w-full h-1 transition duration-300 origin-left scale-x-0 group-hover:scale-x-100 bg-accent"></div>
@@ -70,9 +73,9 @@
 				
 			</nav>
 		</header> <!-- End of Header -->
-		<nav id="mobile-nav" class="text-2xl text-primary-light lg:hidden z-[9] fixed right-0 w-full shadow-md flex hidden" data-state="active">
+		<nav id="mobile-nav" class="text-2xl text-primary-light lg:hidden z-[9] fixed top-[calc(45px+1rem)] right-0 w-full shadow-md flex hidden" data-state="active">
 			<div onclick="toggleMobileNav()" class="w-1/2 bg-black opacity-50"></div>
-			<div  class="grid content-start w-1/2 h-screen py-4 pl-5 justify-items-start bg-primary-dark gap-y-4">
+			<div  class="grid content-start w-1/2 h-screen py-10 pl-5 justify-items-start bg-primary-dark gap-y-4">
 				<a onclick="toggleMobileNav()" href="#home">Home</a>
 				<a onclick="toggleMobileNav()" href="#about">About</a>
 				<a onclick="toggleMobileNav()" href="#services">Services</a>
@@ -80,21 +83,25 @@
 				<a onclick="toggleMobileNav()" href="#contact">Contact</a>
 			</div>
 		</nav>
-		
+		<!-- <div class="mt-[calc(45px+1rem)]"></div> -->
+		<!-- <div id="home" class=""></div> -->
 		<main class="w-full">
 			<!-- Start of Hero Section -->
-			<section id="hero-section" class="grid md:grid-cols-2 px-[7%] py-5 md:py-10 lg:py-14 text-xl lg:text-2xl mt-[calc(45px+1rem)]">
-				<div class="grid content-center text-primary-light lg:pl-[30%] md:pr-5">
-					<p class="text-4xl font-semibold lg:text-5xl">Hi there! I'm Mark.</p>
-					<p class="pt-5 lg:pt-8">I'm a web developer—building simple and well-rounded websites that thoughtfully impacts your digital presence.</p>
-					<p class="pt-3">My thrills are bringing ideas to life in a browser using HTML and CSS. Whether you're building a website or crafting an effective email, let my codes lead the way.</p>
-					<div class="flex gap-3 pt-10 font-semibold md:pt-16">
-						<a class="flex" href="#contact"><span class="px-4 py-2 text-black transition duration-300 lg:px-6 bg-accent hover:bg-yellow-200">Contact Me</span></a>
-						<a class="flex" href="#portfolio"><span class="px-4 py-2 transition duration-300 border-2 lg:px-6 border-accent text-accent hover:border-yellow-200 hover:text-yellow-200">My Portfolio</span></a>
+			<section id="home" class="grid md:grid-cols-2 px-[7%] lg:px-[10%] xl:px-[15%] py-5 md:py-10 lg:py-14 text-xl lg:text-2xl leading-relaxed lg:pt-[calc(45px+4rem)] pt-[calc(45px+4rem)] md:pt-[calc(45px+4rem)] gap-5 place-content-center">
+				<!--  pt-[calc(45px+1rem)] -->
+				<div class="grid content-center text-primary-light">
+					<div class="">
+						<p class="text-4xl lg:text-5xl">Hi there! I'm <a href="#about" class="hover:underline underline-offset-8 text-accent">Mark.</a></p>
+						<p class="pt-5 lg:pt-8">I'm a web developer—building simple and well-rounded websites that thoughtfully impacts your digital presence.</p>
+						<p class="pt-3">My thrills are bringing ideas to life in a browser using HTML and CSS. Whether you're building a website or crafting an effective email, let my codes lead the way.</p>
+						<div class="flex gap-3 pt-10 font-semibold md:pt-16">
+							<a class="flex" href="#contact"><span class="px-4 py-2 text-black transition duration-300 lg:px-6 bg-accent hover:bg-yellow-200">Contact Me</span></a>
+							<a class="flex" href="#portfolio"><span class="px-4 py-2 transition duration-300 border-2 lg:px-6 border-accent text-accent hover:border-yellow-200 hover:text-yellow-200">My Portfolio</span></a>
+						</div>
 					</div>
 				</div>
-				<div class="flex lg:justify-end lg:pl-20 lg:pr-[30%] pt-10 md:pt-0">
-					<img class="max-h-[550px]" src=".\src\hero-img.jpg">
+				<div class="flex justify-center pt-10 md:justify-end md:pt-0">
+					<img class="max-h-[500px] w-auto object-cover object-center" src=".\src\hero-img.jpg">
 				</div>
 
 			</section>
@@ -114,12 +121,12 @@
 						<div class="flex justify-start items-center md:pr-5 lg:pl-[30%]">
 							<img class="md:max-h-[450px] lg:max-h-[550px]" src=".\src\about-img.jpg">
 						</div>
-						<div class="grid content-center lg:text-2xl text-primary-dark lg:pr-[10%]">
+						<div class="grid content-center lg:text-2xl text-primary-dark lg:pr-[10%] leading-relaxed">
 							<p class="pt-8 text-4xl font-semibold md:pt-0">Anton Mark Z. Casia</p>
 							<p class="pt-4 lg:pt-8">I am a Web Developer based in Cebu, Philippines. My expertise lies in translating designs into fully functional websites and emails while utilizing my development skills to enhance and customize their features. My goal is to craft visually appealing, user-friendly websites and emails, with a built-in seamless browsing experience.</p>
 							<p class="pt-3">In my free time, I enjoy playing Valorant and go road cycling during the weekends.</p>
 							<div class="flex pt-8">
-								<a class="flex" href="#contact"><span class="px-6 py-2 text-2xl font-semibold text-white transition duration-300 bg-primary-dark hover:bg-primary">Get in Touch</span></a>
+								<a class="flex" href="#contact"><span class="px-6 py-2 text-2xl font-medium text-white transition duration-300 bg-primary-dark hover:bg-primary">Get in Touch</span></a>
 							</div>
 						</div>
 
@@ -582,7 +589,7 @@ I will reply as soon as I read it"></textarea>
 				</div>
 			</section> <!-- End of Contact Section-->
 		</main>
-		<footer class="grid gap-2 text-xl md:grid-cols-2 lg:grid-cols-4 bg-primary-dark text-primary-light px-[7%] py-8 lg:py-5">
+		<footer class="grid gap-2 text-xl md:grid-cols-2 lg:grid-cols-4 bg-primary-dark text-primary-light px-[7%] py-8 lg:py-5 drop-shadow-3xl-top">
 			<div class="grid gap-4">
 				<div class="flex items-center">
 					<img class="rounded-full h-[60px] aspect-square" src=".\src\1x1.jpg">
@@ -626,9 +633,10 @@ I will reply as soon as I read it"></textarea>
 				<a class="underline hover:no-underline" href="#portfolio">Portfolio</a>
 				<a class="underline hover:no-underline" href="#contact">Contact</a>
 			</div>
+			<div class="py-4 text-center md:col-span-2 lg:col-span-4 text-primary-light bg-primary-dark">All rights reserved &copy; AMZC</div>
 
 		</footer>
-		<div class="py-4 text-center text-primary-light bg-primary-dark">All rights reserved &copy; AMZC</div>
+		
 		<!-- Remove this part -->
 
 	</body>
