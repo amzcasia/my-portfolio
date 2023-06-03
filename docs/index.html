@@ -18,7 +18,7 @@
 		<title>Mark - Web Developer</title>
 	
 	</head>
-	<body  class="relative w-full bg-primary-dark scroll-smooth">
+	<body  class="relative w-full bg-primary-dark">
 		
 		<!-- Header -->
 		<!-- <section id="hero-section" class="fixed top-0 w-full h-screen bg-primary-dark -z-[1]">
@@ -39,56 +39,62 @@
 		<header class="px-[7%] text-primary-light fixed w-full drop-shadow-3xl top-0 left-0 bg-primary-dark bg-opacity-100 z-10 opacity-100">
 			<nav class="flex items-center justify-between">
 				<div class="flex items-center py-2">
-					<a onclick="toggleMenu2()" class="flex items-center gap-4" href="#home">
+					<a onclick="closeMenu()" class="flex items-center gap-4" href="#home">
 						<img class="rounded-full h-[45px] border-2 border-secondary aspect-square" src=".\src\1x1.jpg">
 						<span class="text-2xl font-medium">AMZC</span>
 					</a>
 				</div>
-				<div class="items-center hidden h-[calc(45px+1rem)] text-xl gap-x-6 lg:flex">
-					<a class="relative flex items-center h-full px-6 py-2 group" href="#home">
+				<div id="nav-options-lg" class="items-center hidden h-[calc(45px+1rem)] text-xl gap-x-6 lg:flex">
+					<a class="relative flex items-center h-full px-6 py-2 group" href="#home" onclick="highlight(0)">
 						<span>Home</span>
-						<div class="absolute bottom-0 left-0 w-full h-1 transition duration-300 origin-left scale-x-0 group-hover:scale-x-100 bg-accent"></div>
+						<div class="absolute bottom-0 left-0 w-full h-1 transition duration-300 origin-left scale-x-0 bg-accent group-hover:scale-x-100"></div>
 					</a>
-					<a class="relative flex items-center h-full px-6 py-2 group" href="#about">
+					<a class="relative flex items-center h-full px-6 py-2 group" href="#about" onclick="highlight(1)">
 						<span>About</span>
-						<div class="absolute bottom-0 left-0 w-full h-1 transition duration-300 origin-left scale-x-0 group-hover:scale-x-100 bg-accent"></div>
+						<div class="absolute bottom-0 left-0 w-full h-1 transition duration-300 origin-left scale-x-0 bg-accent group-hover:scale-x-100"></div>
 					</a>
-					<a class="relative flex items-center h-full px-6 py-2 group" href="#services">
+					<a class="relative flex items-center h-full px-6 py-2 group" href="#services" onclick="highlight(2)">
 						<span>Services</span>
-						<div class="absolute bottom-0 left-0 w-full h-1 transition duration-300 origin-left scale-x-0 group-hover:scale-x-100 bg-accent"></div>
+						<div class="absolute bottom-0 left-0 w-full h-1 transition duration-300 origin-left scale-x-0 bg-accent group-hover:scale-x-100"></div>
 					</a>
-					<a class="relative flex items-center h-full px-6 py-2 group" href="#portfolio">
+					<a class="relative flex items-center h-full px-6 py-2 group" href="#portfolio" onclick="highlight(3)">
 						<span>Portfolio</span>
-						<div class="absolute bottom-0 left-0 w-full h-1 transition duration-300 origin-left scale-x-0 group-hover:scale-x-100 bg-accent"></div>
+						<div class="absolute bottom-0 left-0 w-full h-1 transition duration-300 origin-left scale-x-0 bg-accent group-hover:scale-x-100"></div>
 					</a>
-					<a class="relative flex items-center h-full px-6 py-2 group" href="#contact">
+					<a class="relative flex items-center h-full px-6 py-2 group" href="#contact" onclick="highlight(4)">
 						<span>Contact</span>
-						<div class="absolute bottom-0 left-0 w-full h-1 transition duration-300 origin-left scale-x-0 group-hover:scale-x-100 bg-accent"></div>
+						<div class="absolute bottom-0 left-0 w-full h-1 transition duration-300 origin-left scale-x-0 bg-accent group-hover:scale-x-100"></div>
 					</a>
 				</div>
 				<button  onclick="toggleMobileNav()" class="flex items-center text-2xl lg:hidden">
-					<i id="mobile-nav-button" class="fa-solid fa-bars"></i>
-					<!-- <i class="hidden text-3xl fa-solid fa-xmark"></i> -->
+					<i id="mobile-nav-button-1" class="fa-solid fa-bars"></i>
+					<i id="mobile-nav-button-2" class="hidden text-3xl fa-solid fa-xmark"></i>
 				</button>
 				
 			</nav>
 		</header> <!-- End of Header -->
-		<nav id="mobile-nav" class="text-2xl text-primary-light lg:hidden z-[9] fixed top-[calc(45px+1rem)] right-0 w-full shadow-md flex hidden" data-state="active">
-			<div onclick="toggleMobileNav()" class="w-1/2 bg-black opacity-50"></div>
-			<div  class="grid content-start w-1/2 h-screen py-10 pl-5 justify-items-start bg-primary-dark gap-y-4">
-				<a onclick="toggleMobileNav()" href="#home">Home</a>
-				<a onclick="toggleMobileNav()" href="#about">About</a>
-				<a onclick="toggleMobileNav()" href="#services">Services</a>
-				<a onclick="toggleMobileNav()" href="#portfolio">Portfolio</a>
-				<a onclick="toggleMobileNav()" href="#contact">Contact</a>
+		<nav id="mobile-nav" class="text-2xl text-primary-light lg:hidden z-[9] fixed top-[calc(45px+1rem)] right-0 w-full shadow-md flex scale-y-0 duration-200 origin-top h-screen" data-state="active">
+			<div onclick="toggleMobileNav()" class="w-1/2 opacity-100 backdrop-blur-[2px]">
+				<div class="w-full h-full opacity-60 bg-primary-dark"></div>
+			</div>
+			<div  class="grid w-1/2 h-screen py-10 bg-primary-dark">
+				<div id="mobile-nav-link-container" class="grid content-start hidden justify-items-start gap-y-5">
+					<a class="flex" onclick="toggleMobileNav()" href="#home"><span class="pl-5 border-accent" >Home</span></a>
+					<a class="" onclick="toggleMobileNav()" href="#about"><span class="pl-5 border-accent">About</span></a>
+					<a class="" onclick="toggleMobileNav()" href="#services"><span class="pl-5 border-accent">Services</span></a>
+					<a class="" onclick="toggleMobileNav()" href="#portfolio"><span class="pl-5 border-accent">Portfolio</span></a>
+					<a class="" onclick="toggleMobileNav()" href="#contact"><span class="pl-5 border-accent">Contact</span></a>
+				</div>
 			</div>
 		</nav>
-		<!-- <div class="mt-[calc(45px+1rem)]"></div> -->
-		<!-- <div id="home" class=""></div> -->
+
 		<main class="w-full">
 			<!-- Start of Hero Section -->
-			<section id="home" class="grid md:grid-cols-2 px-[7%] lg:px-[10%] xl:px-[15%] py-5 md:py-10 lg:py-14 text-xl lg:text-2xl leading-relaxed lg:pt-[calc(45px+4rem)] pt-[calc(45px+4rem)] md:pt-[calc(45px+4rem)] gap-5 place-content-center">
+			
+			
+			<section id="home" class="grid md:grid-cols-2 px-[7%] lg:px-[10%] xl:px-[15%] text-xl lg:text-2xl leading-relaxed pt-[calc(45px+2rem)] pb-10 gap-5 place-content-center">
 				<!--  pt-[calc(45px+1rem)] -->
+				<div class="sticky top-0 main-section md:col-span-2"></div>
 				<div class="grid content-center text-primary-light">
 					<div class="">
 						<p class="text-4xl lg:text-5xl">Hi there! I'm <a href="#about" class="hover:underline underline-offset-8 text-accent">Mark.</a></p>
@@ -108,8 +114,9 @@
 			<!-- End of Hero Section -->
 			<!-- Start of About Section -->
 			<!-- <div class="w-full h-1 bw"></div> -->
-			<section id="about" class="px-[7%] py-10 pt-[calc(1rem+61px)] bg-white text-xl lg:text-2xl">
-				
+			
+			<section id="about" class="px-[7%] pb-10 pt-[calc(2rem+45px)] bg-white text-xl lg:text-2xl">
+				<div id="about-div" class="sticky top-0 main-section"></div>
 				<div class="grid">
 					<div class="flex items-center lg:">
 						<div class="w-2 h-12 lg:h-16 bg-primary"></div>
@@ -138,6 +145,7 @@
 
 			<!-- Services Section -->
 			<section id="services" class="pt-[calc(1rem+61px)]  pb-14 px-[7%]">
+				<div class="sticky top-0 main-section"></div>
 				<div class="flex items-center lg:">
 					<div class="w-2 h-12 lg:h-16 bg-primary-light"></div>
 					<span class="pl-3 text-4xl font-semibold lg:pl-5 lg:text-5xl text-primary-light">
@@ -168,6 +176,7 @@
 			<!-- End of Services Section -->
 		
 			<section id="portfolio" class="lg:px-[7%] py-10 pt-[calc(1rem+61px)] bg-white grid" >
+				<div class="sticky top-0 main-section"></div>
 				<div class="flex items-center lg:pl-0 pl-[7%]">
 					<div class="w-2 h-12 lg:h-16 bg-primary"></div>
 					<span class="pl-3 text-4xl font-semibold lg:pl-5 lg:text-5xl text-primary">
@@ -536,7 +545,8 @@
 			</section>
 			<!-- End of Portfolio -->
 			<!-- Contact Section -->
-			<section id="contact" class="px-[7%] py-10 pt-[calc(1rem+61px)]">
+			<section id="contact" class="px-[7%] pb-10 pt-[calc(1rem+61px)]">
+				<div class="sticky top-0 main-section"></div>
 				<div class="flex items-center ">
 					<div class="w-2 h-12 lg:h-16 bg-primary-light"></div>
 					<span class="pl-3 text-4xl font-semibold lg:pl-5 lg:text-5xl text-primary-light">
@@ -565,15 +575,16 @@
 					</div>
 					<div class="pt-10 md:pt-10">
 						<p class="text-3xl text-primary-light">Send me a message</p>
-						<form id="form" class="grid pt-5 text-primary-light gap-y-4 lg:pr-20" action="https://formsubmit.co/strikefrdm23@gmail.com" method="POST">
-							<input type="hidden" name="_subject" value="Portfolio - Contact">
+						<form id="form" class="grid pt-5 text-primary-light gap-y-4 lg:pr-20" action="https://formsubmit.co/amzcasia@gmail.com" method="POST">
+							<input type="hidden" name="_subject" value="my-portfolio New Message">
+							<input type="hidden" name="_captcha" value="false">
 							<div class="grid">
 							  <label class="text-xl after:content-['*'] after:text-accent pb-2">Name:</label>
-							  <input class="p-1 px-2 text-black" type="text" placeholder="" name="name" id="name" required >           
+							  <input class="p-1 px-2 text-black" type="text" placeholder="Name" name="name" id="name" required >           
 							</div>
 							<div class="grid">
 							  <label class="text-xl after:content-['*'] after:text-accent pb-2">Email:</label> 
-							  <input class="p-1 px-2 text-black" type="email" name="email" id="email" required>
+							  <input class="p-1 px-2 text-black" type="email" placeholder="youremail@email.com" name="email" id="email" required>
 							</div>
 							<div class="grid">
 							  <label class="text-xl after:content-['*'] after:text-accent pb-2">Message:</label>
@@ -583,7 +594,7 @@ I will reply as soon as I read it"></textarea>
 							<div class="pt-6">
 							  <input class="py-2 text-xl font-semibold transition duration-300 px-14 bg-accent text-primary-dark hover:cursor-pointer hover:bg-yellow-200" type="submit" id="submit" value="Send" >                
 							</div>
-							<input type="hidden" name="_next" value="#"> <!-- Link back to page -->
+							<!-- <input type="hidden" name="_next" value="#"> Link back to page -->
 						  </form>
 					</div>
 				</div>
