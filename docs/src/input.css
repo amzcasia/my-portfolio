@@ -4,11 +4,11 @@
 
 
 @layer utilities {
-    .borders {
+    .bb {
         border: 1px dashed black;
     }
 
-    .borderss {
+    .bw {
         border: 1px dashed white;
     }
 }

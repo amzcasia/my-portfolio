@@ -33,20 +33,35 @@
 	
 		
 		<!-- aspect-[calc(1195/847)] -->
-		<header class="px-[7%] py-2 text-primary-light shadow-md sticky top-0 left-0 bg-primary-dark z-10">
+		<header class="px-[7%] text-primary-light fixed w-full drop-shadow-3xl top-0 left-0 bg-primary-dark bg-opacity-100 z-10 opacity-100">
 			<nav class="flex items-center justify-between">
 				<div class="flex items-center">
 					<a onclick="toggleMenu2()" class="flex items-center gap-4" href="#home">
-						<img class="rounded-full h-[45px] aspect-square" src=".\src\1x1.jpg">
+						<img class="rounded-full h-[45px] border-2 border-primary-light aspect-square" src=".\src\1x1.jpg">
 						<span class="text-2xl font-bold">AMZC</span>
 					</a>
 				</div>
-				<div class="items-center hidden text-xl font-semibold gap-x-6 lg:flex">
-					<a class="px-6 py-2 transition duration-300 rounded-lg hover:bg-primary hover:text-primary-dark" href="#home">Home</a>
-					<a class="px-6 py-2 transition duration-300 rounded-lg hover:bg-primary hover:text-primary-dark" href="#about">About</a>
-					<a class="px-6 py-2 transition duration-300 rounded-lg hover:bg-primary hover:text-primary-dark" href="#services">Services</a>
-					<a class="px-6 py-2 transition duration-300 rounded-lg hover:bg-primary hover:text-primary-dark" href="#portfolio">Portfolio</a>
-					<a class="px-6 py-2 transition duration-300 rounded-lg hover:bg-primary hover:text-primary-dark" href="#contact">Contact</a>
+				<div class="items-center hidden h-[calc(45px+1rem)] text-xl font-semibold gap-x-6 lg:flex">
+					<a class="relative flex items-center h-full px-6 py-2 group" href="#home">
+						<span>Home</span>
+						<div class="absolute bottom-0 left-0 w-full h-1 transition duration-300 origin-left scale-x-0 group-hover:scale-x-100 bg-accent"></div>
+					</a>
+					<a class="relative flex items-center h-full px-6 py-2 group" href="#about">
+						<span>About</span>
+						<div class="absolute bottom-0 left-0 w-full h-1 transition duration-300 origin-left scale-x-0 group-hover:scale-x-100 bg-accent"></div>
+					</a>
+					<a class="relative flex items-center h-full px-6 py-2 group" href="#services">
+						<span>Services</span>
+						<div class="absolute bottom-0 left-0 w-full h-1 transition duration-300 origin-left scale-x-0 group-hover:scale-x-100 bg-accent"></div>
+					</a>
+					<a class="relative flex items-center h-full px-6 py-2 group" href="#portfolio">
+						<span>Portfolio</span>
+						<div class="absolute bottom-0 left-0 w-full h-1 transition duration-300 origin-left scale-x-0 group-hover:scale-x-100 bg-accent"></div>
+					</a>
+					<a class="relative flex items-center h-full px-6 py-2 group" href="#contact">
+						<span>Contact</span>
+						<div class="absolute bottom-0 left-0 w-full h-1 transition duration-300 origin-left scale-x-0 group-hover:scale-x-100 bg-accent"></div>
+					</a>
 				</div>
 				<button  onclick="toggleMobileNav()" class="flex items-center text-2xl lg:hidden">
 					<i id="mobile-nav-button" class="fa-solid fa-bars"></i>
@@ -68,14 +83,14 @@
 		
 		<main class="w-full">
 			<!-- Start of Hero Section -->
-			<section id="hero-section" class="grid md:grid-cols-2 px-[7%] py-5 md:py-10 lg:py-14 text-xl lg:text-2xl">
+			<section id="hero-section" class="grid md:grid-cols-2 px-[7%] py-5 md:py-10 lg:py-14 text-xl lg:text-2xl mt-[calc(45px+1rem)]">
 				<div class="grid content-center text-primary-light lg:pl-[30%] md:pr-5">
 					<p class="text-4xl font-semibold lg:text-5xl">Hi there! I'm Mark.</p>
 					<p class="pt-5 lg:pt-8">I'm a web developer—building simple and well-rounded websites that thoughtfully impacts your digital presence.</p>
 					<p class="pt-3">My thrills are bringing ideas to life in a browser using HTML and CSS. Whether you're building a website or crafting an effective email, let my codes lead the way.</p>
 					<div class="flex gap-3 pt-10 font-semibold md:pt-16">
-						<a class="flex" href="#contact"><span class="px-4 py-2 text-black transition duration-300 lg:px-6 bg-accent hover:bg-yellow-600">Contact Me</span></a>
-						<a class="flex" href="#portfolio"><span class="px-4 py-2 transition duration-300 border-2 lg:px-6 border-accent text-accent hover:border-yellow-600 hover:text-yellow-600">My Portfolio</span></a>
+						<a class="flex" href="#contact"><span class="px-4 py-2 text-black transition duration-300 lg:px-6 bg-accent hover:bg-yellow-200">Contact Me</span></a>
+						<a class="flex" href="#portfolio"><span class="px-4 py-2 transition duration-300 border-2 lg:px-6 border-accent text-accent hover:border-yellow-200 hover:text-yellow-200">My Portfolio</span></a>
 					</div>
 				</div>
 				<div class="flex lg:justify-end lg:pl-20 lg:pr-[30%] pt-10 md:pt-0">
@@ -85,7 +100,9 @@
 			</section>
 			<!-- End of Hero Section -->
 			<!-- Start of About Section -->
+			<!-- <div class="w-full h-1 bw"></div> -->
 			<section id="about" class="px-[7%] py-10 pt-[calc(1rem+61px)] bg-white text-xl lg:text-2xl">
+				
 				<div class="grid">
 					<div class="flex items-center lg:">
 						<div class="w-2 h-12 lg:h-16 bg-primary"></div>
@@ -289,8 +306,8 @@
 							<div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
 								<!-- P3 Col 1 -->
 								<div class="relative overflow-y-scroll max-h-[400px]">
-									<a class="w-full h-[400px]" href=".\projects\go-daddy\index.html" target="_blank">
-									<img class="w-full h-[400px]" src=".\src\go-daddy-desktop.png">
+									<a class="w-full h-[400px]" href="https://amzcasia.github.io/go-daddy-clone/" target="_blank">
+									<img class="" src=".\src\go-daddy-desktop.png">
 									</a>
 									
 								</div>
@@ -309,20 +326,29 @@
 									</div>
 									<!-- P3 Visit Website Button -->
 									<div class="flex justify-center pt-2 md:justify-start">
-										<a class="px-5 py-2 font-semibold text-center text-white transition duration-300 bg-secondary hover:bg-primary" href=".\projects\go-daddy\index.html" target="_blank">
+										<a class="px-5 py-2 font-semibold text-center text-white transition duration-300 bg-secondary hover:bg-primary" href="https://amzcasia.github.io/go-daddy-clone/" target="_blank">
 											<span class="">Visit Website</span>
 										</a>
 									</div>
 								</div>
 								<!-- End of P3 Col 2 -->
 								<!-- P3 Col3 -->
+								
 								<div class="hidden lg:flex">
-									<div class="max-h-[400px] overflow-y-scroll w-full">
-										<a href=".\projects\go-daddy\index.html" target="_blank">
-										<img class="w-full h-[400px]" src=".\src\go-daddy-mobile.png">
+									<div class="max-h-[400px] overflow-y-scroll">
+										<a href="https://amzcasia.github.io/go-daddy-clone/" target="_blank">
+										<img class="" src=".\src\go-daddy-mobile.png">
 										</a>
 									</div>
 								</div>
+								<!--  
+								<div class="hidden lg:flex">
+									<div class="max-h-[400px] overflow-y-scroll">
+										<a href=".\projects\benvinum\dist\index.html" target="_blank">
+										<img class="" src=".\src\benvinum-mobile.png">
+										</a>
+									</div>
+								</div>-->
 								<!-- End of P3 Col 3 -->
 							</div><!-- End of Project 3 Content -->
 						</div><!-- End of Project 3-->
@@ -548,7 +574,7 @@
 I will reply as soon as I read it"></textarea>
 							</div>
 							<div class="pt-6">
-							  <input class="py-2 text-xl font-semibold transition duration-300 px-14 bg-accent text-primary-dark hover:cursor-pointer hover:bg-yellow-600" type="submit" id="submit" value="Send" >                
+							  <input class="py-2 text-xl font-semibold transition duration-300 px-14 bg-accent text-primary-dark hover:cursor-pointer hover:bg-yellow-200" type="submit" id="submit" value="Send" >                
 							</div>
 							<input type="hidden" name="_next" value="#"> <!-- Link back to page -->
 						  </form>
@@ -564,7 +590,7 @@ I will reply as soon as I read it"></textarea>
 				</div>
 				<p>Converting designs to fully functional websites/emails is my forte.</p>
 				<p>If you have any HTML and CSS related needs, I’m the man for the job.</p>
-				<a class="flex pt-0" href="#contact"><span class="px-4 py-2 font-semibold bg-accent text-primary-dark">Send a Message</span></a>
+				<a class="flex pt-0" href="#contact"><span class="px-4 py-2 font-semibold duration-300 bg-accent text-primary-dark hover:bg-yellow-200">Send a Message</span></a>
 			</div>
 
 			<div class="flex flex-col gap-4 pt-8 md:pt-0">

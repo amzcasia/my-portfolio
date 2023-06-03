@@ -10,11 +10,12 @@ module.exports = {
            DEFAULT : '#4060C9'},
         'secondary':'#163292 ',
         'accent':'#E2B628'
-         
-        
+      },
+      dropShadow: {
+        '3xl': '0 3px 10px rgba(0, 0, 0, 1)'
       }
     },
-  },
   plugins: [],
+  }
 }
  
