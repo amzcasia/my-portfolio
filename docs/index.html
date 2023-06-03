@@ -188,22 +188,28 @@
 					<div id="projects" class="absolute -top-[calc(1rem+61px)] left-0"></div>
 					<!-- Tabs -->
 					<div class="flex bg-primary-dark"> 
-						<button id="tab-button-1" onclick="changeTab(0)" class="flex gap-2 px-3 py-2 transition duration-500 tab-button rounded-t-md text-primary-light bg-primary hover:bg-blue-700">
-							<img class="w-[25px] aspect-square" src=".\src\jjj-logo.png">
-							<span class="hidden lg:inline">Jejoju Cafe</span>
-							<span class="hidden md:inline lg:hidden">Jejoju</span>
+
+						<button id="tab-button-1" onclick="changeTab(0)" class="flex gap-2 px-3 py-2 transition duration-500 tab-button rounded-t-md text-primary-light bg-secondary hover:bg-blue-700">
+							<img class="w-[25px] aspect-square" src=".\src\GoDaddy-Logo-notext.svg">
+							<span class="hidden lg:inline">GoDaddy</span>
+							<span class="hidden md:inline lg:hidden">GoDaddy</span>
 						</button>
+
 						<button id="tab-button-2" onclick="changeTab(1)" class="flex gap-2 px-3 py-2 transition duration-500 tab-button rounded-t-md text-primary-light bg-secondary hover:bg-blue-700">
 							<img class="w-[25px] aspect-square" src=".\src\wine.png">
 							<span class="hidden lg:inline">Benvinum Wines</span>
 							<span class="hidden md:inline lg:hidden">Benvinum</span>
 
 						</button>
-						<button id="tab-button-3" onclick="changeTab(2)" class="flex gap-2 px-3 py-2 transition duration-500 tab-button rounded-t-md text-primary-light bg-secondary hover:bg-blue-700">
-							<img class="w-[25px] aspect-square" src=".\src\GoDaddy-Logo-notext.svg">
-							<span class="hidden lg:inline">GoDaddy</span>
-							<span class="hidden md:inline lg:hidden">GoDaddy</span>
+
+						<button id="tab-button-3" onclick="changeTab(2)" class="flex gap-2 px-3 py-2 transition duration-500 tab-button rounded-t-md text-primary-light bg-primary hover:bg-blue-700">
+							<img class="w-[25px] aspect-square" src=".\src\jjj-logo.png">
+							<span class="hidden lg:inline">Jejoju Cafe</span>
+							<span class="hidden md:inline lg:hidden">Jejoju</span>
 						</button>
+
+						
+
 						<button id="tab-button-4" onclick="changeTab(3)" class="flex items-center gap-2 px-3 py-2 transition duration-500 tab-button rounded-t-md text-primary-light bg-secondary hover:bg-blue-700">
 							
 							<img class="w-[25px]" src=".\src\shakeys-logo.png">
@@ -225,97 +231,7 @@
 					<!-- End of Tabs -->
 					<!-- Project Box -->
 					<div class="p-4 py-10 text-primary-dark bg-primary-light">
-						<!-- Project 1 -->
-						<div class="project-item"> <!-- hidden -->
-							<!-- Project 1 Content -->
-							<div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
-								<!-- P1 Col 1 -->
-								<div class="relative overflow-y-scroll max-h-[400px]">
-									<a class="w-full h-[400px]" href=".\projects\landing-page\dist\index.html" target="_blank">
-									<img class="w-full" src=".\src\jjj-desktop.png">
-									</a>
-									
-								</div>
-								<!-- P1 Col 2 -->
-								<div class="grid content-between text-lg">
-									<div class="">
-										<p class="text-2xl font-semibold">Jejoju Cafe Landing Page</p>
-										<p class="pt-4">Mock landing page for a Bubble Tea store. This project was created as a requirement for the FreeCodeCamp Responsive Web Design Certification.</p>
-										<p class="pt-4">Features:</p>
-										<ul>
-											<li class="indent-4 before:content-['-']"> Dynamic Navigation Highlight</li>
-											<li class="indent-4 before:content-['-']"> Copy code snippet</li>
-											<li class="indent-4 before:content-['-']"> Sticky Heading</li>
-											<li class="indent-4 before:content-['-']"> Tailwind CSS </li>
-											<li class="indent-4 before:content-['-']"> Responsive</li>
-										</ul>
-									</div>
-									<!-- P1 Visit Website Button -->
-									<div class="flex justify-center pt-2 md:justify-start">
-										<a class="px-5 py-2 font-semibold text-center text-white transition duration-300 bg-secondary hover:bg-primary" href=".\projects\landing-page\dist\index.html" target="_blank">
-											<span class="">Visit Website</span>
-										</a>
-									</div>
-								</div>
-								<!-- End of P1 Col 2 -->
-								<!-- P1 Col 3 -->
-								<div class="hidden lg:flex">
-									<div class="max-h-[400px] overflow-y-scroll">
-										<a href=".\projects\landing-page\dist\index.html" target="_blank">
-										<img class="" src=".\src\jjj-mobile.png">
-										</a>
-									</div>
-								</div>
-								<!-- End of P1 Col 3 -->
-							</div><!-- End of Project 1 Content -->
-						</div><!-- End of Project 1-->
-
-
-						<!-- Project 2 -->
-						<div class="project-item"> <!-- hidden -->
-							<!-- Project 2 Content -->
-							<div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
-								<!-- P2 Col 1 -->
-								<div class="relative overflow-y-scroll max-h-[400px]">
-									<a class="w-full h-[400px]" href=".\projects\benvinum\dist\index.html" target="_blank">
-									<img class="w-full" src=".\src\benvinum-desktop.png">
-									</a>
-									
-								</div>
-								<!-- P2 Col 2 -->
-								<div class="grid content-between text-lg">
-									<div class="">
-										<p class="text-2xl font-semibold">Benvinum Wines Landing Page</p>
-										<p class="pt-4">Mock landing page for a wine shop. Explain development process</p>
-										<p class="pt-4">Features:</p>
-										<ul>
-											<li class="indent-4 before:content-['-']"> Image Carousel</li>
-											<li class="indent-4 before:content-['-']"> Collapsible Navbar (Mobile)</li>
-											<li class="indent-4 before:content-['-']"> Tailwind CSS </li>
-											<li class="indent-4 before:content-['-']"> Responsive</li>
-										</ul>
-									</div>
-									<!-- P2 Visit Website Button -->
-									<div class="flex justify-center pt-2 md:justify-start">
-										<a class="px-5 py-2 font-semibold text-center text-white transition duration-300 bg-secondary hover:bg-primary" href=".\projects\benvinum\dist\index.html" target="_blank">
-											<span class="">Visit Website</span>
-										</a>
-									</div>
-								</div>
-								<!-- End of P2 Col 2 -->
-								<!-- P2 Col3 -->
-								<div class="hidden lg:flex">
-									<div class="max-h-[400px] overflow-y-scroll">
-										<a href=".\projects\benvinum\dist\index.html" target="_blank">
-										<img class="" src=".\src\benvinum-mobile.png">
-										</a>
-									</div>
-								</div>
-								<!-- End of P2 Col 3 -->
-							</div><!-- End of Project 2 Content -->
-						</div><!-- End of Project 2-->
-
-
+						
 						<!-- Project 3 -->
 						<div class="project-item"> <!-- hidden -->
 							<!-- Project 3 Content -->
@@ -331,11 +247,13 @@
 								<div class="grid content-between text-lg">
 									<div class="">
 										<p class="text-2xl font-semibold">GoDaddy Landing Page</p>
-										<p class="pt-4">Landing page clone of GoDaddy website. </p>
+										<p class="pt-4">Landing page clone of GoDaddy website.</p>
+										<p>Why this website?</p>
 										<p class="pt-4">Features:</p>
 										<ul>
-											<li class="indent-4 before:content-['-']"> Image Carousel</li>
+											<li class="indent-4 before:content-['-']"> Accordion FAQ</li>
 											<li class="indent-4 before:content-['-']"> Collapsible Navbar (Mobile)</li>
+											<li class="indent-4 before:content-['-']"> Hover Animations</li>
 											<li class="indent-4 before:content-['-']"> Tailwind CSS </li>
 											<li class="indent-4 before:content-['-']"> Responsive</li>
 										</ul>
@@ -368,6 +286,98 @@
 								<!-- End of P3 Col 3 -->
 							</div><!-- End of Project 3 Content -->
 						</div><!-- End of Project 3-->
+
+						<!-- Project 2 -->
+						<div class="project-item"> <!-- hidden -->
+							<!-- Project 2 Content -->
+							<div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+								<!-- P2 Col 1 -->
+								<div class="relative overflow-y-scroll max-h-[400px]">
+									<a class="w-full h-[400px]" href=".\projects\benvinum\dist\index.html" target="_blank">
+									<img class="w-full" src=".\src\benvinum-desktop.png">
+									</a>
+									
+								</div>
+								<!-- P2 Col 2 -->
+								<div class="grid content-between text-lg">
+									<div class="">
+										<p class="text-2xl font-semibold">Benvinum Wines Landing Page</p>
+										<p class="pt-4">Mock landing page for a wine shop. Explain development process</p>
+										<p class="pt-4">Features:</p>
+										<ul>
+											<li class="indent-4 before:content-['-']"> Image Carousel</li>
+											<li class="indent-4 before:content-['-']"> Collapsible Navbar (Mobile)</li>
+											<li class="indent-4 before:content-['-']"> Hover Animations</li>
+											<li class="indent-4 before:content-['-']"> Tailwind CSS </li>
+											<li class="indent-4 before:content-['-']"> Responsive</li>
+										</ul>
+									</div>
+									<!-- P2 Visit Website Button -->
+									<div class="flex justify-center pt-2 md:justify-start">
+										<a class="px-5 py-2 font-semibold text-center text-white transition duration-300 bg-secondary hover:bg-primary" href=".\projects\benvinum\dist\index.html" target="_blank">
+											<span class="">Visit Website</span>
+										</a>
+									</div>
+								</div>
+								<!-- End of P2 Col 2 -->
+								<!-- P2 Col3 -->
+								<div class="hidden lg:flex">
+									<div class="max-h-[400px] overflow-y-scroll">
+										<a href=".\projects\benvinum\dist\index.html" target="_blank">
+										<img class="" src=".\src\benvinum-mobile.png">
+										</a>
+									</div>
+								</div>
+								<!-- End of P2 Col 3 -->
+							</div><!-- End of Project 2 Content -->
+						</div><!-- End of Project 2-->
+
+						<!-- Project 1 -->
+						<div class="project-item"> <!-- hidden -->
+							<!-- Project 1 Content -->
+							<div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+								<!-- P1 Col 1 -->
+								<div class="relative overflow-y-scroll max-h-[400px]">
+									<a class="w-full h-[400px]" href=".\projects\landing-page\dist\index.html" target="_blank">
+									<img class="w-full" src=".\src\jjj-desktop.png">
+									</a>
+									
+								</div>
+								<!-- P1 Col 2 -->
+								<div class="grid content-between text-lg">
+									<div class="">
+										<p class="text-2xl font-semibold">Jejoju Cafe Landing Page</p>
+										<p class="pt-4">Mock landing page for a Bubble Tea store. This project was created as a requirement for the FreeCodeCamp Responsive Web Design Certification.</p>
+										<p class="pt-4">Features:</p>
+										<ul>
+											<li class="indent-4 before:content-['-']"> Image carousel</li>
+											<li class="indent-4 before:content-['-']"> Form Submission</li>
+											<li class="indent-4 before:content-['-']"> Show navigation on scroll-up</li>
+											<li class="indent-4 before:content-['-']"> Collapsible Navbar (Mobile)</li>
+											<li class="indent-4 before:content-['-']"> Responsive</li>
+										</ul>
+									</div>
+									<!-- P1 Visit Website Button -->
+									<div class="flex justify-center pt-2 md:justify-start">
+										<a class="px-5 py-2 font-semibold text-center text-white transition duration-300 bg-secondary hover:bg-primary" href=".\projects\landing-page\dist\index.html" target="_blank">
+											<span class="">Visit Website</span>
+										</a>
+									</div>
+								</div>
+								<!-- End of P1 Col 2 -->
+								<!-- P1 Col 3 -->
+								<div class="hidden lg:flex">
+									<div class="max-h-[400px] overflow-y-scroll">
+										<a href=".\projects\landing-page\dist\index.html" target="_blank">
+										<img class="" src=".\src\jjj-mobile.png">
+										</a>
+									</div>
+								</div>
+								<!-- End of P1 Col 3 -->
+							</div><!-- End of Project 1 Content -->
+						</div><!-- End of Project 1-->
+
+						
 
 						<!-- Project 4 -->
 						<div class="hidden project-item"> <!-- hidden -->
@@ -437,7 +447,7 @@
 										<ul>
 											<li class="indent-4 before:content-['-']"> Dynamic Navigation Highlight</li>
 											<li class="indent-4 before:content-['-']"> Copy code snippet </li>
-											<li class="indent-4 before:content-['-']"> ResSticky Headingponsive</li>
+											<li class="indent-4 before:content-['-']"> Sticky Heading</li>
 											<li class="indent-4 before:content-['-']"> Tailwind CSS </li>
 											<li class="indent-4 before:content-['-']"> Responsive</li>
 										</ul>
@@ -494,22 +504,9 @@
 				<!-- Portfolio Thumbnails -->
 				<!-- <p class="pt-4 text-xl lg:text-xl text-primary-dark lg:pl-0 px-[7%]">Click on a thumbnail to display above ^</p> -->
 				<div class="grid gap-5 lg:gap-10 pt-8 md:grid-cols-2 lg:grid-cols-3 px-[7%] text-xl lg:text-2xl text-white">
-					<a class="max-h-[130px] lg:max-h-[200px] overflow-hidden border border-primary-dark shadow-xl relative group" onclick="changeTab(0)" href="#projects">
-						<div class="absolute top-0 h-[130px] lg:h-[200px] flex items-end group-hover:opacity-100 opacity-0 z-[9] transition duration-500 w-full justify-center bg-primary-light bg-opacity-0 group-hover:bg-opacity-50">
-							<div class="flex items-center justify-center w-full transition duration-500 h-1/4 bg-primary-dark hover:bg-primary">Preview
-							</div>
-						</div>
-						<img class="" src=".\src\jjj-desktop.png">
-					</a>
-					<a class="max-h-[130px] lg:max-h-[200px] overflow-hidden border border-primary-dark shadow-xl relative group" onclick="changeTab(1)" href="#projects">
-						<div class="absolute top-0 h-[130px] lg:h-[200px] flex items-end group-hover:opacity-100 opacity-0 z-[9] transition duration-500 w-full justify-center bg-primary-light bg-opacity-0 group-hover:bg-opacity-50">
-							<div class="flex items-center justify-center w-full transition duration-500 h-1/4 bg-primary-dark hover:bg-primary">Preview
-							</div>
-						</div>
-						<img class="" src=".\src\benvinum-desktop.png">
-					</a>
-					
-					<a class=" max-h-[130px] h-[130px] lg:h-[200px] lg:max-h-[200px] overflow-hidden border border-primary-dark shadow-xl relative group" onclick="changeTab(2)" href="#projects">
+
+
+					<a class=" max-h-[130px] h-[130px] lg:h-[200px] lg:max-h-[200px] overflow-hidden border border-primary-dark shadow-xl relative group" onclick="changeTab(0)" href="#projects">
 						<div class="absolute top-0 h-[130px] lg:h-[200px] flex items-end group-hover:opacity-100 opacity-0 z-[9] transition duration-500 w-full justify-center bg-primary-light bg-opacity-0 group-hover:bg-opacity-50">
 							<div class="flex items-center justify-center w-full transition duration-500 h-1/4 bg-primary-dark hover:bg-primary">Preview
 							</div>
@@ -517,6 +514,27 @@
 						<img class="" src=".\src\go-daddy-desktop.png">
 					</a>
 					
+
+
+					<a class="max-h-[130px] lg:max-h-[200px] overflow-hidden border border-primary-dark shadow-xl relative group" onclick="changeTab(1)" href="#projects">
+						<div class="absolute top-0 h-[130px] lg:h-[200px] flex items-end group-hover:opacity-100 opacity-0 z-[9] transition duration-500 w-full justify-center bg-primary-light bg-opacity-0 group-hover:bg-opacity-50">
+							<div class="flex items-center justify-center w-full transition duration-500 h-1/4 bg-primary-dark hover:bg-primary">Preview
+							</div>
+						</div>
+						<img class="" src=".\src\benvinum-desktop.png">
+					</a>
+
+					<a class="max-h-[130px] lg:max-h-[200px] overflow-hidden border border-primary-dark shadow-xl relative group" onclick="changeTab(2)" href="#projects">
+						<div class="absolute top-0 h-[130px] lg:h-[200px] flex items-end group-hover:opacity-100 opacity-0 z-[9] transition duration-500 w-full justify-center bg-primary-light bg-opacity-0 group-hover:bg-opacity-50">
+							<div class="flex items-center justify-center w-full transition duration-500 h-1/4 bg-primary-dark hover:bg-primary">Preview
+							</div>
+						</div>
+						<img class="" src=".\src\jjj-desktop.png">
+					</a>
+					
+
+					
+
 					<a class="max-h-[130px] lg:max-h-[200px] overflow-hidden border border-primary-dark shadow-xl relative group" onclick="changeTab(3)" href="#projects">
 						<div class="absolute top-0 h-[130px] lg:h-[200px] flex items-end group-hover:opacity-100 opacity-0 z-[9] transition duration-500 w-full justify-center bg-primary-light bg-opacity-0 group-hover:bg-opacity-50">
 							<div class="flex items-center justify-center w-full transition duration-500 h-1/4 bg-primary-dark hover:bg-primary">Preview
