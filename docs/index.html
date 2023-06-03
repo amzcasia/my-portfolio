@@ -73,7 +73,7 @@
 				
 			</nav>
 		</header> <!-- End of Header -->
-		<nav id="mobile-nav" class="text-2xl text-primary-light lg:hidden z-[9] fixed top-[calc(45px+1rem)] right-0 w-full shadow-md flex scale-y-0 duration-200 origin-top h-screen" data-state="active">
+		<nav id="mobile-nav" class="text-2xl text-primary-light lg:hidden z-[9] fixed top-[calc(45px+1rem)] right-0 w-full shadow-md flex scale-y-0 duration-100 transform origin-top h-screen" data-state="active">
 			<div onclick="toggleMobileNav()" class="w-1/2 opacity-100 backdrop-blur-[2px]">
 				<div class="w-full h-full opacity-60 bg-primary-dark"></div>
 			</div>
@@ -101,8 +101,8 @@
 						<p class="pt-5 lg:pt-8">I'm a web developer — focused on building simple and well-rounded websites that meaningfully impacts your digital presence.</p>
 						<p class="pt-3">I'm excited to bring your ideas live in a browser. If you need a website, or have to broadcast an engaging email, I'm the man for the job.</p>
 						<div class="flex gap-3 pt-10 font-semibold md:pt-16">
-							<a class="flex" href="#contact"><span class="px-4 py-2 text-black transition duration-300 lg:px-6 bg-accent hover:bg-yellow-200">Contact Me</span></a>
-							<a class="flex" href="#portfolio"><span class="px-4 py-2 transition duration-300 border-2 lg:px-6 border-accent text-accent hover:border-yellow-200 hover:text-yellow-200">My Portfolio</span></a>
+							<a class="flex items-center" href="#contact"><span class="px-4 py-2 text-black transition duration-300 border-2 lg:px-6 bg-accent hover:bg-yellow-200 hover:border-yellow-200 border-accent">Contact Me</span></a>
+							<a class="flex items-center" href="#portfolio"><span class="px-4 py-2 transition duration-300 border-2 lg:px-6 border-accent text-accent hover:border-yellow-200 hover:text-yellow-200">My Portfolio</span></a>
 						</div>
 					</div>
 				</div>
@@ -580,15 +580,15 @@
 						</div>
 						<div class="flex gap-3 pt-5">
 							<span class="w-5"><i class="font-light text-white fa-solid fa-at"></i></span>
-							<span><a href="mailto:amarkzc@gmail.com">amarkzc@gmail.com</a></span>
+							<span><a class="hover:underline" href="mailto:amarkzc@gmail.com">amarkzc@gmail.com</a></span>
 						</div>
 						<div class="flex gap-3">
 							<span class="w-5"><i class="text-white fa-brands fa-facebook"></i></span>
-							<span><a class="" href="https://www.facebook.com/amarkzc" target="_blank">fb.com/amarkzc</a></span>
+							<span><a class="hover:underline" href="https://www.facebook.com/amarkzc" target="_blank">fb.com/amarkzc</a></span>
 						</div>
 						<div class="flex gap-3">
 							<span class="grid w-5 justify-items-center"><i class="text-white fa-solid fa-location-dot"></i></span>
-							<span><a href="https://goo.gl/maps/AYbfQVwaeikEimPS7?coh=178572&entry=tt" target="_blank">Cebu City, Cebu, Philippines, 6000</a></span>
+							<span><a class="hover:underline" href="https://goo.gl/maps/AYbfQVwaeikEimPS7?coh=178572&entry=tt" target="_blank">Cebu City, Cebu, Philippines, 6000</a></span>
 						</div>
 
 					</div>
@@ -622,7 +622,7 @@ I will reply as soon as I read it"></textarea>
 		<footer class="grid gap-2 text-xl md:grid-cols-2 lg:grid-cols-4 bg-primary-dark text-primary-light px-[7%] py-8 lg:py-5 drop-shadow-3xl-top">
 			<div class="grid gap-4">
 				<div class="flex items-center">
-					<img class="rounded-full h-[60px] aspect-square" src=".\src\1x1.jpg">
+					<img class="rounded-full h-[60px] aspect-square border-4 border-secondary" src=".\src\1x1.jpg">
 					<span class="pl-2 text-3xl font-semibold">AMZC</span>
 				</div>
 				<p>Converting designs to fully functional websites/emails is my forte.</p>
@@ -635,15 +635,15 @@ I will reply as soon as I read it"></textarea>
 				<div class="flex flex-col gap-4">
 					<div class="flex items-center gap-3">
 						<span><i class="font-light text-white fa-solid fa-at"></i></span>
-						<span><a href="mailto:amarkzc@gmail.com">amarkzc@gmail.com</a></span>
+						<span><a class="hover:underline" href="mailto:amarkzc@gmail.com">amarkzc@gmail.com</a></span>
 					</div>
 					<div class="flex items-center gap-3">
 						<span class="w-5"><i class="text-white fa-brands fa-facebook"></i></span>
-						<span><a class="" href="https://www.facebook.com/amarkzc" target="_blank">fb.com/amarkzc</a></span>
+						<span><a class="hover:underline" href="https://www.facebook.com/amarkzc" target="_blank">fb.com/amarkzc</a></span>
 					</div>
 					<div class="flex items-center gap-3">
 						<span class="grid w-5 justify-items-center"><i class="text-white fa-solid fa-location-dot"></i></span>
-						<span><a href="https://goo.gl/maps/AYbfQVwaeikEimPS7?coh=178572&entry=tt" target="_blank">Cebu City, Cebu, Philippines, 6000</a></span>
+						<span><a class="hover:underline" href="https://goo.gl/maps/AYbfQVwaeikEimPS7?coh=178572&entry=tt" target="_blank">Cebu City, Cebu, Philippines, 6000</a></span>
 					</div>
 				</div>
 			</div>
