@@ -616,12 +616,12 @@ video {
   aspect-ratio: calc(1195 / 847);
 }
 
-.aspect-square {
-  aspect-ratio: 1 / 1;
-}
-
 .aspect-auto {
   aspect-ratio: auto;
+}
+
+.aspect-square {
+  aspect-ratio: 1 / 1;
 }
 
 .h-1\/4 {
@@ -634,10 +634,6 @@ video {
 
 .h-40 {
   height: 10rem;
-}
-
-.h-\[1000px\] {
-  height: 1000px;
 }
 
 .h-\[130px\] {
@@ -662,10 +658,6 @@ video {
 
 .h-screen {
   height: 100vh;
-}
-
-.h-\[50px\] {
-  height: 50px;
 }
 
 .max-h-\[130px\] {
@@ -978,6 +970,10 @@ video {
   padding-left: 7%;
 }
 
+.pt-0 {
+  padding-top: 0px;
+}
+
 .pt-10 {
   padding-top: 2.5rem;
 }
@@ -1008,10 +1004,6 @@ video {
 
 .pt-\[calc\(1rem\+61px\)\] {
   padding-top: calc(1rem + 61px);
-}
-
-.pt-0 {
-  padding-top: 0px;
 }
 
 .text-center {
@@ -1133,14 +1125,6 @@ video {
   transition-duration: 500ms;
 }
 
-.borders {
-  border: 1px dashed black;
-}
-
-.borderss {
-  border: 1px dashed white;
-}
-
 #hero-img {
   /* background-image: url("/src/pcb.png"); */
 }
@@ -1195,10 +1179,6 @@ video {
   color: rgb(202 138 4 / var(--tw-text-opacity));
 }
 
-.hover\:underline:hover {
-  text-decoration-line: underline;
-}
-
 .hover\:no-underline:hover {
   text-decoration-line: none;
 }
@@ -1221,12 +1201,12 @@ video {
     display: inline;
   }
 
-  .md\:h-full {
-    height: 100%;
-  }
-
   .md\:h-\[60px\] {
     height: 60px;
+  }
+
+  .md\:h-full {
+    height: 100%;
   }
 
   .md\:max-h-\[450px\] {
@@ -1359,19 +1339,9 @@ video {
     padding-right: 7%;
   }
 
-  .lg\:py-10 {
-    padding-top: 2.5rem;
-    padding-bottom: 2.5rem;
-  }
-
   .lg\:py-14 {
     padding-top: 3.5rem;
     padding-bottom: 3.5rem;
-  }
-
-  .lg\:py-8 {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
   }
 
   .lg\:py-5 {
