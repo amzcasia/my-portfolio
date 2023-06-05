@@ -4,7 +4,21 @@
 
 
 @layer utilities {
-    .borders {
+    .bb {
         border: 1px dashed black;
     }
+
+    .bw {
+        border: 1px dashed white;
+    }
 }
+
+#hero-img {
+    /* background-image: url("/src/pcb.png"); */
+
+}
+
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
